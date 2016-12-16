@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+  include ../_templates/head.pug
+  +head("Levi Zitting - Programmer, Creator, and Life Long Learner")
+  body
+    include ../_templates/navbar.pug
+    +navbar("Home")
+    header
+      div.header-content
+        div.header-content-inner
+          img(src="../img/large-logo.png")
+    section.section-light.vertical-align-parent
+      div.container.vertical-align-child
+        div.row
+          div.col-lg-8.col-lg-offset-2.text-center
+            h2.section-heading Fun for the whole family!
+            hr.light
+            p.text-faded Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!
+    include ../_templates/scripts.pug
+    +scripts()

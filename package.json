@@ -1,0 +1,33 @@
+{
+  "name": "levizitting.com",
+  "version": "1.0.0",
+  "description": "The source code for the website located at levizitting.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass scss/source/ -o public/css/",
+    "scss-watch": "node-sass -w scss/source/ -o public/css/",
+    "pug": "pug pug/pages -o public/pages/ --pretty",
+    "pug-watch": "pug -w pug/pages -o public/pages/ --pretty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glitchedmob/levizitting.com.git"
+  },
+  "keywords": [
+    "blog",
+    "personal-site",
+    "web-development"
+  ],
+  "author": "Levi Zitting",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glitchedmob/levizitting.com/issues"
+  },
+  "homepage": "https://github.com/glitchedmob/levizitting.com#readme",
+  "devDependencies": {
+    "node-sass": "^4.0.0",
+    "pug": "^2.0.0-beta6",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
