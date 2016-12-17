@@ -1,0 +1,22 @@
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+.v-align-parent {
+	display: table;
+	overflow: hidden;
+}
+
+.v-align-child {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.navbar-brand {
+	font-weight: 200;
+}
+
+.brand-last-name {
+	font-weight: 400;
+}

@@ -2,8 +2,9 @@ mixin scripts(...scripts)
 	// jQuery 
 	script(src="../js/jquery-3.1.1.min.js")
 	// Bootstrap Core JavaScript 
+	script(src="../js/tether.min.js")
 	script(src="../js/bootstrap.min.js")
-	// Plugin JavaScript 
 	script(src="../js/mdb.min.js")
+	
 	each script in scripts
 		script(src=script)
