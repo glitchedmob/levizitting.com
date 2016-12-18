@@ -16,6 +16,15 @@
   font-weight: 200;
 }
 
+@media (max-width: 768px) {
+  #home-header h1 {
+    font-size: 1.75em;
+  }
+  #home-header p {
+    font-size: 1em;
+  }
+}
+
 #home-header .card {
   width: 40%;
   position: relative;
