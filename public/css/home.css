@@ -3,31 +3,45 @@
   height: 100%;
   text-align: center;
   background: url("../img/atlanta.jpg");
-  background-size: cover; }
-  #home-header h1 {
-    font-size: 3.5em;
-    font-weight: 100; }
-  #home-header p {
-    font-size: 1.5em;
-    font-weight: 200; }
+  background-size: cover;
+}
+
+#home-header h1 {
+  font-size: 3.5em;
+  font-weight: 100;
+}
+
+#home-header p {
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+#home-header .card {
+  width: 40%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
   #home-header .card {
-    width: 40%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px; }
-  @media (max-width: 768px) {
-    #home-header .card {
-      width: 75%; } }
-  #home-header .card-profile {
-    border-radius: 100%;
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    top: -100px;
-    height: 200px;
-    border-width: 7px;
-    border-style: solid;
-    border-color: #FFF; }
-  #home-header .card-block {
-    padding-top: 100px; }
+    width: 75%;
+  }
+}
+
+#home-header .card-profile {
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: -100px;
+  height: 200px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #FFF;
+}
+
+#home-header .card-block {
+  padding-top: 100px;
+}

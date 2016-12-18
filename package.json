@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass scss/source/ -o public/css/",
-    "scss-watch": "node-sass -w scss/source/ -o public/css/",
-    "pug": "pug pug/pages -o public/pages/ --pretty",
-    "pug-watch": "pug -w pug/pages -o public/pages/ --pretty"
+    "scss": "node-sass scss/ -o public/css/ --output-style expanded",
+    "scss-watch": "node-sass -w scss/ -o public/css/ --output-style expanded",
+    "scss-production": "node-sass scss/ -o public/css/ --output-style expanded",
+    "pug": "pug pug/pages -o public/ --pretty",
+    "pug-watch": "pug -w pug/pages -o public/ --pretty"
   },
   "repository": {
     "type": "git",
