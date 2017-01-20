@@ -5,6 +5,18 @@ html(lang='en')
 	body
 		include ../_templates/navbar.pug
 		+navbar("Blog")
+		.container
+			.row
+				.col-md-8.offset-md-2
+					.card
+						img.img-fluid(src='http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg', alt='Card image cap')
+						.card-block
+							h4.card-title Card title
+							p.card-text
+								| Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+							|  
+							a.btn.btn-primary(href='#') Button
+
 			
 		include ../_templates/scripts.pug
 		+scripts()
