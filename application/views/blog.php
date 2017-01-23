@@ -1,33 +1,45 @@
 <div class="container">
 	<div class="row blog-move-down">
-	<div class="col-md-4 push-md-8">
+		<div class="col-md-4 push-md-8">
 			<div class="card">
 				<div class="card-block">
 					<h4 class="card-title">Recent Posts</h4>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<ul>
+						<li>
+							<a href="">Post 1</a>
+						</li>
+						<li>
+							<a href="">Post 2</a>
+						</li>
+						<li>
+							<a href="">Post 3</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-8 pull-md-4">
-			<div class="card">
-				<img class="img-fluid" src="http://placehold.it/1000x150" alt="Card image cap">
-				<div class="card-block">
-					<h4 class="card-title">Blog Post Title</h4>
-					<p class="blog-author">By: Levi Zitting</p>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Read More</a>
+		<?php
+			$first_post = "pull-md-4";
+			foreach ($blog_posts as $blog_post) {
+				?>
+				<div class="col-md-8 <?php echo $first_post; ?>">
+					<div class="card">
+						<img class="img-fluid" src="<?php echo $blog_post["image"]; ?>" alt="Card image cap">
+						<div class="card-block">
+							<h4 class="card-title"><?php echo $blog_post["title"]; ?></h4>
+							<p class="author">By: <?php echo $blog_post["author"]; ?></p>
+							<p class="created-date">Created: <?php echo $blog_post["created_date"] ?></p>
+							<p class="Categories">Categories: <?php echo $blog_post["categories"]; ?></p>
+							<p class="card-text"><?php echo $blog_post["text"]; ?></p>
+							<a href="<?php echo site_url("blog/".$blog_post["slug"]); ?>" class="btn btn-primary">Read More</a>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="col-md-8">
-			<div class="card">
-				<img class="img-fluid" src="http://placehold.it/1000x150" alt="Card image cap">
-				<div class="card-block">
-					<h4 class="card-title">Blog Post Title</h4>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="#" class="btn btn-primary">Read More</a>
-				</div>
-			</div>
-		</div>
+				<?php
+				if ($first_post != NULL) {
+					$first_post = NULL;
+				}
+			}
+		?>
 	</div>
 </div>

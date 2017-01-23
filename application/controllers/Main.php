@@ -9,19 +9,19 @@ class Main extends Base_Controller {
 	}
 
 	public function index() {
-		$this->create_page("Home", "home", array(base_url()."public/css/home.css"), NULL);
+		$this->create_page("Home", "home", array(base_url()."public/css/home.css"), NULL, NULL);
 	}
 
 	public function projects() {
-		$this->create_page("Projects", "projects", NULL, NULL);
+		$this->create_page("Projects", "projects", NULL, NULL, NULL);
 	}
 
 	public function about() {
-		$this->create_page("About", "about", NULL, NULL);
+		$this->create_page("About", "about", NULL, NULL, NULL);
 	}
 
 	public function contact() {
-		$this->create_page("Contact", "contact", NULL, NULL);
+		$this->create_page("Contact", "contact", NULL, NULL, NULL);
 	}
 }
 ?>

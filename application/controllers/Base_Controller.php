@@ -9,7 +9,7 @@ class Base_Controller extends CI_Controller {
 	}
 
 	// Function for creating pages
-	function create_page($page_title, $page_view, $custom_css, $custom_js) {
+	function create_page($page_title, $page_view, $custom_css, $custom_js, $data) {
 		// Data for the tabs
 		$data["active_tab"] = $page_title;
 		$data["custom_css"] = $custom_css;
