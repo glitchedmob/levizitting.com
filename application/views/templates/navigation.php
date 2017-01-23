@@ -1,4 +1,7 @@
 <?php
+	$tabs_left = array("Home", "Blog", "Projects");
+	$tabs_right = array("About", "Contact");
+	
 	function create_tabs($tab_list, $active_tab) {
 		foreach ($tab_list as $tab) {
 			if($active_tab === $tab) {
@@ -18,7 +21,7 @@
 		}
 	}
 ?>
-<body>
+<body class="move-down">
 	<nav class="navbar navbar-fixed-top navbar-dark bg-primary">
 		<!-- Collapse button-->
 		<button class="navbar-toggler hidden-sm-up" data-target="#collapseEx2" data-toggle="collapse" type="button"><i class="fa fa-bars"></i></button>

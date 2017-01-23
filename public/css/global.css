@@ -13,6 +13,10 @@ body, html {
   vertical-align: middle;
 }
 
+.move-down {
+  padding-top: 51px;
+}
+
 .navbar-brand {
   font-weight: 200;
 }
