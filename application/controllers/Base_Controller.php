@@ -19,6 +19,7 @@ class Base_Controller extends CI_Controller {
 		$this->load->view("templates/head", $data);
 		$this->load->view("templates/navigation", $data);
 		$this->load->view($page_view);
+		$this->load->view("templates/footer");
 		$this->load->view("templates/js_scripts", $data);
 	}
 }

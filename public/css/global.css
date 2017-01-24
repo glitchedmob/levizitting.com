@@ -24,3 +24,7 @@ body, html {
 .brand-last-name {
   font-weight: 400;
 }
+
+footer.page-footer {
+  margin-top: 0;
+}
