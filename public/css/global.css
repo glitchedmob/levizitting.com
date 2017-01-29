@@ -21,6 +21,14 @@ body, html {
   display: inline-block;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.hr-dark {
+  border: 1px solid #333;
+}
+
 .navbar-brand {
   font-weight: 200;
 }
