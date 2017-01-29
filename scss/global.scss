@@ -17,6 +17,10 @@ body, html {
 	padding-top: 51px;
 }
 
+.morphext > .animated {
+	display: inline-block;
+}
+
 @import "navbar";
 
 @import "footer";

@@ -17,6 +17,10 @@ body, html {
   padding-top: 51px;
 }
 
+.morphext > .animated {
+  display: inline-block;
+}
+
 .navbar-brand {
   font-weight: 200;
 }
@@ -27,4 +31,8 @@ body, html {
 
 footer.page-footer {
   margin-top: 0;
+}
+
+footer {
+  text-align: center;
 }

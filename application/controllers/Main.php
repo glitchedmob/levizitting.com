@@ -9,19 +9,62 @@ class Main extends Base_Controller {
 	}
 
 	public function index() {
-		$this->create_page("Home", "home", array(base_url()."public/css/home.css"), NULL, NULL);
+		$page_data = array(
+			"page_title" => "Levi Zitting - Programmer, Creator, and Life Long Learner",
+			"active_tab" => "Home",
+			"view" => "home",
+			"custom_css" => array(
+				base_url()."public/css/home.css"
+			),
+			"custom_js" => array(
+				base_url()."public/js/morphext.min.js",
+				base_url()."public/js/home.js"
+			)
+		);
+
+		$this->create_page($page_data, NULL);
 	}
 
 	public function projects() {
-		$this->create_page("Projects", "projects", NULL, NULL, NULL);
+		$page_data = array(
+			"page_title" => "Levi Zitting - Programmer, Creator, and Life Long Learner",
+			"active_tab" => "Projects",
+			"view" => "projects",
+			"custom_css" => array(
+				base_url()."public/css/projects.css"
+			),
+			"custom_js" => NULL
+		);
+
+		$this->create_page($page_data, NULL);
 	}
 
 	public function about() {
-		$this->create_page("About", "about", NULL, NULL, NULL);
+		$page_data = array(
+			"page_title" => "Levi Zitting - Programmer, Creator, and Life Long Learner",
+			"active_tab" => "About",
+			"view" => "about",
+			"custom_css" => array(
+				base_url()."public/css/about.css"
+			),
+			"custom_js" => NULL
+		);
+
+		$this->create_page($page_data, NULL);
 	}
 
 	public function contact() {
-		$this->create_page("Contact", "contact", NULL, NULL, NULL);
+		$page_data = array(
+			"page_title" => "Levi Zitting - Programmer, Creator, and Life Long Learner",
+			"active_tab" => "Contact",
+			"view" => "contact",
+			"custom_css" => array(
+				base_url()."public/css/contact.css"
+			),
+			"custom_js" => NULL
+		);
+
+		$this->create_page($page_data, NULL);
 	}
 }
 ?>
