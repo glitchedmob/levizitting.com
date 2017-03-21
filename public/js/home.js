@@ -4,7 +4,7 @@ $(document).ready(function () {
 });
 
 $("#js-rotating").Morphext({
-	animation: "fadeIn",
+	animation: "bounceIn",
 	separator: "|",
 	speed: 3000
 });
