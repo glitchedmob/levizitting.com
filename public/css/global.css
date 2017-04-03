@@ -13,10 +13,34 @@ body, html {
   vertical-align: middle;
 }
 
+.move-down {
+  padding-top: 51px;
+}
+
+.morphext > .animated {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hr-dark {
+  border: 1px solid #333;
+}
+
 .navbar-brand {
   font-weight: 200;
 }
 
 .brand-last-name {
   font-weight: 400;
+}
+
+footer.page-footer {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
 }
