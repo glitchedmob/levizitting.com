@@ -1,0 +1,30 @@
+doctype html
+html
+	include _partials/_head.pug
+	body
+		include _partials/_nav.pug
+		#contact.valign-wrapper
+			.container
+				.row
+					.col.s12.m8.offset-m2.card
+							.center-align
+								h1 Contact Me
+								p.flow-text.
+									Whether you are trying to get a hold of me for feedback, an employment opportunity, or just to chat, I appriciate it all.
+									Except spam. I hate that stuff.
+								hr
+							form
+								.input-field.col.s6
+									input#name.validate(type='text')
+									label(for='name') Name
+								.input-field.col.s6
+									input#email.validate(type='email')
+									label(for='email') Email
+								.input-field.col.s12
+									input#subject.validate(type='text')
+									label(for='subject') Subject
+								.input-field.col.s12
+									textarea#message.materialize-textarea.validate(type='email')
+									label(for='message') Message
+		include _partials/_footer.pug
+		include _partials/_scripts.pug

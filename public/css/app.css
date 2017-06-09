@@ -8973,3 +8973,59 @@ body {
 .sidebar ul {
   font-size: 1.2em;
 }
+
+#about {
+  margin-top: 20px;
+}
+
+#about .card-content p {
+  font-weight: 300;
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+#about .card-content hr {
+  border-width: 3px;
+  width: 80%;
+}
+
+.about-header {
+  background-image: url("../images/atlanta.jpg");
+  height: 500px;
+  background-position: center center;
+}
+
+.about-header .profile {
+  height: 200px;
+  border: 6px solid white;
+  border-radius: 100px;
+}
+
+.about-header h1 {
+  color: white;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+#contact {
+  width: 100%;
+  height: 100%;
+}
+
+#contact .card {
+  padding: 10px;
+}
+
+#contact .card h1 {
+  font-size: 2.7em;
+  font-weight: 300;
+}
+
+#contact .card p {
+  font-weight: 200;
+}
+
+#contact .card hr {
+  width: 70%;
+  border-width: 3px;
+}
