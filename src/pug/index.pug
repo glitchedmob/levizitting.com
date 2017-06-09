@@ -1,0 +1,26 @@
+doctype html
+html
+	include _partials/_head.pug
+	body
+		include _partials/_nav.pug
+		
+		#home-header.valign-wrapper
+			.container
+				.row
+					.col.s10.offset-s1
+						.card.white.center-align#home-profile-card
+							img#home-profile-img(src="images/profile.jpg")
+							h1 Levi Zitting
+							p I am a programmer, creator, and life long learner
+							p.flow-text
+								| Welcome to my website.
+								br 
+								| While you're here check out some of the stuff I've been working on
+							.row.align-center.cta-buttons
+								.col.s12.m6.l3.offset-l3
+									a.btn.waves-effect(href="blog.html") Blog
+								.col.s12.m6.l3
+									a.btn.waves-effect(href="projects.html") Projects
+
+		include _partials/_footer.pug
+		include _partials/_scripts.pug
