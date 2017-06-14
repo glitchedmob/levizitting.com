@@ -9,6 +9,8 @@ body {
 	background: color("blue-grey", "lighten-5");
 }
 
+$small-height-screens: 650px;
+
 @import "_partials/navbar";
 @import "_partials/footer";
 @import "_partials/home";
