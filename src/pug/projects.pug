@@ -4,7 +4,13 @@ html
 	body
 		include _partials/_nav.pug
 		
-		
+		include _partials/_project.pug
+		.container
+			.row
+				.col.m6
+					+project(1)
+				.col.m6
+					+project(2)
 
 		include _partials/_footer.pug
 		include _partials/_scripts.pug

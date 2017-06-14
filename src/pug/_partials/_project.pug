@@ -1,0 +1,10 @@
+mixin project(id)
+	button.modal-trigger.btn.waves-effect(data-target="modal" + id) Modal
+
+	// Modal Structure
+	.modal.modal-fixed-footer(id="modal" + id)
+		.modal-content
+			h4 Modal Header #{id}
+			p A bunch of text
+		.modal-footer
+			a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree
