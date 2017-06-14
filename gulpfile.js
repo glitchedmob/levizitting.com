@@ -57,7 +57,7 @@ gulp.task("typescript", function() {
 });
 
 gulp.task("pug", function() {
-	gulp.src(paths.pug + "*.pug")
+	gulp.src([paths.pug + "**/*.pug", "!" + paths.pug + "**/_*.pug"])
 		.pipe(pug({
 			pretty: true
 		}).on('error', function (e) {

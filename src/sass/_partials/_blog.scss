@@ -38,9 +38,13 @@
 }
 
 .read-more {
-	display: inline-block;
-	position: relative;
-	top: 10px;
+	display: block;
+	margin-top: 10px;
+	@media #{$small-and-down} {
+		& > a {
+			display: block;
+		}
+	}
 }
 
 .sidebar {
