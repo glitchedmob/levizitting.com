@@ -1,6 +1,7 @@
 declare var $;
 
 $(document).ready( function () {
+    $(".button-collapse").sideNav();
     $('#posts-table').DataTable();
     $('#projects-table').DataTable();
     $('#tags').material_chip({

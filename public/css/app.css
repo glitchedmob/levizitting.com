@@ -8793,6 +8793,10 @@ body {
   font-weight: 200;
 }
 
+#sidenav-overlay {
+  z-index: 998;
+}
+
 .brand-last-name {
   font-weight: 400;
 }
