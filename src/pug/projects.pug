@@ -7,10 +7,20 @@ html
 		include _partials/_project.pug
 		.container
 			.row
-				.col.m6
-					+project(1)
-				.col.m6
-					+project(2)
+				.col.m4.offset-m1
+					+project(1, "Cycle Fitness")
+				.col.m4.offset-m2
+					+project(2, "MissSpelt")
+			.row
+				.col.m4.offset-m1
+					+project(3, "FunWorks Warehouse")
+				.col.m4.offset-m2
+					+project(4, "Transitional Resources United")
+			.row
+				.col.m4.offset-m1
+					+project(5, "Click Computers")
+				.col.m4.offset-m2
+					+project(6, "Generic Project")
 
 		include _partials/_footer.pug
 		include _partials/_scripts.pug

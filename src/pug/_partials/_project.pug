@@ -1,10 +1,22 @@
-mixin project(id)
-	button.modal-trigger.btn.waves-effect(data-target="modal" + id) Modal
+mixin project(id, name)
+	.card
+		.card-image
+			img(src="images/atlanta.jpg")
+			span.card-title=name
+		.card-content
+			p.
+				A short description of the project. This shouldn't be longer than a couple of sentences
+		.card-action
+			a.modal-trigger.waves-effect.center-align.teal-text.lighten-2-text(data-target="modal" + id) Learn More
 
-	// Modal Structure
-	.modal.modal-fixed-footer(id="modal" + id)
-		.modal-content
-			h4 Modal Header #{id}
-			p A bunch of text
-		.modal-footer
-			a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree
+		// Modal Structure
+		.modal.modal-fixed-footer(id="modal" + id)
+			.modal-content.project-content
+				h4=name
+				p.flow-text.
+					An vix agam animal sapientem, ei vim elit detraxit. Odio accusam comprehensam vel id, qui vero aliquid ne. Vix iuvaret commune sententiae ei. Vix id hinc oporteat comprehensam, eos cu modo ignota. At mea error dolores deterruisset, pri cu nibh facete latine. Id quaeque efficiantur eum.
+				img.materialboxed(src="images/atlanta.jpg")
+				p.flow-text.
+					Lorem ipsum dolor sit amet, his ne singulis invenire, nec clita vituperata ne. Ea meis ipsum vix, id omittam neglegentur instructior sea, mei tation similique vulputate ei. Error saperet per ea. Ut has erat causae dolorem. Docendi eligendi quo ei. Mea quaeque volutpat honestatis ne.
+			.modal-footer
+				a.modal-action.modal-close.waves-effect.btn-flat(href='#!') Close

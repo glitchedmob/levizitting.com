@@ -8785,6 +8785,10 @@ body {
   background: #eceff1;
 }
 
+.modal-footer {
+  z-index: -1;
+}
+
 .brand-first-name {
   font-weight: 200;
 }
@@ -8996,6 +9000,10 @@ body {
 
 .sidebar ul {
   font-size: 1.2em;
+}
+
+.project-content img {
+  width: 100%;
 }
 
 #about {

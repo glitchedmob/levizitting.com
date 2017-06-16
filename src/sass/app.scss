@@ -9,11 +9,16 @@ body {
 	background: color("blue-grey", "lighten-5");
 }
 
+.modal-footer {
+	z-index: -1;
+}
+
 $small-height-screens: 650px;
 
 @import "_partials/navbar";
 @import "_partials/footer";
 @import "_partials/home";
 @import "_partials/blog";
+@import "_partials/projects";
 @import "_partials/about";
 @import "_partials/contact";
