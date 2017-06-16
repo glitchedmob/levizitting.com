@@ -1,0 +1,28 @@
+doctype html
+html
+	include _partials/_head.pug
+	body
+		include _partials/_nav.pug
+
+		#main
+			.container
+				.row.card
+					h1.center-align Create Post
+					form.col.s12
+						.input-field.col.s12
+							input#title.validate(type='text')
+							label(for='title') Title
+						.file-field.input-field.col.s12
+							.btn
+								span Featured Image
+								input(type='file')
+							.file-path-wrapper
+								input.file-path.validate(type='text')
+						.input-field.col.s12
+							#tags.chips.chips-placeholder.validate(type='text')
+						.input-field.col.s12
+							textarea#body.materialize-textarea.validate(type='email')
+							label(for='body') Body
+						input.btn.waves-effect.right(type="submit" value="Create")
+
+		include _partials/_scripts.pug

@@ -1,4 +1,5 @@
 @import "materialize";
+@import "datatables";
 
 body, html {
 	width: 100%;
@@ -10,11 +11,34 @@ body {
 }
 
 
- header, #main, footer {
+#main {
 	padding-left: 0;
+
+	h1 {
+		padding-top: 20px;
+	}
+
+	.card {
+		form {
+			margin-bottom: 20px;
+		}
+	}
+
 	@media #{$large-and-up} {
 		padding-left: 300px;
 	}
 }
 
+
+
+.dataTables_wrapper {
+	padding: 10px;
+
+	select {
+		display: initial;
+	}
+}
+
 @import "_admin/navbar";
+@import "_admin/posts";
+@import "_admin/projects";

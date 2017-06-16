@@ -2,6 +2,7 @@ var gulp = require("gulp");
 var sass = require("gulp-sass");
 var pug = require("gulp-pug");
 var ts = require("gulp-typescript");
+var browserify = require("browserify");
 var browserSync = require("browser-sync").create();
 
 paths = {
@@ -49,7 +50,7 @@ gulp.task("sass-production", function() {
 
 // Compile typescript code
 gulp.task("typescript", function() {
-	gulp.src(paths.typscript + "*.ts")
+	gulp.src([paths.typscript + "**/*.ts", "!" + paths.typscript + "**/_*.ts"])
 		.pipe(ts({
 			target: "ES5"
 		}))
