@@ -1,5 +1,6 @@
-require("jquery");
-require("./materialize.js");
+var $ = window.jQuery = require('jquery');
+require("./datatables.js");
+require('./materialize/bin/materialize.js');
 
 $(document).ready(function () {
     $(".button-collapse").sideNav();

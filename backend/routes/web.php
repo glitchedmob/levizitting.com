@@ -12,3 +12,7 @@
 */
 
 Route::get('/', 'PageController@index');
+Route::get('/blog', 'PageController@blog');
+Route::get('/projects', 'PageController@projects');
+Route::get('/about', 'PageController@about');
+Route::get('/contact', 'PageController@contact');
