@@ -1,0 +1,53 @@
+#home-header {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/atlanta.jpg");
+	background-size: cover;
+}
+
+#home-profile-card {
+	padding: 0 10px 20px 10px;
+	h1 {
+		font-weight: 200;
+		@media #{$small-and-down} {
+			font-size: 34px;
+		}
+
+		@media(max-height: $small-height-screens) {
+			font-size: 2.5em;
+			margin-top: 0;
+		}
+	}
+
+	p {
+		font-size: 22px;
+		font-weight: 200;
+	}
+
+	.cta-buttons {
+		.btn {
+			margin: 10px;
+			width: 140px;
+
+			@media(max-height: $small-height-screens) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@media(max-height: $small-height-screens) {
+		margin-top: 100px;
+	}
+}
+
+#home-profile-img {
+	height: 250px;
+	border-radius: 125px;
+	margin-top: -105px;
+	border: 10px solid white;
+
+	@media #{$small-and-down} {
+    height: 175px;
+  }
+}

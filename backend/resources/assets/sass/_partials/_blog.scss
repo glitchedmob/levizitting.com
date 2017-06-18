@@ -1,0 +1,54 @@
+.blog-move-down {
+	margin-top: 35px;
+}
+
+.posts {
+	.pagination {
+		margin-top: 30px;
+	}
+}
+
+.post {
+	margin-bottom: 30px;
+	padding-bottom: 5px;
+	p {
+		font-size: 1.1em;
+	}
+
+	p.post-meta {
+		margin-top: -10px;;
+		margin-bottom: 15px;
+		.published {
+			font-weight: 500;
+		}
+	}
+
+	.card-title {
+		font-size: 2em;
+	}
+}
+
+.post-tags {
+	margin-top: 20px;
+	display: inline-block;
+	p {
+		font-size: 1.2em;
+		display: inline-block;
+	}
+}
+
+.read-more {
+	display: block;
+	margin-top: 10px;
+	@media #{$small-and-down} {
+		& > a {
+			display: block;
+		}
+	}
+}
+
+.sidebar {
+	ul {
+		font-size: 1.2em;
+	}
+}
