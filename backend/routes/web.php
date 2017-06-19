@@ -20,6 +20,15 @@ Route::get('/contact', 'PageController@contact');
 
 Route::prefix('admin')
     ->group(function () {
-        Route::get("/", "LoginController@index");
+        Auth::routes();
+        Route::get("/", function() { return redirect("/admin/login"); });
+        Route::get("/dashboard", "AdminController@index");
+        Route::get("/posts", "AdminController@posts");
+        Route::get("/posts/new", "AdminController@postsNew");
+        Route::get("/projects", "AdminController@projects");
+        Route::get("/projects/new", "AdminController@projectsNew");
     });
+
+
+
 

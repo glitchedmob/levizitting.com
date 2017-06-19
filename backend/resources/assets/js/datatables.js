@@ -14389,7 +14389,7 @@
 		"sNoFooter": "no-footer",
 	
 		/* Paging buttons */
-		"sPageButton": "paginate_button",
+		"sPageButton": "paginate_button btn waves-effect",
 		"sPageButtonActive": "current",
 		"sPageButtonDisabled": "disabled",
 	
