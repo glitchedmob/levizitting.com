@@ -17,6 +17,9 @@ Route::get('/projects', 'PageController@projects');
 Route::get('/about', 'PageController@about');
 Route::get('/contact', 'PageController@contact');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::prefix('admin')
+    ->group(function () {
+        Route::get("/", "LoginController@index");
+    });
+
