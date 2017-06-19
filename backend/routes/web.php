@@ -22,11 +22,15 @@ Route::prefix('admin')
     ->group(function () {
         Auth::routes();
         Route::get("/", function() { return redirect("/admin/login"); });
-        Route::get("/dashboard", "AdminController@index");
-        Route::get("/posts", "AdminController@posts");
-        Route::get("/posts/new", "AdminController@postsNew");
-        Route::get("/projects", "AdminController@projects");
-        Route::get("/projects/new", "AdminController@projectsNew");
+        Route::middleware('auth')
+            ->group(function () {
+                Route::get("/dashboard", "AdminController@index");
+                Route::get("/logout", "AdminController@logout");
+                Route::get("/posts", "AdminController@posts");
+                Route::get("/posts/new", "AdminController@postsNew");
+                Route::get("/projects", "AdminController@projects");
+                Route::get("/projects/new", "AdminController@projectsNew");
+            });
     });
 
 

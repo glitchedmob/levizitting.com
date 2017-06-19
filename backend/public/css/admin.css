@@ -9093,6 +9093,10 @@ body {
   padding: 20px 10px;
 }
 
+#login form h4 {
+  font-weight: 300;
+}
+
 #slide-out a {
   color: #FFFFFF;
 }

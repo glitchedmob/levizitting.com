@@ -1,4 +1,4 @@
-var $ = window.jQuery = require('jquery');
+var $ = window.jQuery =  require('jquery');
 require('./materialize/bin/materialize.js');
 
 
@@ -11,3 +11,4 @@ $(document).ready(function () {
         indicators: true
     });
 });
+

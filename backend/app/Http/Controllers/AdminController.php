@@ -11,6 +11,13 @@ class AdminController extends Controller
         return view("admin.index");
     }
 
+    public function logout()
+    {
+        auth()->logout();
+
+        return redirect("/admin/login");
+    }
+
     public function posts()
     {
         return view("admin.posts");
