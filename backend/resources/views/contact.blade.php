@@ -14,22 +14,22 @@
                         </p>
                         <hr>
                     </div>
-                    <form>
+                    <form method="POST" action="/contact">
                         {{ csrf_field() }}
                         <div class="input-field col s6">
-                            <input class="validate" id="name" type="text">
+                            <input class="validate" id="name" type="text" name="name">
                             <label for="name">Name</label>
                         </div>
                         <div class="input-field col s6">
-                            <input class="validate" id="email" type="email">
+                            <input class="validate" id="email" type="email" name="email">
                             <label for="email">Email</label>
                         </div>
                         <div class="input-field col s12">
-                            <input class="validate" id="subject" type="text">
+                            <input class="validate" id="subject" type="text" name="subject">
                             <label for="subject">Subject</label>
                         </div>
                         <div class="input-field col s12">
-                            <textarea class="materialize-textarea validate" id="message" type="email"></textarea>
+                            <textarea class="materialize-textarea validate" id="message" type="email" name="message"></textarea>
                             <label for="message">Message</label>
                         </div>
                         <input class="btn waves-effect right" type="submit" value="Submit">

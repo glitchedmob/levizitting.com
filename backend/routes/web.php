@@ -15,7 +15,8 @@ Route::get('/', 'PageController@index');
 Route::get('/blog', 'PageController@blog');
 Route::get('/projects', 'PageController@projects');
 Route::get('/about', 'PageController@about');
-Route::get('/contact', 'PageController@contact');
+Route::get('/contact', 'ContactController@index');
+Route::post('/contact', 'ContactController@store');
 
 
 Route::prefix('admin')
@@ -24,15 +25,14 @@ Route::prefix('admin')
         Route::get("/", function() { return redirect("/admin/login"); });
         Route::middleware('auth')
             ->group(function () {
-                Route::get("/dashboard", "AdminController@index");
-                Route::get("/logout", "AdminController@logout");
-                Route::get("/posts", "AdminController@posts");
-                Route::get("/posts/new", "AdminController@postsNew");
-                Route::get("/projects", "AdminController@projects");
-                Route::get("/projects/new", "AdminController@projectsNew");
+                Route::get("/dashboard", "Admin\PageController@index");
+                Route::get("/logout", "Admin\PageController@logout");
+                Route::get("/posts", "Admin\PostController@index");
+                Route::get("/posts/{post}/edit", "Admin\PostController@edit");
+                Route::get("/posts/create", "Admin\PostController@create");
+                Route::get("/projects", "Admin\PageController@projects");
+                Route::get("/projects/new", "Admin\PageController@projectsNew");
+                Route::get("/contacts", "Admin\ContactController@index");
+                Route::get("/contacts/{contact}", "Admin\ContactController@show");
             });
     });
-
-
-
-
