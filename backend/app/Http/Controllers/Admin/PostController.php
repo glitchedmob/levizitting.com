@@ -26,8 +26,15 @@ class PostController extends Controller
     {
         $this->validate(\request(), [
             "title" => "required",
-            "body" => "required"
+            "body" => "required",
+            "image" => "required",
+            "file" => "required"
         ]);
+
+        \request()
+            ->file("file")
+            ->storeAs("images/blog", \request("image"), ["disk" => "public"]);
+
 
         $post = new Post(\request(['title', 'image' ,'body']));
 
@@ -45,8 +52,13 @@ class PostController extends Controller
     {
         $this->validate(\request(), [
             "title" => "required",
-            "body" => "required"
+            "body" => "required",
+            "image" => "required"
         ]);
+
+        \request()
+            ->file("file")
+            ->storeAs("images/blog", \request("image"), ["disk" => "public"]);
 
         $post->update(\request(['title', 'image' ,'body']));
 

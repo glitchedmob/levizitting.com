@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row card">
             <h1 class="center-align">Create Post</h1>
-            <form method="POST" action="/admin/posts/create" class="col s12">
+            <form method="POST" action="/admin/posts/create" class="col s12" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="input-field col s12">
                     <input class="validate" id="title" type="text" name="title">
@@ -12,7 +12,7 @@
                 </div>
                 <div class="file-field input-field col s12">
                     <div class="btn"><span>Featured Image</span>
-                        <input type="file">
+                        <input type="file" name="file">
                     </div>
                     <div class="file-path-wrapper">
                         <input class="file-path validate" type="text" name="image">

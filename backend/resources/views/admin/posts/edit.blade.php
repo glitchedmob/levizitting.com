@@ -12,14 +12,11 @@
                 </div>
                 <div class="file-field input-field col s12">
                     <div class="btn"><span>Featured Image</span>
-                        <input type="file">
+                        <input type="file" name="file">
                     </div>
                     <div class="file-path-wrapper">
                         <input class="file-path validate" type="text" value="{{ $post->image }}" name="image">
                     </div>
-                </div>
-                <div class="input-field col s12">
-                    <div class="chips chips-placeholder validate" id="tags" type="text"></div>
                 </div>
                 <div class="input-field col s12">
                     <textarea class="materialize-textarea validate" id="body" name="body">{{ $post->body }}</textarea>

@@ -12,3 +12,4 @@ $(document).ready(function () {
     });
 });
 
+require("./g-analytics.js");
