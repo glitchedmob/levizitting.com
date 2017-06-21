@@ -22,9 +22,42 @@ class PostController extends Controller
         return view("admin.posts.create");
     }
 
+    public function store()
+    {
+        $this->validate(\request(), [
+            "title" => "required",
+            "body" => "required"
+        ]);
+
+        $post = new Post(\request(['title', 'image' ,'body']));
+
+        $post->save();
+
+        return redirect("/admin/posts/" . $post->id . "/edit");
+    }
+
     public function edit(Post $post)
     {
         return view("admin.posts.edit", compact("post"));
+    }
+
+    public function update(Post $post)
+    {
+        $this->validate(\request(), [
+            "title" => "required",
+            "body" => "required"
+        ]);
+
+        $post->update(\request(['title', 'image' ,'body']));
+
+        return redirect("/admin/posts/" . $post->id . "/edit");
+    }
+
+    public function delete(Post $post)
+    {
+        $post->delete();
+
+        return redirect("/admin/posts/");
     }
 
 }

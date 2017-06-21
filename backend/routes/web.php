@@ -28,8 +28,11 @@ Route::prefix('admin')
                 Route::get("/dashboard", "Admin\PageController@index");
                 Route::get("/logout", "Admin\PageController@logout");
                 Route::get("/posts", "Admin\PostController@index");
-                Route::get("/posts/{post}/edit", "Admin\PostController@edit");
                 Route::get("/posts/create", "Admin\PostController@create");
+                Route::post("/posts/create", "Admin\PostController@store");
+                Route::get("/posts/{post}/edit", "Admin\PostController@edit");
+                Route::post("/posts/{post}/edit", "Admin\PostController@update");
+                Route::get("/posts/{post}/delete", "Admin\PostController@delete");
                 Route::get("/projects", "Admin\PageController@projects");
                 Route::get("/projects/new", "Admin\PageController@projectsNew");
                 Route::get("/contacts", "Admin\ContactController@index");

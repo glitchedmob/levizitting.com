@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col s12">
                 <div class="card">
-                    <h1 class="center-align">Manage Posts</h1><a class="btn waves-effect" id="new-post" href="/admin/posts/new">New Post</a>
+                    <h1 class="center-align">Manage Posts</h1><a class="btn waves-effect" id="new-post" href="/admin/posts/create">Create Post</a>
                     <table class="display" id="posts-table">
                         <thead>
                         <tr>
