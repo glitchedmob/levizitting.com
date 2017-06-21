@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'PageController@index');
-Route::get('/blog', 'PageController@blog');
+Route::get('/blog', 'PostController@index');
+Route::get('/blog/{post}', 'PostController@show');
 Route::get('/projects', 'PageController@projects');
 Route::get('/about', 'PageController@about');
 Route::get('/contact', 'ContactController@index');
