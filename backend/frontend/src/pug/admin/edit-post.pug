@@ -1,0 +1,31 @@
+doctype html
+html
+	include _partials/_head.pug
+	body
+		include _partials/_nav.pug
+
+		#main
+			.container
+				.row.card
+					h1.center-align Edit Post
+					form.col.s12
+						.input-field.col.s12
+							input#title.validate(type='text' value="Post Title")
+							label(for='title') Title
+						.file-field.input-field.col.s12
+							.btn
+								span Featured Image
+								input(type='file')
+							.file-path-wrapper
+								input.file-path.validate(type='text')
+						.input-field.col.s12
+							#tags.chips.chips-placeholder.validate(type='text')
+						.input-field.col.s12
+							textarea#body.materialize-textarea.validate(type='email').
+								<p>Lorem ipsum dolor sit amet, per in labore eirmod rationibus. Ius at ubique delicatissimi, quo lorem paulo luptatum ut. Cibo rebum lucilius ad per, pri aeque interesset vituperatoribus an. Ex feugiat nominavi suscipiantur has, sea id dicat partem constituam. Et nec sumo autem verterem, te quod commodo mei.</p>
+
+								<p>Vis ad brute detraxit adipisci, sea assum ceteros disputando te. Mea no maiorum offendit facilisis, mei ex dicam labitur, ad omnis vocent sit. Ei eam enim periculis, id porro euismod propriae eam, quis scripta duo id. Ad quo solum impedit forensibus, vis mazim iuvaret platonem id. Nam suas unum decore cu, an diam elitr delectus duo, quem dolorem perpetua ad eam. Est ea imperdiet rationibus theophrastus, no mazim omnesque eum, persius accusata similique eam ei.</p>
+							label(for='body') Body
+						input.btn.waves-effect.right(type="submit" value="Create")
+
+		include _partials/_scripts.pug

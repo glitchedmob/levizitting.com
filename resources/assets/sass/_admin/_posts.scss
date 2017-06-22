@@ -1,0 +1,19 @@
+#posts-table {
+	a.btn {
+		float: right;
+	}
+}
+
+#new-post {
+	margin-left: 10px;
+}
+
+textarea#body {
+	height: 200px;
+}
+
+#delete-post {
+  position: absolute;
+  bottom: 0;
+  right: 150px;
+}
