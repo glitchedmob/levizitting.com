@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row card">
             <h1 class="center-align">Edit Post</h1>
-            <form class="col s12" method="POST" action="/admin/posts/{{ $post->id }}/edit">
+            <form class="col s12" method="POST" action="/admin/posts/{{ $post->slug }}/edit">
                 {{ csrf_field() }}
                 <div class="input-field col s12">
                     <input class="validate" id="title" type="text" value="{{ $post->title }}" name="title">
@@ -23,7 +23,10 @@
                     <label for="body">Body</label>
                 </div>
                 <input class="btn waves-effect right" type="submit" value="Update">
-                <a class="btn waves-effect red right" href="/admin/posts/{{ $post->id }}/delete"> Delete</a>
+            </form>
+            <form id="delete-post" method="POST" action="/admin/posts/{{ $post->slug }}/delete">
+                {{ csrf_field() }}
+                <input class="btn waves-effect red" type="submit" value="Delete" >
             </form>
         </div>
     </div>

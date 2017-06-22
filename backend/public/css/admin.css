@@ -9133,6 +9133,12 @@ textarea#body {
   height: 200px;
 }
 
+#delete-post {
+  position: absolute;
+  bottom: 0;
+  right: 150px;
+}
+
 #projects-table a.btn, #projects-table a.btn-large {
   float: right;
 }

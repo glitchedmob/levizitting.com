@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Post;
+use App\Log;
 
 class PostController extends Controller
 {
@@ -31,16 +33,18 @@ class PostController extends Controller
             "file" => "required"
         ]);
 
-        \request()
-            ->file("file")
-            ->storeAs("images/blog", \request("image"), ["disk" => "public"]);
-
+        $file = \request()->file("file");
+        if( !empty($file)) {
+            $file->storeAs("blog", \request("image"), ["disk" => "public"]);
+        }
 
         $post = new Post(\request(['title', 'image' ,'body']));
 
+        $post->slug = $this->generateSlug(\request('title'));
+
         $post->save();
 
-        return redirect("/admin/posts/" . $post->id . "/edit");
+        return redirect("/admin/posts/" . $post->slug . "/edit");
     }
 
     public function edit(Post $post)
@@ -56,20 +60,32 @@ class PostController extends Controller
             "image" => "required"
         ]);
 
-        \request()
-            ->file("file")
-            ->storeAs("images/blog", \request("image"), ["disk" => "public"]);
+        $file = \request()->file("file");
+        if( !empty($file)) {
+            $file->storeAs("blog", \request("image"), ["disk" => "public"]);
+        }
+
+        $post->slug = $this->generateSlug(\request('title'));
 
         $post->update(\request(['title', 'image' ,'body']));
 
-        return redirect("/admin/posts/" . $post->id . "/edit");
+        return redirect("/admin/posts/" . $post->slug . "/edit");
     }
 
     public function delete(Post $post)
     {
-        $post->delete();
+        if(Auth::check()) {
+            $post->delete();
+        }
 
         return redirect("/admin/posts/");
+    }
+
+    // Takes the title of a post, lower cases it, and replaces spaces with dashes
+    private function generateSlug($title)
+    {
+        $slug = strtolower($title);
+        return  str_replace(" ","-", $slug);
     }
 
 }

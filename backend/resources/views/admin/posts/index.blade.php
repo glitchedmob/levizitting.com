@@ -26,7 +26,7 @@
                                     <div class="chip">Backend</div>
                                 </td>
                                 <td>{{ $post->created_at }}</td>
-                                <td><a class="btn waves-effect" href="/admin/posts/{{ $post->id }}/edit">Edit</a></td>
+                                <td><a class="btn waves-effect" href="/admin/posts/{{ $post->slug }}/edit">Edit</a></td>
                             </tr>
                         @endforeach
                         </tbody>
