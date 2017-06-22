@@ -18,20 +18,4 @@ class PageController extends Controller
 
         return redirect("/admin/login");
     }
-
-
-    public function projects()
-    {
-        return view("admin.projects.index");
-    }
-
-    public function projectsNew()
-    {
-        return view("admin.projects.create");
-    }
-
-    public function contact()
-    {
-        return view("admin.contact");
-    }
 }

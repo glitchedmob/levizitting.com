@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row card">
             <h1 class="center-align">Edit Post</h1>
-            <form class="col s12" method="POST" action="/admin/posts/{{ $post->slug }}/edit">
+            <form class="col s12" method="POST" action="/admin/posts/{{ $post->slug }}/edit" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="input-field col s12">
                     <input class="validate" id="title" type="text" value="{{ $post->title }}" name="title">

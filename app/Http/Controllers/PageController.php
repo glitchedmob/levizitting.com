@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Project;
 
 class PageController extends Controller
 {
@@ -11,14 +12,11 @@ class PageController extends Controller
         return view('index');
     }
 
-    public function blog()
-    {
-        return view('blog');
-    }
-
     public function projects()
     {
-        return view('projects');
+        $projects = Project::latest()
+            ->get();
+        return view('projects', compact("projects"));
     }
 
     public function about()

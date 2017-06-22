@@ -43,6 +43,12 @@ body {
   }
 }
 
+#delete-item {
+  position: absolute;
+  bottom: 0;
+  right: 150px;
+}
+
 @import "_admin/login";
 @import "_admin/navbar";
 @import "_admin/posts";

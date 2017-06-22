@@ -5,28 +5,25 @@
         <div class="row">
             <div class="col s12">
                 <div class="card">
-                    <h1 class="center-align">Manage Projects</h1><a class="btn waves-effect" id="new-post" href="/admin/projects/new">New Project</a>
+                    <h1 class="center-align">Manage Projects</h1><a class="btn waves-effect" id="new-post" href="/admin/projects/create">New Project</a>
                     <table class="display" id="projects-table">
                         <thead>
                         <tr>
                             <th>ID</th>
                             <th>Title</th>
-                            <th>Tags</th>
                             <th>Published</th>
                             <th> </th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>First Post</td>
-                            <td>
-                                <div class="chip">Frontend						</div>
-                                <div class="chip">Backend	</div>
-                            </td>
-                            <td>06-16-2017</td>
-                            <td><a class="btn waves-effect" href="edit-post.html">Edit</a></td>
-                        </tr>
+                        @foreach($projects as $project)
+                            <tr>
+                                <td>{{ $project->id }}</td>
+                                <td>{{ $project->title }}</td>
+                                <td>{{ $project->created_at }}</td>
+                                <td><a class="btn waves-effect" href="/admin/projects/{{ $project->id }}/edit">Edit</a></td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

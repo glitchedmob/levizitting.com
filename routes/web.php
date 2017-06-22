@@ -34,8 +34,12 @@ Route::prefix('admin')
                 Route::get("/posts/{post}/edit", "Admin\PostController@edit");
                 Route::post("/posts/{post}/edit", "Admin\PostController@update");
                 Route::post("/posts/{post}/delete", "Admin\PostController@delete");
-                Route::get("/projects", "Admin\PageController@projects");
-                Route::get("/projects/new", "Admin\PageController@projectsNew");
+                Route::get("/projects", "Admin\ProjectController@index");
+                Route::get("/projects/create", "Admin\ProjectController@create");
+                Route::post("/projects/create", "Admin\ProjectController@store");
+                Route::get("/projects/{project}/edit", "Admin\ProjectController@edit");
+                Route::post("/projects/{project}/edit", "Admin\ProjectController@update");
+                Route::post("/projects/{project}/delete", "Admin\ProjectController@delete");
                 Route::get("/contacts", "Admin\ContactController@index");
                 Route::get("/contacts/{contact}", "Admin\ContactController@show");
             });
