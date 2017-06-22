@@ -6,7 +6,7 @@
             <div class="card large post">
                 <div class="card-image"><img src="/images/blog/{{ $post->image }}"></div>
                 <div class="card-content"><span class="card-title">{{ $post->title }}</span>
-                    <p class="post-meta"><span class="published">Published: </span>May 21, 2017</p>
+                    <p class="post-meta"><span class="published">Published: </span> {{ $post->created_at->toFormattedDateString() }} </p>
                     <p class="post-body flow-text">{{  substr(strip_tags($post->body), 0, 200).'...' }}</p>
                     <div class="read-more"><a class="btn waves-effect" href="/blog/{{  $post->slug }}">Read More...</a></div>
                 </div>

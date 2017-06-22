@@ -10,13 +10,36 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::latest()
-            ->paginate(1);
+            ->paginate(5);
 
-        return view("posts.index", compact("posts"));
+        $latest = $this->latest(5);
+        $popular = $this->popular(5);
+
+        return view("posts.index", compact("posts", "latest", "popular"));
     }
 
     public function show(Post $post)
     {
-        return view("posts.show", compact("post"));
+        $latest = $this->latest(5);
+        $popular = $this->popular(5);
+
+        $post->increment("view_count");
+
+        return view("posts.show", compact("post", "latest", "popular"));
     }
+
+    private function latest($limit)
+    {
+        return Post::latest()
+            ->limit($limit)
+            ->get();
+    }
+
+    private function popular($limit)
+    {
+        return Post::orderBy('view_count', 'desc')
+            ->limit($limit)
+            ->get();
+    }
+
 }
