@@ -1,20 +1,32 @@
 @import "materialize";
 
 body, html {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-	background: color("blue-grey", "lighten-5");
+  background: color("blue-grey", "lighten-5");
 }
 
 .modal-footer {
-	z-index: -1;
+  z-index: -1;
 }
 
 $small-height-screens: 650px;
 
+.cta-buttons {
+  .btn {
+    margin: 10px;
+    width: 140px;
+
+    @media(max-height: $small-height-screens) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@import "_partials/404";
 @import "_partials/navbar";
 @import "_partials/footer";
 @import "_partials/home";

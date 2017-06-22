@@ -25,17 +25,6 @@
 		font-weight: 200;
 	}
 
-	.cta-buttons {
-		.btn {
-			margin: 10px;
-			width: 140px;
-
-			@media(max-height: $small-height-screens) {
-				margin-bottom: 0;
-			}
-		}
-	}
-
 	@media(max-height: $small-height-screens) {
 		margin-top: 100px;
 	}

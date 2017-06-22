@@ -1,0 +1,18 @@
+doctype html
+html
+	include _partials/_head.pug
+	body
+	
+		#error-404.blue.darken-2.valign-wrapper
+			.container.white-text.center-align
+				h1 404
+				h4 Whoops, that's an error
+				h5 Maybe you were looking for some of these pages
+				.row.align-center.cta-buttons
+					.col.s12.m6.l3.offset-l3
+						a.btn.waves-effect(href="blog.html") Home
+					.col.s12.m6.l3
+						a.btn.waves-effect(href="projects.html") Blog
+					
+
+		include _partials/_scripts.pug

@@ -8789,6 +8789,30 @@ body {
   z-index: -1;
 }
 
+.cta-buttons .btn, .cta-buttons .btn-large {
+  margin: 10px;
+  width: 140px;
+}
+
+@media (max-height: 650px) {
+  .cta-buttons .btn, .cta-buttons .btn-large {
+    margin-bottom: 0;
+  }
+}
+
+#error-404 {
+  width: 100%;
+  height: 100%;
+}
+
+#error-404 h1 {
+  font-size: 11em;
+}
+
+#error-404 .cta-buttons {
+  margin-top: 30px;
+}
+
 .brand-first-name {
   font-weight: 200;
 }
@@ -8919,17 +8943,6 @@ body {
 #home-profile-card p {
   font-size: 22px;
   font-weight: 200;
-}
-
-#home-profile-card .cta-buttons .btn, #home-profile-card .cta-buttons .btn-large {
-  margin: 10px;
-  width: 140px;
-}
-
-@media (max-height: 650px) {
-  #home-profile-card .cta-buttons .btn, #home-profile-card .cta-buttons .btn-large {
-    margin-bottom: 0;
-  }
 }
 
 @media (max-height: 650px) {
