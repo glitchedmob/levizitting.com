@@ -15,8 +15,8 @@
         <h4>Whoops, that's an error</h4>
         <h5>Maybe you were looking for some of these pages</h5>
         <div class="row align-center cta-buttons">
-            <div class="col s12 m6 l3 offset-l3"><a class="btn waves-effect" href="blog.html">Home</a></div>
-            <div class="col s12 m6 l3"><a class="btn waves-effect" href="projects.html">Blog</a></div>
+            <div class="col s12 m6 l3 offset-l3"><a class="btn waves-effect" href="/">Home</a></div>
+            <div class="col s12 m6 l3"><a class="btn waves-effect" href="/blog">Blog</a></div>
         </div>
     </div>
 </div>

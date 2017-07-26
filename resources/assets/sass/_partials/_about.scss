@@ -1,7 +1,7 @@
 #about {
 	margin-top: 20px;
 	.card-content {
-		p {
+		p.flow-text {
 			font-weight: 300;
 			font-size: 1.2em;
 			margin: 20px 0;
@@ -30,4 +30,11 @@
 		font-size: 3em;
 		font-weight: 300;
 	}
+}
+
+.skill {
+  padding: 0 5px;
+  p {
+    margin: 0;
+  }
 }

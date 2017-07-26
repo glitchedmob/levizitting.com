@@ -14,10 +14,161 @@
                         <div class="card-content">
                             <h3 class="center-align">About me</h3>
                             <hr>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue interdum velit. Sed risus pretium quam vulputate dignissim suspendisse in est ante. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Pulvinar etiam non quam lacus suspendisse faucibus. Nisl tincidunt eget nullam non nisi. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. At tempor commodo ullamcorper a lacus. Nisl purus in mollis nunc sed id semper risus in. Condimentum vitae sapien pellentesque habitant morbi tristique. Dignissim enim sit amet venenatis urna cursus eget nunc. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt. Nulla facilisi nullam vehicula ipsum a. Volutpat lacus laoreet non curabitur. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Turpis massa tincidunt dui ut ornare lectus sit amet. Sit amet commodo nulla facilisi nullam vehicula ipsum.</p>
-                            <p>
-                                Quis blandit turpis cursus in hac habitasse. In vitae turpis massa sed. Sagittis eu volutpat odio facilisis. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Feugiat pretium nibh ipsum consequat nisl vel pretium. Donec pretium vulputate sapien nec sagittis aliquam. Nibh tortor id aliquet lectus proin nibh. Bibendum ut tristique et egestas. Arcu cursus euismod quis viverra nibh. Massa ultricies mi quis hendrerit. Ullamcorper eget nulla facilisi etiam dignissim diam. Sollicitudin ac orci phasellus egestas tellus rutrum. Magna eget est lorem ipsum dolor sit.
+                            <p class="flow-text">
+                                Hello, my name is Levi Zitting.
+                                I'm an excited, young professional, trying to become excellent in the craft of software development.
+                                I first started writing code over 5 years ago, and ever since then I've been learning as much as I possibly can about the industry.
+                                Although I'm extremely interested in just about every aspect of computer programming, I've decided to first focus on the web development space.
+                                The web is where so many of us spend vast amounts of time, so why not help others have an amazing experience using it.
                             </p>
+                            <h3 class="center-align">What Can I Do?</h3>
+                            <hr>
+                            <h4>Skills</h4>
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <div class="skill">
+                                        <p>HTML</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>CSS</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>Bootstrap 3/4</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>Sass</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>Javascript</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>Jquery</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>PHP</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6">
+                                    <div class="skill">
+                                        <p>Node.js/NPM</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>Laravel</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>MySQL</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>OOP</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>C</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 50%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>C++</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 45%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Tools</h4>
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <div class="skill">
+                                        <p>Git</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>GitHub</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>BitBucket</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>Visual Studio Code</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>PHPStorm</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6">
+                                    <div class="skill">
+                                        <p>Gulp</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>Webpack</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>Linux command line</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <p>Powershell</p>
+                                        <div class="progress">
+                                            <div class="determinate" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
