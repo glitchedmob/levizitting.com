@@ -8957,9 +8957,22 @@ body {
   z-index: -1;
 }
 
+.cta-buttons {
+  text-align: center;
+  display: inline-block;
+}
+
 .cta-buttons .btn, .cta-buttons .btn-large {
   margin: 10px;
   width: 140px;
+}
+
+@media only screen and (max-width: 600px) {
+  .cta-buttons .btn, .cta-buttons .btn-large {
+    margin-bottom: 0;
+    width: 120px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-height: 650px) {
@@ -8975,10 +8988,6 @@ body {
 
 #error-404 h1 {
   font-size: 11em;
-}
-
-#error-404 .cta-buttons {
-  margin-top: 30px;
 }
 
 .brand-first-name {
@@ -9080,48 +9089,64 @@ body {
   background-size: cover;
 }
 
+@media only screen and (max-width: 600px) {
+  #home-header {
+    min-height: 100%;
+    height: auto;
+  }
+}
+
 #home-profile-card {
   padding: 0 10px 20px 10px;
 }
 
+@media only screen and (max-width: 600px) {
+  #home-profile-card {
+    padding: 0 10px 10px 10px;
+  }
+}
+
+@media (max-width: 438px) {
+  #home-profile-card {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 262px) {
+  #home-profile-card {
+    margin-top: 85px;
+  }
+}
+
 #home-profile-card h1 {
+  font-weight: 200;
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+#home-profile-card p {
+  font-size: 1.6rem;
   font-weight: 200;
 }
 
 @media only screen and (max-width: 600px) {
-  #home-profile-card h1 {
-    font-size: 34px;
-  }
-}
-
-@media (max-height: 650px) {
-  #home-profile-card h1 {
-    font-size: 2.5em;
-    margin-top: 0;
-  }
-}
-
-#home-profile-card p {
-  font-size: 22px;
-  font-weight: 200;
-}
-
-@media (max-height: 650px) {
-  #home-profile-card {
-    margin-top: 100px;
+  #home-profile-card p {
+    font-size: 1.3rem;
   }
 }
 
 #home-profile-img {
   height: 250px;
   border-radius: 125px;
-  margin-top: -105px;
   border: 10px solid white;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 600px) {
   #home-profile-img {
-    height: 175px;
+    height: 150px;
+    margin-top: -80px;
+    border-width: 5px;
   }
 }
 

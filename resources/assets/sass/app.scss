@@ -16,9 +16,17 @@ body {
 $small-height-screens: 650px;
 
 .cta-buttons {
+  text-align: center;
+  display: inline-block;
   .btn {
     margin: 10px;
     width: 140px;
+
+    @media #{$small-and-down} {
+      margin-bottom: 0;
+      width: 120px;
+      font-size: 1rem;
+    }
 
     @media(max-height: $small-height-screens) {
       margin-bottom: 0;

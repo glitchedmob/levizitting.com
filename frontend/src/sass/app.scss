@@ -15,19 +15,6 @@ body {
 
 $small-height-screens: 650px;
 
-.cta-buttons {
-	.btn {
-		margin: 10px;
-		width: 140px;
-
-		@media(max-height: $small-height-screens) {
-			margin-bottom: 0;
-		}
-	}
-}
-
-
-
 @import "_partials/404";
 @import "_partials/navbar";
 @import "_partials/footer";
