@@ -24,9 +24,9 @@
                 </div>
                 <input class="btn waves-effect right" type="submit" value="Update">
             </form>
-            <form id="delete-post" method="POST" action="/admin/posts/{{ $post->slug }}/delete">
+            <form method="POST" action="/admin/posts/{{ $post->slug }}/delete" id="delete-item">
                 {{ csrf_field() }}
-                <input class="btn waves-effect red" type="submit" value="Delete" >
+                <input class="btn waves-effect red" type="submit" value="Delete">
             </form>
         </div>
     </div>
