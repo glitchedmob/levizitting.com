@@ -5,7 +5,7 @@
         <div class="row">
             @foreach($projects as $project)
                 <div class="col m6">
-                    <div class="card large">
+                    <div class="card small">
                         <div class="card-image"><img src="/images/projects/{{ $project->image }}"><span class="card-title">{{ $project->title }}</span></div>
                         <div class="card-content">
                             <p>{{ $project->description }}</p>
