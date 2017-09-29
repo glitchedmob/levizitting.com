@@ -2,7 +2,7 @@
   margin: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/atlanta.jpg");
+  background-image: url("/images/atlanta.jpg");
   background-size: cover;
 
   @media #{$small-and-down} {
@@ -13,6 +13,32 @@
 
 #home-profile-card {
   padding: 0 10px 20px 10px;
+  display: flex;
+  align-items: center;
+
+  @media #{$small-and-down} {
+    display: block;
+  }
+
+  .header {
+    flex-basis: 50%;
+    img {
+      height: 250px;
+      border-radius: 125px;
+      border: 10px solid white;
+      margin-top: 20px;
+
+      @media #{$small-and-down} {
+        height: 150px;
+        margin-top: -80px;
+        border-width: 5px;
+      }
+    }
+  }
+
+  .description {
+    flex-basis: 50%;
+  }
 
   @media #{$small-and-down} {
     padding: 0 10px 10px 10px;
@@ -38,18 +64,5 @@
     @media #{$small-and-down} {
       font-size: 1.3rem;
     }
-  }
-}
-
-#home-profile-img {
-  height: 250px;
-  border-radius: 125px;
-  border: 10px solid white;
-  margin-top: 20px;
-
-  @media #{$small-and-down} {
-    height: 150px;
-    margin-top: -80px;
-    border-width: 5px;
   }
 }

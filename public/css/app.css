@@ -9085,7 +9085,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/atlanta.jpg");
+  background-image: url("/images/atlanta.jpg");
   background-size: cover;
 }
 
@@ -9098,6 +9098,43 @@ body {
 
 #home-profile-card {
   padding: 0 10px 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #home-profile-card {
+    display: block;
+  }
+}
+
+#home-profile-card .header {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+#home-profile-card .header img {
+  height: 250px;
+  border-radius: 125px;
+  border: 10px solid white;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  #home-profile-card .header img {
+    height: 150px;
+    margin-top: -80px;
+    border-width: 5px;
+  }
+}
+
+#home-profile-card .description {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -9132,21 +9169,6 @@ body {
 @media only screen and (max-width: 600px) {
   #home-profile-card p {
     font-size: 1.3rem;
-  }
-}
-
-#home-profile-img {
-  height: 250px;
-  border-radius: 125px;
-  border: 10px solid white;
-  margin-top: 20px;
-}
-
-@media only screen and (max-width: 600px) {
-  #home-profile-img {
-    height: 150px;
-    margin-top: -80px;
-    border-width: 5px;
   }
 }
 
