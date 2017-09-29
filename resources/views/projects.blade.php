@@ -3,21 +3,25 @@
 @section("content")
     <div class="container">
         <div class="row">
-            <div class="col m10 offset-m1">
-                @foreach($projects as $project)
-                    <div class="col m6">
-                        <div class="card small">
-                            <div class="card-image"><img src="/images/projects/{{ $project->image }}"><span class="card-title">{{ $project->title }}</span></div>
-                            <div class="card-content">
-                                <p>{{ $project->description }}</p>
+            <div class="col m10 offset-m1 s12 offset-s0">
+                @foreach($projects->chunk(2) as $chuckedProjects)
+                    <div class="row">
+                        @foreach($chuckedProjects as $project)
+                            <div class="col m6 s12">
+                                <div class="project" style="background-image: url('/images/projects/{{ $project->image }}');">
+                                    <div class="dark-panel" tabindex="0">
+                                        <div class="title">
+                                            <h4>{{ $project->title }}</h4>
+                                        </div>
+                                        <div class="body">
+                                            {!! $project->body !!}
+                                        </div>
+                                    </div>
+                                    <i class="material-icons arrow-icon" aria-hidden="true">arrow_upward</i>
+                                    <div class="un-focuser" tabindex="0"></div>
+                                </div>
                             </div>
-                            <div class="card-action"><a href="#" class="modal-trigger waves-effect center-align teal-text lighten-2-text" data-target="modal{{ $project->id }}">Learn More</a></div>
-                            <!-- Modal Structure-->
-                            <div class="modal modal-fixed-footer" id="modal{{ $project->id }}">
-                                <div class="modal-content project-content">{!! $project->body !!}</div>
-                                <div class="modal-footer"><a class="modal-action modal-close waves-effect btn-flat" href="#!">Close</a></div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 @endforeach
             </div>

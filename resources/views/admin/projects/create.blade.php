@@ -10,10 +10,6 @@
                     <input class="validate" id="title" type="text" name="title">
                     <label for="title">Title</label>
                 </div>
-                <div class="input-field col s12">
-                    <input class="validate" id="description" type="text" name="description">
-                    <label for="description">Description</label>
-                </div>
                 <div class="file-field input-field col s12">
                     <div class="btn"><span>Image</span>
                         <input type="file" name="file">

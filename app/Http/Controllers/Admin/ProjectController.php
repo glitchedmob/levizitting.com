@@ -26,7 +26,6 @@ class ProjectController extends Controller
     {
         $this->validate(\request(), [
             "title" => "required",
-            "description" => "required",
             "body" => "required",
             "image" => "required",
             "file" => "required"
@@ -37,7 +36,7 @@ class ProjectController extends Controller
             $file->storeAs("projects", \request("image"), ["disk" => "public"]);
         }
 
-        $project = new Project(\request(["title", "description", "image", "body"]));
+        $project = new Project(\request(["title", "image", "body"]));
 
         $project->save();
 
@@ -53,7 +52,6 @@ class ProjectController extends Controller
     {
         $this->validate(\request(), [
             "title" => "required",
-            "description" => "required",
             "body" => "required",
             "image" => "required"
         ]);
@@ -63,7 +61,7 @@ class ProjectController extends Controller
             $file->storeAs("projects", \request("image"), ["disk" => "public"]);
         }
 
-        $project->update(\request(["title", "description", "image", "body"]));
+        $project->update(\request(["title", "image", "body"]));
 
         return redirect("/admin/projects/" . $project->id . "/edit");
     }

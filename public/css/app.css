@@ -9231,6 +9231,99 @@ body {
   width: 100%;
 }
 
+.project {
+  height: 260px;
+  width: 100%;
+  margin-top: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  box-shadow: 1px 9px 20px 0px rgba(50, 50, 50, 0.4);
+  position: relative;
+}
+
+.project:hover .dark-panel, .project:focus .dark-panel {
+  top: 200px;
+}
+
+.project .arrow-icon {
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  color: #FFF;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 8px;
+  right: 20px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.project .un-focuser {
+  transition: bottom;
+  transition-delay: 0.7s;
+  position: absolute;
+  bottom: -50px;
+  right: 20px;
+  width: 3rem;
+  height: 3rem;
+  z-index: 11;
+}
+
+.project .un-focuser:focus {
+  outline: none;
+}
+
+.project .dark-panel {
+  transition: top 0.7s;
+  position: relative;
+  top: 205px;
+  width: 100%;
+  height: 120%;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.66);
+}
+
+.project .dark-panel .title h4 {
+  margin-left: 20px;
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+.project .dark-panel .body h3 {
+  padding: 20px;
+}
+
+.project .dark-panel .body p {
+  padding: 20px;
+  font-size: 18px;
+}
+
+.project .dark-panel .body a {
+  font-weight: bold;
+}
+
+.project .dark-panel .body a:hover, .project .dark-panel .body a:focus {
+  color: #337AB7;
+  cursor: pointer;
+}
+
+.project .dark-panel:hover, .project .dark-panel:focus {
+  top: 0px;
+  outline: none;
+}
+
+.project .dark-panel:hover + .arrow-icon, .project .dark-panel:focus + .arrow-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.project .dark-panel:focus ~ .un-focuser {
+  bottom: 8px;
+}
+
 #about {
   margin-top: 20px;
 }
