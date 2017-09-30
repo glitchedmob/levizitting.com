@@ -71,22 +71,14 @@
 
     .body {
       padding: 10px;
-      h3 {
-        padding: 20px;
-      }
 
-      p {
-        padding: 20px;
-        font-size: 18px;
+      .buttons {
+        margin-top: 20px;
+        text-align: center;
       }
 
       a {
-        font-weight: bold;
-        &:hover,
-        &:focus {
-          color: #337AB7;
-          cursor: pointer;
-        }
+        margin: 0 5px;
       }
     }
 
