@@ -2,9 +2,9 @@
     <ul class="pagination center-align">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
-            <li class="disabled"><i class="material-icons">chevron_left</i></li>
+            <li class="disabled pagination-arrow"><i class="material-icons">chevron_left</i></li>
         @else
-            <li><a href="{{ $paginator->previousPageUrl() }}" rel="prev"><i class="material-icons">chevron_left</i></a></li>
+            <li class="pagination-arrow"><a href="{{ $paginator->previousPageUrl() }}" rel="prev"><i class="material-icons">chevron_left</i></a></li>
         @endif
 
         {{-- Pagination Elements --}}
@@ -28,9 +28,9 @@
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <li><a href="{{ $paginator->nextPageUrl() }}" rel="next"><i class="material-icons">chevron_right</i></a></li>
+            <li class="pagination-arrow"><a href="{{ $paginator->nextPageUrl() }}" rel="next"><i class="material-icons">chevron_right</i></a></li>
         @else
-            <li class="disabled"><i class="material-icons">chevron_right</i></li>
+            <li class="disabled pagination-arrow"><i class="material-icons">chevron_right</i></li>
         @endif
     </ul>
 @endif

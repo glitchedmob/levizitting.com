@@ -70,6 +70,7 @@
     }
 
     .body {
+      padding: 10px;
       h3 {
         padding: 20px;
       }
@@ -100,7 +101,7 @@
 
     }
 
-    // This is where the unfucoser covers the arrow
+    // This is where the unfocuser covers the arrow
     &:focus {
       & ~ .un-focuser {
         bottom: 8px;

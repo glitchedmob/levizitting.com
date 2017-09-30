@@ -1,4 +1,4 @@
-<div class="col s12 m3 offset-m1">
+<div class="col s12 m4">
     <div class="card sidebar">
         <div class="card-content">
             <h5>Recent Posts</h5>
