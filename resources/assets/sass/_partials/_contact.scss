@@ -1,33 +1,34 @@
 #contact {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  min-height: 100vh;
 
-	@media(max-height: $small-height-screens) {
-		margin-top: 20px;
-	}
+  @media(max-height: $small-height-screens) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-	.card {
-		padding: 10px;
-		h1 {
-			font-size: 2.7em;
-			font-weight: 300;
-		}
+  .card {
+    padding: 10px;
+    h1 {
+      font-size: 2.7em;
+      font-weight: 300;
+    }
 
-		p {
-			font-weight: 200;
-		}
+    p {
+      font-weight: 200;
+    }
 
-		hr {
-			width: 70%;
-			border-width: 3px;
-		}
-	}
+    hr {
+      width: 70%;
+      border-width: 3px;
+    }
+  }
 }
 
 #email-icon {
-	position: relative;
-	top: 15px;
-	margin-left: 10px;
+  position: relative;
+  top: 15px;
+  margin-left: 10px;
 }
 
 #contact-thank-you {

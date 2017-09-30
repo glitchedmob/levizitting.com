@@ -7,7 +7,7 @@
                 <div class="col l12">
                     <div class="card white center-align" id="home-profile-card">
                         <div class="header">
-                            <img src="/images/profile.jpg">
+                            <img src="/images/profile-2.jpg">
                             <h1>Levi Zitting</h1></div>
                         <div class="description">
                             <p>I am a programmer, creator, and life long learner</p>

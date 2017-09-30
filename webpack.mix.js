@@ -15,9 +15,9 @@ mix.options({
     processCssUrls: false
 });
 
-mix.webpackConfig({ devtool: "inline-source-map" })
+mix.webpackConfig()
     .js('resources/assets/js/app.js', 'public/js')
     .js('resources/assets/js/admin.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css', { sourceMap: true, sourceMapEmbed: true })
+    .sass('resources/assets/sass/app.scss', 'public/css')
     .sass('resources/assets/sass/admin.scss', 'public/css')
     .sourceMaps();
