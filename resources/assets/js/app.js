@@ -1,5 +1,5 @@
 var $ = window.jQuery =  require('jquery');
-require('./materialize/bin/materialize.js');
+require('materialize-css');
 
 
 

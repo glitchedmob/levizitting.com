@@ -1,9 +1,9 @@
 var $ = window.jQuery = require('jquery');
-require("./datatables.js");
-require('./materialize/bin/materialize.js');
+require('datatables.net');
+require('materialize-css');
 
 $(document).ready(function () {
-    $(".button-collapse").sideNav();
+    $('.button-collapse').sideNav();
     $('#posts-table').DataTable();
     $('#projects-table').DataTable();
     $('#tags').material_chip({
