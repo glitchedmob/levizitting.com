@@ -3,7 +3,7 @@
 <head>
     <title>Levi Zitting - Admin</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/css/admin.css">
+    <link type="text/css" rel="stylesheet" href="{{ mix('/css/admin.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1976D2">
     <meta name="msapplication-navbutton-color" content="#1976D2">
@@ -19,6 +19,8 @@
     @yield("content")
 </div>
 
-<script type="text/javascript" src="/js/admin.js"></script>
+<script type="text/javascript" src="{{ mix('/js/manifest.js') }}"></script>
+<script type="text/javascript" src="{{ mix('/js/vendor.js') }}"></script>
+<script type="text/javascript" src="{{ mix('/js/admin.js') }}"></script>
 </body>
 </html>
