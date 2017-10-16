@@ -1,5 +1,9 @@
 @extends("layouts.blog-layout")
 
+@section('title', $post->title)
+@section('share-title', $post->title)
+@section('share-image', "https://levizitting.com/images/blog/{$post->image}")
+
 @section("content")
     <div class="col s12 m8 posts">
         <div class="card post">
