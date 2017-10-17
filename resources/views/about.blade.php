@@ -169,6 +169,26 @@
                                     </div>
                                 </div>
                             </div>
+                            <h3 class="center-align">What Others Have Said</h3>
+                            <hr>
+                            <div class="row endorsement valign-wrapper">
+                                <div class="col s12 m12 l4">
+                                    <img src="/images/dougbradshaw.jpg" alt="Douglas Bradshaw" class="profile-img">
+                                </div>
+                                <div class="col s12 m12 l8">
+                                    <p class="flow-text">"Levi is very talented. Any project I gave him I had confidence that it would get done in the manner that I wanted. My customers loved him, he was kind and patient with the public."</p>
+                                    <p>Douglas Bradshaw - CEO of Click Computers Inc.</p>
+                                </div>
+                            </div>
+                            <div class="row endorsement valign-wrapper">
+                                <div class="col s12 m12 l4">
+                                    <img src="/images/josephssempala.jpg" alt="Joseph Ssempala" class="profile-img">
+                                </div>
+                                <div class="col s12 m12 l8">
+                                    <p class="flow-text">"We found Levi to be very knowledgeable, professional and co-operative throughout the course of each project. Additionally, after completions, he has been exceptionally responsive in addressing any minor issues associated with the projects. We look forward to working with him more in future."</p>
+                                    <p>Joseph Ssempala - CEO of Ssemco Technolgies</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -24,7 +24,7 @@ class PostController extends Controller
         if(!$post->published) {
             abort(404);
         }
-        
+
         $latest = Post::recent(5);
         $popular = Post::popular(5);
 
