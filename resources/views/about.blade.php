@@ -173,7 +173,7 @@
                             <hr>
                             <div class="row endorsement valign-wrapper">
                                 <div class="col s12 m12 l4">
-                                    <img src="/images/dougbradshaw.jpg" alt="Douglas Bradshaw" class="profile-img">
+                                    <img src="/images/dougbradshaw.jpg" alt="Douglas Bradshaw" class="profile-img z-depth-4">
                                 </div>
                                 <div class="col s12 m12 l8">
                                     <p class="flow-text">"Levi is very talented. Any project I gave him I had confidence that it would get done in the manner that I wanted. My customers loved him, he was kind and patient with the public."</p>
@@ -182,7 +182,7 @@
                             </div>
                             <div class="row endorsement valign-wrapper">
                                 <div class="col s12 m12 l4">
-                                    <img src="/images/josephssempala.jpg" alt="Joseph Ssempala" class="profile-img">
+                                    <img src="/images/josephssempala.jpg" alt="Joseph Ssempala" class="profile-img z-depth-4">
                                 </div>
                                 <div class="col s12 m12 l8">
                                     <p class="flow-text">"We found Levi to be very knowledgeable, professional and co-operative throughout the course of each project. Additionally, after completions, he has been exceptionally responsive in addressing any minor issues associated with the projects. We look forward to working with him more in future."</p>

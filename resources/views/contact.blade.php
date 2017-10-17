@@ -6,14 +6,17 @@
             <div class="row">
                 <div class="col s12 m12 l8 offset-l2 card">
                     <div class="center-align">
-                        <h1>
-                            Contact Me<i class="medium material-icons" id="email-icon">email</i></h1>
-                        <p class="flow-text">
-                            Whether you are trying to get a hold of me for feedback, an employment opportunity, or just to chat, I appriciate it all.
-                            Except spam. I hate that stuff.
-                        </p>
+                        <h1>Contact Me</h1>
                         <hr>
+                        <p class="flow-text">
+                            Whether you're trying to get a hold of me for feedback, an employment opportunity, or just to chat, feel free to shoot me an email. Unless you send spam, I hate that stuff
+                        </p>
+                        <h3><i class="medium material-icons" id="email-icon">email</i>: <a href="mailto:me@levizitting">me@levizitting.com</a></h3>
+                        <br>
+                        <br>
+                        <h4>Contact forms more of your thing?</h4>
                     </div>
+
                     <form method="POST" action="/contact">
                         {{ csrf_field() }}
                         <div class="input-field col s6">
