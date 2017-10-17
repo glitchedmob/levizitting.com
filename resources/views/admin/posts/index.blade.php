@@ -12,6 +12,7 @@
                             <th>ID</th>
                             <th>Title</th>
                             <th>Views</th>
+                            <th>Date</th>
                             <th>Published</th>
                             <th> </th>
                         </tr>
@@ -23,6 +24,7 @@
                                 <td>{{ $post->title }}</td>
                                 <td>{{ $post->view_count }}</td>
                                 <td>{{ $post->created_at }}</td>
+                                <td>{{ $post->published ? 'Yes' : 'No'  }}</td>
                                 <td><a class="btn waves-effect" href="/admin/posts/{{ $post->slug }}/edit">Edit</a></td>
                             </tr>
                         @endforeach

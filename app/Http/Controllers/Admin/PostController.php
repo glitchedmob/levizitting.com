@@ -25,6 +25,7 @@ class PostController extends Controller
 
     public function store()
     {
+
         $this->validate(\request(), [
             "title" => "required",
             "body" => "required",
@@ -40,6 +41,7 @@ class PostController extends Controller
         $post = new Post(\request(['title', 'image' ,'body']));
 
         $post->slug = $this->generateSlug(\request('title'));
+        $post->published = \request('published') !== null ? 1 : 0;
 
         $post->save();
 
@@ -65,6 +67,7 @@ class PostController extends Controller
         }
 
         $post->slug = $this->generateSlug(\request('title'));
+        $post->published = \request('published') !== null ? 1 : 0;
 
         $post->update(\request(['title', 'image' ,'body']));
 
