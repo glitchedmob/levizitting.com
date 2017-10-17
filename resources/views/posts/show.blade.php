@@ -1,3 +1,4 @@
+
 @extends("layouts.blog-layout")
 
 @section('title', $post->title)
