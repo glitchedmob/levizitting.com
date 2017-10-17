@@ -10,7 +10,7 @@
                             <img src="/images/profile-2.jpg">
                             <h1>Levi Zitting</h1></div>
                         <div class="description">
-                            <p>I am a programmer, creator, and life long learner</p>
+                            <p>I am a programmer and creator</p>
                             <p>Welcome to my website.<br>While you're here check out some of the stuff I've been working on</p>
                             <div class="cta-buttons">
                                 <div class="row">
