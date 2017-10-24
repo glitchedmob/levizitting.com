@@ -20,14 +20,16 @@ class Post extends Model
 
     public static function recent($limit)
     {
-        return static::latest()
+        return static::published()
+            ->latest()
             ->limit($limit)
             ->get();
     }
 
     public  static function popular($limit)
     {
-        return static::orderBy('view_count', 'desc')
+        return static::published()
+            ->orderBy('view_count', 'desc')
             ->limit($limit)
             ->get();
     }
