@@ -18,8 +18,8 @@ mix.options({
 
 mix.sourceMaps()
 	.version()
-	.js('resources/assets/js/app.js', 'public/js')
-	.extract(['jquery', 'materialize-css'])
-	.js('resources/assets/js/admin.js', 'public/js')
-	.sass('resources/assets/sass/app.scss', 'public/css')
-	.sass('resources/assets/sass/admin.scss', 'public/css');
+	.ts('resources/assets/js/app.ts', 'public/js')
+    .extract(['material-design-lite'])
+	// .js('resources/assets/js/admin.js', 'public/js')
+	.stylus('resources/assets/stylus/app.styl', 'public/css');
+	// .sass('resources/assets/sass/admin.scss', 'public/css');
