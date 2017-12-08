@@ -48,7 +48,7 @@
     <main>
         {{--@include("layouts.nav")--}}
 
-        {{--@yield("main")--}}
+        @yield("main")
     </main>
 
 @include("layouts.footer")
