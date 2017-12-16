@@ -1,5 +1,5 @@
 <template>
-	
+	<h1>Hello World</h1>
 </template>
 
 <script lang="ts">
@@ -12,3 +12,7 @@ export default class Home extends Vue {
 }
 </script>
 
+<style lang="stylus" scoped>
+	h1
+		font-size 20px
+</style>
