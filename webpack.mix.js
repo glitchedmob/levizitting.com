@@ -18,8 +18,5 @@ mix.options({
 
 mix.sourceMaps()
 	.version()
-	.js('resources/assets/js/app.js', 'public/js')
-	.extract(['jquery', 'materialize-css'])
-	.js('resources/assets/js/admin.js', 'public/js')
-	.sass('resources/assets/sass/app.scss', 'public/css')
-	.sass('resources/assets/sass/admin.scss', 'public/css');
+	.ts('resources/assets/ts/main.ts', 'public/js')
+	.extract(['vue', 'vue-router'])
