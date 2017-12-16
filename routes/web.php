@@ -12,12 +12,12 @@
 */
 
 Route::get('/', 'PageController@index');
-Route::get('/blog', 'PostController@index');
-Route::get('/blog/{post}', 'PostController@show');
-Route::get('/projects', 'PageController@projects');
-Route::get('/about', 'PageController@about');
-Route::get('/contact', 'ContactController@index');
-Route::post('/contact', 'ContactController@store');
+Route::get('/blog', 'PageController@index');
+Route::get('/blog/{post}', 'PageController@index');
+Route::get('/projects', 'PageController@index');
+Route::get('/about', 'PageController@index');
+Route::get('/contact', 'PageController@index');
+Route::post('/contact', 'PageController@index');
 
 
 Route::prefix('admin')

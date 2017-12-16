@@ -1,6 +1,10 @@
+
 declare module '*.vue' {
-  import Vue from 'vue'
+	import Vue from 'vue'
   export default Vue
 }
 
-declare module 'vuetify/es5/components/Vuetify';
+declare module 'vuetify';
+
+declare module 'vue-meta';
+
