@@ -1,5 +1,7 @@
 <template>
-	<h1>Hello World</h1>
+	<v-container fluid class="home-header">
+
+	</v-container>
 </template>
 
 <script lang="ts">
@@ -13,6 +15,8 @@ export default class Home extends Vue {
 </script>
 
 <style lang="stylus" scoped>
-	h1
-		font-size 20px
+.home-header
+	min-height 100vh
+	background-image url('../../images/atlanta.jpg')
+	background-size cover
 </style>

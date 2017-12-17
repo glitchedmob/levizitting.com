@@ -1,6 +1,12 @@
 <template>
-	<div class="navigation">
-		<v-navigation-drawer fixed v-model="drawer" app clipped hide-overlay>
+	<div>
+		<v-navigation-drawer
+			class="hidden-md-and-up"
+			v-model="drawer"
+			fixed
+			app
+			clipped
+			hide-overlay>
 			<v-list>
 				<v-list-tile
 					v-for="page in pages"
@@ -13,8 +19,16 @@
 				</v-list-tile>
 			</v-list>
 		</v-navigation-drawer>
-		<v-toolbar fixed dark color="primary" app clipped-left >
-			<v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+		<v-toolbar
+			fixed
+			dark
+			color="primary"
+			app
+			clipped-left>
+			<v-toolbar-side-icon
+				class="hidden-md-and-up"
+				@click.stop="drawer = !drawer">
+			</v-toolbar-side-icon>
 			<v-toolbar-title class="white--text">
 				<logo></logo>
 			</v-toolbar-title>
@@ -41,11 +55,12 @@
 	import Logo from './Logo.vue'
 
 	@Component({
+		props: ['pages'],
 		components: {
 			Logo
 		}
 	})
-	export default class NavBar extends Vue {
+	export default class SiteNavbar extends Vue {
 		public drawer = false;
 
 		public pages = ['home', 'blog', 'projects', 'about', 'contact'];
