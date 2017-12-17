@@ -1,30 +1,54 @@
 <template>
-	<v-toolbar dark color="primary">
-		<v-toolbar-side-icon></v-toolbar-side-icon>
-		<v-toolbar-title class="white--text">Title</v-toolbar-title>
-		<v-spacer></v-spacer>
-		<v-btn>
-			<router-link to="/">Hello</router-link>
-		</v-btn>
-		<v-btn icon>
-			<v-icon>apps</v-icon>
-		</v-btn>
-		<v-btn icon>
-			<v-icon>refresh</v-icon>
-		</v-btn>
-		<v-btn icon>
-			<v-icon>more_vert</v-icon>
-		</v-btn>
-	</v-toolbar>
+	<div class="navigation">
+		<v-navigation-drawer fixed v-model="drawer" app clipped hide-overlay>
+			<v-list>
+				<v-list-tile
+					v-for="page in pages"
+					:key="page"
+					flat
+					append
+					:to="{ name: page }"
+					exact>
+					{{ page | capitalize }}
+				</v-list-tile>
+			</v-list>
+		</v-navigation-drawer>
+		<v-toolbar fixed dark color="primary" app clipped-left >
+			<v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+			<v-toolbar-title class="white--text">
+				<logo></logo>
+			</v-toolbar-title>
+			<v-spacer></v-spacer>
+			<v-toolbar-items class="hidden-sm-and-down">
+				<v-btn
+					v-for="page in pages"
+					:key="page"
+					flat
+					append
+					:to="{ name: page }"
+					exact>
+					{{ page | capitalize }}
+				</v-btn>
+			</v-toolbar-items>
+		</v-toolbar>
+	</div>
 </template>
 
 <script lang="ts">
 	import Vue from 'vue';
 	import Component from 'vue-class-component';
 
-	@Component({})
-	export default class NavBar extends Vue {
+	import Logo from './Logo.vue'
 
+	@Component({
+		components: {
+			Logo
+		}
+	})
+	export default class NavBar extends Vue {
+		public drawer = false;
+
+		public pages = ['home', 'blog', 'projects', 'about', 'contact'];
 	}
 </script>
 
