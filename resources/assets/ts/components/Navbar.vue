@@ -55,7 +55,6 @@
 	import Logo from './Logo.vue'
 
 	@Component({
-		props: ['pages'],
 		components: {
 			Logo
 		}

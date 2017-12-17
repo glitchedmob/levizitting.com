@@ -1,7 +1,9 @@
 <template>
 	<v-app>
 		<site-navbar></site-navbar>
-		<router-view></router-view>
+		<transition name="slide-x-reverse-transition">
+			<router-view></router-view>
+		</transition>
 		<site-footer></site-footer>
 	</v-app>
 </template>
