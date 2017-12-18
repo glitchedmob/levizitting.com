@@ -6,8 +6,11 @@ import 'prismjs';
 import App from './components/App.vue';
 import router from './routes';
 import capitalize from './filters/capitalize';
+import theme from './theme';
 
-Vue.use(Vuetify);
+Vue.use(Vuetify, {
+	theme
+});
 Vue.use(Meta);
 
 Vue.filter('capitalize', capitalize);

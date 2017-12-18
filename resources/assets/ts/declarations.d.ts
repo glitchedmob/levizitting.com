@@ -8,3 +8,4 @@ declare module '*.vue' {
 
 declare module 'vue-meta';
 
+declare module '*.jpg'
