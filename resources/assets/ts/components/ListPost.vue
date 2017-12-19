@@ -1,6 +1,6 @@
 <template>
 	<v-card>
-		<v-card-media v-if="post.image" :src="post.image"></v-card-media>
+		<v-card-media v-if="post.image" :src="post.image" height="400"></v-card-media>
 		<v-card-title primary-title>
 			<div>
 				<h2 class="headline mb-0">{{ post.title }}</h2>
@@ -9,7 +9,13 @@
 		</v-card-title>
 		<v-card-text>{{ post.description }}</v-card-text>
 		<v-card-actions>
-			<v-btn flat color="secondary" append :to="{ name: 'post', params: { slug: post.slug }}">Read More</v-btn>
+			<v-btn
+				flat
+				color="secondary"
+				append
+	 			:to="{ name: 'post', params: { slug: post.slug }}">
+				Read More
+			</v-btn>
 		</v-card-actions>
 	</v-card>
 </template>
