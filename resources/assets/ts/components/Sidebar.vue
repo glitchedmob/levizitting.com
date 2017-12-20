@@ -24,7 +24,6 @@
 				{{ post.title }}
 			</v-list-tile>
 		</v-list>
-
 	</v-card>
 </template>
 

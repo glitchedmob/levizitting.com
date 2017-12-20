@@ -1,6 +1,8 @@
 <template>
 	<v-card>
-		<v-card-media v-if="post.image" :src="post.image" height="400"></v-card-media>
+		<div class="blog-image">
+			<img :src="post.image" :alt="post.title">
+		</div>
 		<v-card-title primary-title>
 			<div>
 				<h2 class="headline mb-0">{{ post.title }}</h2>
@@ -31,8 +33,19 @@
 			post: Post
 		}
 	})
-	export default class ListPost extends Vue {
+	export default class PostPreview extends Vue {
 
 	}
-</script>s
+</script>
+
+<style lang="stylus" scoped>
+.blog-image
+	max-height 600px
+	width 100%
+	overflow hidden
+
+img
+	transform translateX(-50%)
+	margin-left 50%
+</style>
 
