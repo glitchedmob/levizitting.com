@@ -1,6 +1,6 @@
 <template>
 	<v-card>
-		<div class="blog-image">
+		<div class="blog-image" v-if="post.image">
 			<img :src="post.image" :alt="post.title">
 		</div>
 		<v-card-title primary-title>

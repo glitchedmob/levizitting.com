@@ -24,4 +24,3 @@ import SiteFooter from './Footer.vue';
 export default class App extends Vue {
 }
 </script>
-
