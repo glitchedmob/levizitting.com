@@ -9,7 +9,8 @@
 	import Component from 'vue-class-component';
 
 	@Component({})
-	export default class SiteFooter extends Vue {
+	export default class AppFooter extends Vue {
+
 	}
 </script>
 

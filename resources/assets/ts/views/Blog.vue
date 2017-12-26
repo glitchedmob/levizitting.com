@@ -1,6 +1,6 @@
 <template>
 	<v-container grid-list-lg>
-	<h1 class="display-4 mt-5 mb-3">Blog</h1>
+		<h1 class="display-4 mt-5 mb-3">Blog</h1>
 		<v-layout row wrap>
 			<v-flex xs12 md8>
 				<post-preview
