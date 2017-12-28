@@ -1,5 +1,6 @@
 <template>
 	<v-navigation-drawer
+		app
 		class="hidden-md-and-up"
 		:value="drawer"
 		fixed

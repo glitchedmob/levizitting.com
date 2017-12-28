@@ -1,5 +1,5 @@
 <template>
-	<v-footer dark color="primary" app>
+	<v-footer dark color="primary">
 		<div>© {{ new Date().getFullYear() }}</div>
 	</v-footer>
 </template>

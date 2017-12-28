@@ -22,6 +22,6 @@
         "vue-class-component": "^6.1.1",
         "vue-meta": "^1.4.0",
         "vue-router": "^3.0.1",
-        "vuetify": "^0.17.5"
+        "vuetify": "^1.0.0-alpha.3"
     }
 }
