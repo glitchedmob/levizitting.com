@@ -4,6 +4,8 @@ declare module '*.vue' {
   export default Vue
 }
 
+declare function Promise(): any;
+
 // declare module 'vuetify';
 
 declare module 'vue-meta';

@@ -1,13 +1,13 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Home from '../views/Home.vue';
-import Blog from '../views/Blog.vue';
-import Post from '../views/Post.vue';
-import Projects from '../views/Projects.vue';
-import About from '../views/About.vue';
-import Contact from '../views/Contact.vue';
-import Error404 from '../views/404.vue';
+const Home = () => import('../views/Home.vue');
+const Blog = () => import('../views/Blog.vue');
+const Post = () => import('../views/Post.vue');
+const Projects = () => import('../views/Projects.vue');
+const About = () => import('../views/About.vue');
+const Contact = () => import('../views/Contact.vue');
+const Error404 = () => import('../views/404.vue');
 
 Vue.use(Router);
 

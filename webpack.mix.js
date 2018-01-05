@@ -16,7 +16,13 @@ mix.options({
 	processCssUrls: false
 });
 
-mix.sourceMaps()
+mix.
+	webpackConfig({
+		output: {
+			chunkFilename: 'js/[name].[chunkhash].js'
+		}
+	})
+	.sourceMaps()
 	.version()
 	.ts('resources/assets/ts/main.ts', 'public/js')
 	.extract(['axios', 'prismjs', 'vue', 'vue-router', 'vue-class-component', 'vuetify', 'vue-meta', 'vuex-class'])
