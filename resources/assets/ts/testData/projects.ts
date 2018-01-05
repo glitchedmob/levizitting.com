@@ -22,7 +22,7 @@ export default [
 			]
 	),
 	new Project(
-		1,
+		3,
 		'Focus App',
 		'A Google Chrome extension to block distracting websites',
 		'http://via.placeholder.com/400x200',

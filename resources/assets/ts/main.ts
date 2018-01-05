@@ -5,6 +5,7 @@ import 'prismjs';
 
 import App from './App.vue';
 import router from './router';
+import store from './store';
 import { capitalize } from './filters/capitalize';
 import theme from './theme';
 
@@ -18,5 +19,6 @@ Vue.filter('capitalize', capitalize);
 new Vue({
 	el: '#app',
 	router,
+	store,
 	render: (h: any) => h(App)
 });

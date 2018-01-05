@@ -6,7 +6,7 @@
 		clipped-left>
 		<v-toolbar-side-icon
 			class="hidden-md-and-up"
-			@click.stop="emitDrawerOpen">
+			@click.stop="toggleAppDrawer">
 		</v-toolbar-side-icon>
 		<v-toolbar-title>
 			<logo></logo>
@@ -29,6 +29,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { Mutation } from 'vuex-class';
 
 import Logo from './Logo.vue'
 
@@ -41,9 +42,12 @@ import Logo from './Logo.vue'
 export default class AppToolbar extends Vue {
 	pages: string[];
 
-	public emitDrawerOpen() {
-		this.$emit('open');
-	}
+	@Mutation public toggleAppDrawer: Function;
+
+	// public toggleDrawer() {
+	// 	debugger;
+	// 	console.log('toggle');
+	// }
 }
 </script>
 

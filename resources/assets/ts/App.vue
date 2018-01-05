@@ -1,7 +1,7 @@
 <template>
 	<v-app>
-		<app-drawer :pages="pages" :drawer="drawer"></app-drawer>
-		<app-toolbar :pages="pages" @open="drawer = !drawer"></app-toolbar>
+		<app-drawer :pages="pages"></app-drawer>
+		<app-toolbar :pages="pages"></app-toolbar>
 		<v-content>
 			<v-slide-x-transition>
 				<router-view></router-view>
@@ -27,7 +27,6 @@ import AppFooter from './components/AppFooter.vue';
 	}
 })
 export default class App extends Vue {
-	public drawer = false;
 
 	public pages = ['home', 'blog', 'projects', 'about', 'contact'];
 }

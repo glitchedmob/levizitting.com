@@ -3,7 +3,7 @@
 		absolute
 		temporary
 		class="hidden-md-and-up"
-		:value="drawer"
+		v-model="drawer"
 		clipped
 		hide-overlay>
 		<v-list>
@@ -25,10 +25,17 @@ import Vue from 'vue';
 import Component from 'vue-class-component';
 
 @Component({
-	props: ['pages', 'drawer']
+	props: ['pages'],
 })
 export default class AppDrawer extends Vue {
-	pages: string[];
-	drawer: boolean;
+	public pages: string[];
+
+	get drawer() {
+		return this.$store.state.drawer;
+	}
+
+	set drawer(val) {
+		this.$store.commit('setAppDrawer', val);
+	}
 }
 </script>
