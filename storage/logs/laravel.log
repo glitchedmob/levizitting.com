@@ -627,3 +627,11 @@
 #9 /home/levi/git/levizitting.com/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #10 {main}
 "} 
+[2018-01-05 05:56:21] local.ERROR: Illuminate\Routing\Router::loadRoutes(): Failed opening required '/Users/levizitting/git/levizitting.com/router/api.php' (include_path='.:') {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Illuminate\\Routing\\Router::loadRoutes(): Failed opening required '/Users/levizitting/git/levizitting.com/router/api.php' (include_path='.:') at /Users/levizitting/git/levizitting.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php:380)
+[stacktrace]
+#0 {main}
+"} 
+[2018-01-05 05:56:45] local.ERROR: Illuminate\Routing\Router::loadRoutes(): Failed opening required '/Users/levizitting/git/levizitting.com/router/api.php' (include_path='.:') {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Illuminate\\Routing\\Router::loadRoutes(): Failed opening required '/Users/levizitting/git/levizitting.com/router/api.php' (include_path='.:') at /Users/levizitting/git/levizitting.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php:380)
+[stacktrace]
+#0 {main}
+"} 
