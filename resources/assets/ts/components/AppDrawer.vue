@@ -1,9 +1,9 @@
 <template>
 	<v-navigation-drawer
-		app
+		absolute
+		temporary
 		class="hidden-md-and-up"
 		:value="drawer"
-		fixed
 		clipped
 		hide-overlay>
 		<v-list>

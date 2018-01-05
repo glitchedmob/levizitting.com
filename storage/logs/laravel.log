@@ -599,3 +599,31 @@
 #34 /home/levi/git/levizitting.com/server.php(21): require_once('/home/levi/git/...')
 #35 {main}
 "} 
+[2017-12-31 08:04:30] local.ERROR: Too many arguments, expected arguments "command". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments, expected arguments \"command\". at /home/levi/git/levizitting.com/vendor/symfony/console/Input/ArgvInput.php:187)
+[stacktrace]
+#0 /home/levi/git/levizitting.com/vendor/symfony/console/Input/ArgvInput.php(86): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('help')
+#1 /home/levi/git/levizitting.com/vendor/symfony/console/Input/Input.php(61): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#2 /home/levi/git/levizitting.com/vendor/symfony/console/Command/Command.php(220): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#3 /home/levi/git/levizitting.com/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#4 /home/levi/git/levizitting.com/vendor/symfony/console/Application.php(888): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /home/levi/git/levizitting.com/vendor/symfony/console/Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\ServeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 /home/levi/git/levizitting.com/vendor/symfony/console/Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 /home/levi/git/levizitting.com/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 /home/levi/git/levizitting.com/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 /home/levi/git/levizitting.com/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2017-12-31 08:07:13] local.ERROR: The "--host" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--host\" option does not exist. at /home/levi/git/levizitting.com/vendor/symfony/console/Input/ArgvInput.php:222)
+[stacktrace]
+#0 /home/levi/git/levizitting.com/vendor/symfony/console/Input/ArgvInput.php(156): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption('host', '0.0.0.0')
+#1 /home/levi/git/levizitting.com/vendor/symfony/console/Input/ArgvInput.php(82): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption('--host=0.0.0.0')
+#2 /home/levi/git/levizitting.com/vendor/symfony/console/Input/Input.php(61): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 /home/levi/git/levizitting.com/vendor/symfony/console/Command/Command.php(220): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 /home/levi/git/levizitting.com/vendor/symfony/console/Application.php(888): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /home/levi/git/levizitting.com/vendor/symfony/console/Application.php(224): Symfony\\Component\\Console\\Application->doRunCommand(Object(Symfony\\Component\\Console\\Command\\ListCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 /home/levi/git/levizitting.com/vendor/symfony/console/Application.php(125): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 /home/levi/git/levizitting.com/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 /home/levi/git/levizitting.com/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 /home/levi/git/levizitting.com/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 

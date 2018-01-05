@@ -1,10 +1,10 @@
 <template>
 	<v-container fluid class="home-header">
-		<v-layout class="home" align-center justify-center>
+		<v-layout class="home" justify-center align-center>
 			<v-container grid-list text-xs-center>
 				<v-layout row wrap class="home-card elevation-8" align-center>
 					<v-flex xs12 md6>
-						<img :src="profile" alt="Levi Zitting Profile Image" class="profile-img" :height="imageHeight">
+						<img src="../../images/profile-2.jpg" alt="Levi Zitting Profile Image" class="profile-img" :height="imageHeight">
 						<h2 class="name">Levi Zitting</h2>
 					</v-flex>
 					<v-flex xs12 md6 class="description">
@@ -19,8 +19,6 @@
 				</v-layout>
 			</v-container>
 		</v-layout>
-		<v-card>
-		</v-card>
 	</v-container>
 </template>
 
@@ -28,11 +26,8 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
-import * as profileImg from '../../images/profile-2.jpg';
-
 @Component({})
 export default class Home extends Vue {
-	public profile = profileImg;
 
 	get imageHeight () {
 		switch (this.$vuetify.breakpoint.name) {
@@ -48,12 +43,12 @@ export default class Home extends Vue {
 
 <style lang="stylus" scoped>
 .home-header
-	min-height 100vh
+	min-height calc(100vh - 64px)
 	background-image url('../../images/atlanta.jpg')
 	background-size cover
 
 .home
-	height 100%
+	min-height calc(100vh - 64px)
 
 .home-card
 	background #FFF

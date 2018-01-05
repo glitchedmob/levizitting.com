@@ -23,19 +23,19 @@
 </template>
 
 <script lang="ts">
-	import Vue from 'vue';
-	import Component from 'vue-class-component';
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
-	import { Post } from "../models/Post";
+import { Post } from "../models/Post";
 
-	@Component({
-		props: {
-			post: Post
-		}
-	})
-	export default class PostPreview extends Vue {
-
+@Component({
+	props: {
+		post: Post
 	}
+})
+export default class PostPreview extends Vue {
+
+}
 </script>
 
 <style lang="stylus" scoped>

@@ -50,5 +50,4 @@ export default new Router({
             component: Error404
         },
     ]
-})
-
+});

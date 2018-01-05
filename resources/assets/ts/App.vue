@@ -2,9 +2,11 @@
 	<v-app>
 		<app-drawer :pages="pages" :drawer="drawer"></app-drawer>
 		<app-toolbar :pages="pages" @open="drawer = !drawer"></app-toolbar>
-		<v-slide-x-transition>
-			<router-view></router-view>
-		</v-slide-x-transition>
+		<v-content>
+			<v-slide-x-transition>
+				<router-view></router-view>
+			</v-slide-x-transition>
+		</v-content>
 		<app-footer></app-footer>
 	</v-app>
 </template>

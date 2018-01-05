@@ -1,15 +1,14 @@
 <template>
 	<v-toolbar
-		fixed
-		dark
-		color="primary"
 		app
+		dark
+		color="primary700"
 		clipped-left>
 		<v-toolbar-side-icon
 			class="hidden-md-and-up"
 			@click.stop="emitDrawerOpen">
 		</v-toolbar-side-icon>
-		<v-toolbar-title class="white--text">
+		<v-toolbar-title>
 			<logo></logo>
 		</v-toolbar-title>
 		<v-spacer></v-spacer>
@@ -28,23 +27,23 @@
 </template>
 
 <script lang="ts">
-	import Vue from 'vue';
-	import Component from 'vue-class-component';
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
-	import Logo from './Logo.vue'
+import Logo from './Logo.vue'
 
-	@Component({
-		props: ['pages'],
-		components: {
-			Logo
-		}
-	})
-	export default class AppToolbar extends Vue {
-		pages: string[];
-
-		public emitDrawerOpen() {
-			this.$emit('open');
-		}
+@Component({
+	props: ['pages'],
+	components: {
+		Logo
 	}
+})
+export default class AppToolbar extends Vue {
+	pages: string[];
+
+	public emitDrawerOpen() {
+		this.$emit('open');
+	}
+}
 </script>
 

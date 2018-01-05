@@ -7,5 +7,4 @@ export class Post {
 		public image: boolean | string,
 		public date: number
 	) {}
-
 }
