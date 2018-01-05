@@ -1,12 +1,16 @@
 <template>
-	<v-container grid-list-lg>
-		<h1 class="display-4 mt-5 mb-3" text-xs-center>Projects</h1>
-		<v-layout wrap>
-			<v-flex v-for="project in projects" :key="project.id" xs12 md6>
-				<project-card :project="project"></project-card>
-			</v-flex>
-		</v-layout>
-	</v-container>
+	<div>
+		<page-jumbotron>
+			<h1 class="display-4">Projects</h1>
+		</page-jumbotron>
+		<v-container grid-list-lg>
+			<v-layout wrap>
+				<v-flex v-for="project in projects" :key="project.id" xs12 md6>
+					<project-card :project="project"></project-card>
+				</v-flex>
+			</v-layout>
+		</v-container>
+	</div>
 </template>
 
 <script lang="ts">
@@ -16,10 +20,12 @@ import Component from 'vue-class-component';
 import {Project} from "../models/Project";
 import projects from '../testData/projects';
 
+import PageJumbotron from '../components/PageJumbotron.vue';
 import ProjectCard from '../components/ProjectCard.vue';
 
 @Component({
 	components: {
+		PageJumbotron,
 		ProjectCard
 	}
 })

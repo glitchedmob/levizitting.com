@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<v-container fluid color="primary">
-			<h1 class="display-4 mt-5 mb-3">Blog</h1>
-		</v-container>
+		<page-jumbotron>
+			<h1 class="display-4">Blog</h1>
+		</page-jumbotron>
 		<v-container grid-list-lg>
 			<v-layout row wrap>
 				<v-flex xs12 md8>
@@ -27,13 +27,15 @@ import Component from 'vue-class-component';
 import posts from '../testData/posts';
 import { Post } from "../models/Post";
 
+import PageJumbotron from '../components/PageJumbotron.vue';
 import PostPreview from '../components/PostPreview.vue';
 import Sidebar from '../components/Sidebar.vue';
 
 @Component({
 	components: {
 		PostPreview,
-		Sidebar
+		Sidebar,
+		PageJumbotron
 	}
 })
 export default class Blog extends Vue {

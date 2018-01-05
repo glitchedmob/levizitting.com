@@ -12,42 +12,49 @@ import Error404 from '../views/404.vue';
 Vue.use(Router);
 
 export default new Router({
-    mode: 'history',
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: Home
-        },
-        {
-            path: '/blog',
-            name: 'blog',
-            component: Blog
-        },
-        {
-            path: '/blog/:slug',
-            name: 'post',
-            component: Post
-        },
-        {
-            path: '/projects',
-            name: 'projects',
-            component: Projects
-        },
-        {
-            path: '/about',
-            name: 'about',
-            component: About
-        },
-        {
-            path: '/contact',
-            name: 'contact',
-            component: Contact
-        },
-        {
-            path: '/404',
-            name: '404',
-            component: Error404
-        },
-    ]
+	mode: 'history',
+	scrollBehavior(to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition
+		} else {
+			return {x: 0, y: 0}
+		}
+	},
+	routes: [
+		{
+			path: '/',
+			name: 'home',
+			component: Home
+		},
+		{
+			path: '/blog',
+			name: 'blog',
+			component: Blog
+		},
+		{
+			path: '/blog/:slug',
+			name: 'post',
+			component: Post
+		},
+		{
+			path: '/projects',
+			name: 'projects',
+			component: Projects
+		},
+		{
+			path: '/about',
+			name: 'about',
+			component: About
+		},
+		{
+			path: '/contact',
+			name: 'contact',
+			component: Contact
+		},
+		{
+			path: '/404',
+			name: '404',
+			component: Error404
+		},
+	]
 });

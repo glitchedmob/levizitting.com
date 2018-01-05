@@ -28,6 +28,7 @@ import AppFooter from './components/AppFooter.vue';
 })
 export default class App extends Vue {
 
+	// Names of pages for navigation. These should match what the router has for the name property
 	public pages = ['home', 'blog', 'projects', 'about', 'contact'];
 }
 </script>
