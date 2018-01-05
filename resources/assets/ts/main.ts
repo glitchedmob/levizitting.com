@@ -4,8 +4,8 @@ import Meta from 'vue-meta';
 import 'prismjs';
 
 import App from './App.vue';
-import router from './routes';
-import capitalize from './filters/capitalize';
+import router from './router';
+import { capitalize } from './filters/capitalize';
 import theme from './theme';
 
 Vue.use(Vuetify, {

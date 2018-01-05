@@ -23,5 +23,8 @@
         "vue-meta": "^1.4.0",
         "vue-router": "^3.0.1",
         "vuetify": "^1.0.0-alpha.3"
+    },
+    "dependencies": {
+        "vuex": "^3.0.1"
     }
 }
