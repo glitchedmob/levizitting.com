@@ -11,6 +11,15 @@
 						:post="post"
 						:key="post.id"
 						class="post"></post-preview>
+					<div class="d-block text-xs-center">
+						<v-pagination
+							:length="totalPosts / 5"
+							v-model="page"
+							color="secondary"
+							:total-visible="7"
+							@input="handlePaginate"
+							class="text-xs-center" />
+					</div>
 				</v-flex>
 				<v-flex xs12 md4>
 					<sidebar></sidebar>
@@ -39,7 +48,27 @@ import Sidebar from '../components/Sidebar.vue';
 	}
 })
 export default class Blog extends Vue {
-	public posts: Post[] = posts;
+	public posts: Post[];
+
+	public totalPosts = 20;
+
+	public page = 1;
+
+	public created() {
+		if(this.$route.query['page']) {
+			this.page = parseInt(this.$route.query['page']);
+		}
+		
+		this.posts = posts;
+	}
+
+	public handlePaginate(payload: number) {
+		// Vue Router has no current to push a new route without causing a rerender
+		// using straight HTML5 push state works though
+		window.history.replaceState({}, '', `${this.$route.path}?page=${payload}`);
+
+		this.posts = posts;
+	}
 }
 </script>
 
