@@ -1,6 +1,6 @@
 <template>
 	<v-navigation-drawer
-		absolute
+		fixed
 		temporary
 		class="hidden-md-and-up"
 		v-model="drawer"
