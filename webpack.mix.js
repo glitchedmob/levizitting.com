@@ -19,7 +19,7 @@ mix.options({
 mix.
 	webpackConfig({
 		output: {
-			chunkFilename: 'js/[name].[chunkhash].js'
+			chunkFilename: mix.inProduction() ? 'js/chunks/[name].[chunkhash].js' : 'js/chunks/[name].js'
 		}
 	})
 	.sourceMaps()
