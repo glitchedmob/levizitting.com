@@ -25,5 +25,5 @@ mix.
 	.sourceMaps()
 	.version()
 	.ts('resources/assets/ts/main.ts', 'public/js')
-	.extract(['axios', 'prismjs', 'vue', 'vue-router', 'vue-class-component', 'vuetify', 'vue-meta', 'vuex-class'])
+	.extract(['axios', 'vue', 'vue-router', 'vue-class-component', 'vuetify', 'vue-meta', 'vuex-class'])
 	.stylus('resources/assets/stylus/vendor.styl', 'public/css');

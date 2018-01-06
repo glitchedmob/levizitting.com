@@ -22,7 +22,7 @@
 					</div>
 				</v-flex>
 				<v-flex xs12 md4>
-					<sidebar></sidebar>
+					<blog-sidebar />
 				</v-flex>
 			</v-layout>
 		</v-container>
@@ -38,12 +38,12 @@ import { Post } from "../models/Post";
 
 import PageJumbotron from '../components/PageJumbotron.vue';
 import PostPreview from '../components/PostPreview.vue';
-import Sidebar from '../components/Sidebar.vue';
+import BlogSidebar from '../components/BlogSidebar.vue';
 
 @Component({
 	components: {
 		PostPreview,
-		Sidebar,
+		BlogSidebar,
 		PageJumbotron
 	}
 })
@@ -58,7 +58,7 @@ export default class Blog extends Vue {
 		if(this.$route.query['page']) {
 			this.page = parseInt(this.$route.query['page']);
 		}
-		
+
 		this.posts = posts;
 	}
 

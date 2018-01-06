@@ -32,7 +32,7 @@
 	import Component from 'vue-class-component';
 
 	@Component({})
-	export default class Sidebar extends Vue {
+	export default class BlogSidebar extends Vue {
 		public popularPosts = [
 			{ id: 1, slug: 'post', title: 'Post 1'},
 			{ id: 2, slug: 'post', title: 'Post 2'},

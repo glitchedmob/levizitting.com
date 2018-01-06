@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import Meta from 'vue-meta';
-import 'prismjs';
 
 import App from './App.vue';
 import router from './router';
