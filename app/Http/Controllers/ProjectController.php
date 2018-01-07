@@ -10,7 +10,7 @@ class ProjectController extends Controller
 	public function index()
 	{
 		return response()->json(
-			Project::all()
+			Project::latest()->get()
 		);
 	}
 }

@@ -1,9 +1,9 @@
 export class Project {
 	constructor(
 		public id: number,
-		public name: string,
+		public title: string,
 		public description: string,
 		public image: string,
-		public links: ({text: string, href: string})[]
+		public links: string
 	) {}
 }

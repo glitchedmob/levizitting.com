@@ -3,9 +3,9 @@
 		<page-jumbotron>
 			<h1 class="display-4">Projects</h1>
 		</page-jumbotron>
-		<v-container grid-list-lg>
+		<v-container grid-list-xl>
 			<v-layout wrap>
-				<v-flex v-for="project in projects" :key="project.id" xs12 md6>
+				<v-flex v-for="(project, index) in projects" :key="index" xs12 md6>
 					<project-card :project="project"></project-card>
 				</v-flex>
 			</v-layout>
@@ -16,9 +16,9 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import axios from 'axios';
 
-import {Project} from "../models/Project";
-import projects from '../testData/projects';
+import { Project } from "../models/Project";
 
 import PageJumbotron from '../components/PageJumbotron.vue';
 import ProjectCard from '../components/ProjectCard.vue';
@@ -30,10 +30,12 @@ import ProjectCard from '../components/ProjectCard.vue';
 	}
 })
 export default class Projects extends Vue {
-	public projects: Project[];
+	public projects: null | Project[] = null;
 
 	public created() {
-		this.projects = projects;
+		axios.get('/api/projects').then(response => {
+			this.projects = response.data;
+		})
 	}
 }
 </script>
