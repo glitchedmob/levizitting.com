@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/{any}', 'SpaController@index')->where('any', '.*');
-
-
 Route::prefix('admin')
     ->group(function () {
         Auth::routes();
@@ -38,3 +35,5 @@ Route::prefix('admin')
                 Route::get('/contacts/{contact}', 'Admin\ContactController@show');
             });
     });
+
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
