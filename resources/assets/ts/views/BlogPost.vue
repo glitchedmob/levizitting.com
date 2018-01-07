@@ -130,6 +130,7 @@ export default class BlogPost extends Vue {
 
 		.toolbar
 			background transparent
+			box-shadow none
 
 			a
 				font-family Roboto

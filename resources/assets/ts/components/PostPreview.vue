@@ -6,7 +6,7 @@
 		<v-card-title primary-title>
 			<div>
 				<h2 class="headline mb-0">{{ post.title }}</h2>
-				<div>Published on: {{ post.date }}</div>
+				<!--<div>Published on: {{ post.date }}</div>-->
 			</div>
 		</v-card-title>
 		<v-card-text>{{ post.description }}</v-card-text>
