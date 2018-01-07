@@ -1,7 +1,7 @@
 <template>
 	<v-card>
 		<div class="blog-image" v-if="post.image">
-			<img :src="post.image" :alt="post.title">
+			<img :src="`/images/blog/${post.image}`" :alt="post.title">
 		</div>
 		<v-card-title primary-title>
 			<div>
@@ -29,9 +29,7 @@ import Component from 'vue-class-component';
 import { Post } from "../models/Post";
 
 @Component({
-	props: {
-		post: Post
-	}
+	props: ['post']
 })
 export default class PostPreview extends Vue {
 

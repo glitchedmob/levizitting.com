@@ -22,16 +22,16 @@
 							<v-container fluid grid-list-xl>
 								<v-layout wrap>
 									<v-flex xs12 md6>
-										<v-text-field label="Name" required color="secondary"></v-text-field>
+										<v-text-field label="Name" required color="secondary" v-model="form.name"></v-text-field>
 									</v-flex>
 									<v-flex xs12 md6>
-										<v-text-field label="Email" required color="secondary"></v-text-field>
+										<v-text-field label="Email" required color="secondary" v-model="form.email"></v-text-field>
 									</v-flex>
 									<v-flex xs12>
-										<v-text-field label="Subject" required color="secondary"></v-text-field>
+										<v-text-field label="Subject" required color="secondary" v-model="form.subject"></v-text-field>
 									</v-flex>
 									<v-flex xs12>
-										<v-text-field label="Message" multi-line required color="secondary"></v-text-field>
+										<v-text-field label="Message" multi-line required color="secondary" v-model="form.message"></v-text-field>
 									</v-flex>
 									<v-flex xs12 class="text-xs-right">
 										<v-btn class="text-xs-right" color="secondary" @click="submit">Submit</v-btn>
@@ -40,9 +40,15 @@
 							</v-container>
 						</v-form>
 
-						<v-snackbar bottom left timeout="3000" v-model="showToast">
+						<v-snackbar bottom left :timeout="3000" v-model="successToast">
 							Message received! I'll get back to you ASAP
-							<v-btn flat color="secondary" @click.native="showToast = false">Close</v-btn>
+							<v-btn flat color="secondary" @click.native="successToast = false">Close</v-btn>
+						</v-snackbar>
+
+						<v-snackbar bottom left :timeout="8000" v-model="serverErrorToast" multi-line>
+							Oh no. Looks like there's a bug here. Care to shoot me an email and tell me what happened?
+							<v-btn flat color="secondary" href="mailto:me@levizitting.com">Email</v-btn>
+							<v-btn flat color="error" @click.native="serverErrorToast = false">Close</v-btn>
 						</v-snackbar>
 
 					</div>
@@ -55,6 +61,8 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import axios from 'axios';
+
 import PageJumbotron from '../components/PageJumbotron.vue';
 
 
@@ -65,10 +73,24 @@ import PageJumbotron from '../components/PageJumbotron.vue';
 })
 export default class Contact extends Vue {
 
-	public showToast = false;
+	public form = {
+		name: '',
+		email: '',
+		subject: '',
+		message: ''
+	};
+
+	public successToast = false;
+	public serverErrorToast = false;
 
 	public submit() {
-		this.showToast = true;
+		axios.post('/api/contact', this.form).then(response => {
+			if(response.status >= 300) {
+				this.serverErrorToast = true;
+			} else {
+				this.successToast = true;
+			}
+		})
 	}
 }
 </script>

@@ -3,7 +3,7 @@ import Router from 'vue-router';
 
 const Home = () => import('../views/Home.vue');
 const Blog = () => import('../views/Blog.vue');
-const Post = () => import('../views/Post.vue');
+const BlogPost = () => import('../views/BlogPost.vue');
 const Projects = () => import('../views/Projects.vue');
 const About = () => import('../views/About.vue');
 const Contact = () => import('../views/Contact.vue');
@@ -30,7 +30,7 @@ export default new Router({
 		{
 			path: '/blog/:slug',
 			name: 'post',
-			component: Post
+			component: BlogPost
 		},
 		{
 			path: '/projects',

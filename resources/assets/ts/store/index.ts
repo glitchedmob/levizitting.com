@@ -5,7 +5,10 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		drawer: false
+		drawer: false,
+		totalPosts: 0,
+		recentPosts: [],
+		popularPosts: []
 	},
 
 	mutations: {
@@ -15,6 +18,18 @@ export default new Vuex.Store({
 
 		toggleAppDrawer(state) {
 			state.drawer = !state.drawer;
+		},
+
+		updateTotalPosts(state, payload) {
+			state.totalPosts = parseInt(payload);
+		},
+
+		updateRecentPosts(state, payload) {
+			state.recentPosts = payload;
+		},
+
+		updatePopularPosts(state, payload) {
+			state.popularPosts = payload;
 		}
 	}
 });

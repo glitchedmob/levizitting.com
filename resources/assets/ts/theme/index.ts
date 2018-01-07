@@ -6,5 +6,5 @@ export default {
 	secondary: '#009688',
 	secondary300: '#4DB6AC',
 	accent: '#8c9eff',
-	error: '#b71c1c'
+	error: '#F44336'
 }

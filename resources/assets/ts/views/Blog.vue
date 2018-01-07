@@ -13,7 +13,7 @@
 						class="post"></post-preview>
 					<div class="d-block text-xs-center">
 						<v-pagination
-							:length="totalPosts / 5"
+							:length="Math.ceil(totalPosts / 5)"
 							v-model="page"
 							color="secondary"
 							:total-visible="7"
@@ -32,8 +32,9 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { State, Mutation } from 'vuex-class';
+import axios from 'axios';
 
-import posts from '../testData/posts';
 import { Post } from "../models/Post";
 
 import PageJumbotron from '../components/PageJumbotron.vue';
@@ -48,9 +49,14 @@ import BlogSidebar from '../components/BlogSidebar.vue';
 	}
 })
 export default class Blog extends Vue {
-	public posts: Post[];
+	public posts: Post[] = [];
 
-	public totalPosts = 20;
+	@State public totalPosts: number;
+	@Mutation public updateTotalPosts: Function;
+	@State public popularPosts: any[];
+	@State public recentPosts: any[];
+	@Mutation public updatePopularPosts: Function;
+	@Mutation public updateRecentPosts: Function;
 
 	public page = 1;
 
@@ -58,6 +64,36 @@ export default class Blog extends Vue {
 		if(this.$route.query['page']) {
 			this.page = parseInt(this.$route.query['page']);
 		}
+
+		axios.get(this.buildUrl()).then(response => {
+			this.updateTotalPosts(response.data.posts.total);
+
+			this.posts = response.data.posts.data as Post[];
+
+			if(response.data.popular) {
+				this.updatePopularPosts(response.data.popular);
+			}
+
+			if(response.data.recent) {
+				this.updateRecentPosts(response.data.recent);
+			}
+		})
+
+	}
+
+	private buildUrl(): string {
+
+		let url = `/api/blog?page=${this.page}&`;
+
+		if(this.popularPosts.length === 0) {
+			url += 'popular=true&';
+		}
+
+		if(this.recentPosts.length === 0) {
+			url += 'recent=true&';
+		}
+
+		return url;
 	}
 
 	public handlePaginate(payload: number) {
@@ -65,7 +101,10 @@ export default class Blog extends Vue {
 		// using straight HTML5 push state works though
 		window.history.replaceState({}, '', `${this.$route.path}?page=${payload}`);
 
-		this.posts = posts;
+		axios.get(`/api/blog?page=${this.page}`).then(response => {
+			this.posts = response.data.posts.data as Post[];
+		})
+
 	}
 }
 </script>

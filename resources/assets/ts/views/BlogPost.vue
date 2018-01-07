@@ -2,14 +2,14 @@
 	<v-container grid-list-lg>
 		<v-layout row wrap>
 			<v-flex xs12 md8>
-				<v-card>
+				<v-card v-if="post !== null">
 					<div class="post-image" v-if="post.image">
-						<img :src="post.image" :alt="post.title">
+						<img :src="`/images/blog/${post.image}`" :alt="post.title">
 					</div>
 					<v-card-title primary-title>
 						<div>
 							<h2 class="headline mb-0">{{ post.title }}</h2>
-							<div>Published on: {{ post.date }}</div>
+							<div>Published on: {{ post.created_at }}</div>
 						</div>
 					</v-card-title>
 					<div class="pa-4 post-body" v-html="post.body">
@@ -27,55 +27,75 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { State, Mutation } from 'vuex-class';
+import axios from 'axios';
 
 import * as Prism from '../../lib/prism/prism'
 
-
 import BlogSidebar from '../components/BlogSidebar.vue';
+import { Post } from '../models/Post';
 
 @Component({
 	components: {
 		BlogSidebar
+	},
+
+	watch: {
+		'$route': 'getPost'
 	}
 })
-export default class Post extends Vue {
-	public post = {
-		title: 'Post 1',
-		image: 'http://via.placeholder.com/800x400',
-		date: 'Nov 3, 2015',
-		body: `
-			<h2>Heyo</h2>
-			<ul>
-				<li>hello 1</li>
-				<li>hello 1</li>
-				<li>hello 1</li>
-				<li>hello 1</li>
-			</ul>
+export default class BlogPost extends Vue {
+	public post: null | Post = null;
 
-			<code>Hello nerd</code>
+	@State public popularPosts: any[];
+	@State public recentPosts: any[];
+	@Mutation public updatePopularPosts: Function;
+	@Mutation public updateRecentPosts: Function;
 
-			<pre><code class="language-typescript" lang="typescript">
-interface User {
-  firstName: string;
-  lastName: string;
-  age: number;
-}
+	public created() {
+		this.getPost();
+	}
 
-const bob: User = {
-  firstName: 'Bob',
-  lastName: 'Johnson',
-  age: 25
-}
-</code></pre>
+	public getPost() {
+		axios.get(this.buildUrl()).then(response => {
+			console.log(response);
 
-			<p>I'm the main body hooray</p>
-		`
-	};
+			this.post = response.data.post as Post;
 
-	public mounted() {
+			if(response.data.popular) {
+				this.updatePopularPosts(response.data.popular);
+			}
+
+			if(response.data.recent) {
+				this.updateRecentPosts(response.data.recent);
+			}
+
+			//this.highlight();
+		})
+	}
+
+
+	private buildUrl(): string {
+		// @Store let recentPosts;
+		// @Store let popularPosts;
+
+		let url = `/api/blog/${this.$route.params.slug}?`;
+
+		if(this.popularPosts.length === 0) {
+			url += 'popular=true&';
+		}
+
+		if(this.recentPosts.length === 0) {
+			url += 'recent=true&';
+		}
+
+		return url;
+	}
+
+	public updated(): void {
 		(Prism as any).highlightAll();
 	}
-}
+ }
 
 </script>
 

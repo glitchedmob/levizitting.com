@@ -31,23 +31,12 @@
 	import Vue from 'vue';
 	import Component from 'vue-class-component';
 
+	import { State } from 'vuex-class';
+
 	@Component({})
 	export default class BlogSidebar extends Vue {
-		public popularPosts = [
-			{ id: 1, slug: 'post', title: 'Post 1'},
-			{ id: 2, slug: 'post', title: 'Post 2'},
-			{ id: 3, slug: 'post', title: 'Post 3'},
-			{ id: 4, slug: 'post', title: 'Post 4'},
-			{ id: 5, slug: 'post', title: 'Post 5'},
-		];
-
-		public recentPosts = [
-			{ id: 1, slug: 'post', title: 'Post 1'},
-			{ id: 2, slug: 'post', title: 'Post 2'},
-			{ id: 3, slug: 'post', title: 'Post 3'},
-			{ id: 4, slug: 'post', title: 'Post 4'},
-			{ id: 5, slug: 'post', title: 'Post 5'},
-		];
+		@State public popularPosts: any[];
+		@State public recentPosts: any[];
 	}
 </script>s
 

@@ -14,14 +14,14 @@ class ContactController extends Controller
 
     public function store()
     {
-        $this->validate(\request(), [
+        $this->validate(request(), [
             "name" => "required",
             "email" => "required",
             "subject" => "required",
             "message" => "required",
         ]);
 
-        $contact = new Contact(\request(['name', 'email', 'subject', 'message']));
+        $contact = new Contact(request(['name', 'email', 'subject', 'message']));
 
         $contact->save();
 
