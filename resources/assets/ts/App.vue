@@ -1,13 +1,15 @@
 <template>
 	<v-app>
-		<app-drawer :pages="pages"></app-drawer>
-		<app-toolbar :pages="pages"></app-toolbar>
-		<v-content>
-			<v-slide-x-transition>
-				<router-view></router-view>
-			</v-slide-x-transition>
-		</v-content>
-		<app-footer></app-footer>
+		<div v-if="!admin">
+			<app-drawer :pages="pages"></app-drawer>
+			<app-toolbar :pages="pages"></app-toolbar>
+			<v-content>
+				<v-slide-x-transition>
+					<router-view></router-view>
+				</v-slide-x-transition>
+			</v-content>
+			<app-footer></app-footer>
+		</div>
 	</v-app>
 </template>
 
@@ -27,6 +29,8 @@ import AppFooter from './components/AppFooter.vue';
 	}
 })
 export default class App extends Vue {
+
+	public admin = false;
 
 	// Names of pages for navigation. These should match what the router has for the each routes name property
 	public pages = ['home', 'blog', 'projects', 'about', 'contact'];

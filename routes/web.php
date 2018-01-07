@@ -11,13 +11,7 @@
 |
 */
 
-Route::get('/', 'PageController@index');
-Route::get('/blog', 'PageController@index');
-Route::get('/blog/{post}', 'PageController@index');
-Route::get('/projects', 'PageController@index');
-Route::get('/about', 'PageController@index');
-Route::get('/contact', 'PageController@index');
-Route::post('/contact', 'PageController@index');
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 
 
 Route::prefix('admin')
