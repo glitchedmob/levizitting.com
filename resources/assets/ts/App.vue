@@ -1,6 +1,6 @@
 <template>
 	<v-app>
-		<div v-if="!admin">
+		<div v-if="navigation">
 			<app-drawer :pages="pages"></app-drawer>
 			<app-toolbar :pages="pages"></app-toolbar>
 			<v-content>
@@ -10,6 +10,8 @@
 			</v-content>
 			<app-footer></app-footer>
 		</div>
+
+
 	</v-app>
 </template>
 
@@ -30,7 +32,7 @@ import AppFooter from './components/AppFooter.vue';
 })
 export default class App extends Vue {
 
-	public admin = false;
+	public navigation = true;
 
 	// Names of pages for navigation. These should match what the router has for the each routes name property
 	public pages = ['home', 'blog', 'projects', 'about', 'contact'];

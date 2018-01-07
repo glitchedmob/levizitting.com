@@ -18,20 +18,20 @@ class Post extends Model
         return static::where('published', true);
     }
 
-    public static function recent($limit)
+    public static function recent($limit = 5)
     {
         return static::published()
             ->latest()
             ->limit($limit)
-            ->get();
+            ->get(['id', 'title', 'slug']);
     }
 
-    public  static function popular($limit)
+    public  static function popular($limit = 5)
     {
         return static::published()
             ->orderBy('view_count', 'desc')
             ->limit($limit)
-            ->get();
+            ->get(['id', 'title', 'slug']);
     }
 
 }

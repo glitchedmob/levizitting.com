@@ -25,6 +25,6 @@ class ContactController extends Controller
 
         $contact->save();
 
-        return view('contact-submit');
+        return response()->json('success');
     }
 }

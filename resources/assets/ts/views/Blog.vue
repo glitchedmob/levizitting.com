@@ -58,8 +58,6 @@ export default class Blog extends Vue {
 		if(this.$route.query['page']) {
 			this.page = parseInt(this.$route.query['page']);
 		}
-
-		this.posts = posts;
 	}
 
 	public handlePaginate(payload: number) {
