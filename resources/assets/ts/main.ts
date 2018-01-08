@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
+import VueAnalytics from 'vue-analytics';
 import Meta from 'vue-meta';
 
 import App from './App.vue';
@@ -11,6 +12,12 @@ import theme from './theme';
 Vue.use(Vuetify, {
 	theme
 });
+
+Vue.use(VueAnalytics, {
+	id: 'UA-79851879-2',
+	router
+});
+
 Vue.use(Meta);
 
 Vue.filter('capitalize', capitalize);

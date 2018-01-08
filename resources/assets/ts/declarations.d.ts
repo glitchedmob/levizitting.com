@@ -10,6 +10,8 @@ declare function Promise(): any;
 
 declare module 'vue-meta';
 
+declare module 'vue-analytics'
+
 declare module 'code-prettify';
 
 declare module '*.jpg'
