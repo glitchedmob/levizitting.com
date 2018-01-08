@@ -8,7 +8,8 @@ export default new Vuex.Store({
 		drawer: false,
 		totalPosts: 0,
 		recentPosts: [],
-		popularPosts: []
+		popularPosts: [],
+		projects: [],
 	},
 
 	mutations: {
@@ -30,6 +31,10 @@ export default new Vuex.Store({
 
 		updatePopularPosts(state, payload) {
 			state.popularPosts = payload;
+		},
+
+		updateProjects(state, payload) {
+			state.projects = payload;
 		}
 	}
 });

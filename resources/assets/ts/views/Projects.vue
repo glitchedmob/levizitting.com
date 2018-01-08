@@ -16,6 +16,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { State, Mutation } from 'vuex-class';
 import axios from 'axios';
 
 import { Project } from "../models/Project";
@@ -30,12 +31,15 @@ import ProjectCard from '../components/ProjectCard.vue';
 	}
 })
 export default class Projects extends Vue {
-	public projects: null | Project[] = null;
+	@State public projects: Project[];
+
+	@Mutation public updateProjects: Function;
 
 	public created() {
-		axios.get('/api/projects').then(response => {
-			this.projects = response.data;
-		})
+		if(this.projects.length === 0)
+			axios.get('/api/projects').then(response => {
+				this.updateProjects(response.data);
+			});
 	}
 }
 </script>
