@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routing';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ContactComponent } from './pages/contact/contact.component';
   imports: [
     BrowserModule.withServerTransition({ appId: 'nestJS' }),
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
