@@ -8,13 +8,17 @@ import { routes } from './app.routing';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MaterialModule } from './material/material.module';
+import { AppNavComponent } from './components/app-nav/app-nav.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    AppNavComponent,
+    LogoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'nestJS' }),
@@ -23,6 +27,9 @@ import { MaterialModule } from './material/material.module';
     MaterialModule
   ],
   providers: [],
+  entryComponents: [
+    AppNavComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
