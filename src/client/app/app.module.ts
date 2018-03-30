@@ -28,7 +28,8 @@ import { LogoComponent } from './components/logo/logo.component';
   ],
   providers: [],
   entryComponents: [
-    AppNavComponent
+    AppNavComponent,
+    LogoComponent
   ],
   bootstrap: [AppComponent]
 })
