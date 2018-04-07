@@ -1,3 +1,11 @@
 <mat-toolbar color="primary">
   <app-logo></app-logo>
+  <span class="spacer"></span>
+  <a
+    *ngFor="let page of pages"
+    mat-button
+    [routerLink]="page.route"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >{{ page.name }}</a>
 </mat-toolbar>

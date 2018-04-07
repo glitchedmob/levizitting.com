@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppNavComponent implements OnInit {
 
+  public pages = [
+    { name: 'Home', route: '/' },
+    { name: 'About', route: '/about' },
+    { name: 'Blog', route: '/blog' },
+    { name: 'Projects', route: '/projects' },
+    { name: 'Contact', route: '/contact' },
+  ];
+
   constructor() { }
 
   ngOnInit() {
