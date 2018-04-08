@@ -9,8 +9,8 @@ export class AppNavComponent implements OnInit {
 
   public pages = [
     { name: 'Home', route: '/' },
-    { name: 'About', route: '/about' },
     { name: 'Blog', route: '/blog' },
+    { name: 'About', route: '/about' },
     { name: 'Projects', route: '/projects' },
     { name: 'Contact', route: '/contact' },
   ];
