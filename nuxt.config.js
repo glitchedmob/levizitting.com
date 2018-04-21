@@ -14,7 +14,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
 
@@ -27,29 +28,36 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/assets/stylus/main.styl'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/vuetify.js'
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '~/modules/typescript.js'
   ],
 
   /*
   ** Build configuration
   */
   build: {
+    vendor: [
+      '~/plugins/vuetify.js'
+    ],
+    extractCSS: true,
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }

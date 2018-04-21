@@ -16,13 +16,16 @@
   </section>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
+<script lang="ts">
+import {
+  Component,
+  Vue
+} from "nuxt-property-decorator"
+import { State } from "vuex-class"
 
-export default {
-  components: {
-    Logo
-  }
+@Component({})
+export default class extends Vue {
+
 }
 </script>
 
