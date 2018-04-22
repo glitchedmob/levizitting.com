@@ -17,7 +17,7 @@ import {
 import AppProject from '../components/Project.vue';
 import { Project } from '../models/Project';
 
-const context = require.context('../content/projects/', true, /\.json$/);
+const context = require.context('../content/projects/', false, /\.json$/);
 const projects = context.keys().map(key => ({ ...context(key) }))
 
 @Component({
