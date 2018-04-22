@@ -1,10 +1,17 @@
-const pkg = require('./package')
+var glob = require('glob');
+var path = require('path');
+const pkg = require('./package');
+
+var dynamicRoutes = getDynamicPaths({
+  '/blog': 'blog/posts/*.json'
+});
 
 module.exports = {
   mode: 'universal',
 
   router: {
-    linkExactActiveClass: 'active-exact'
+    linkExactActiveClass: 'active-exact',
+    linkActiveClass: 'active'
   },
 
   /*
@@ -46,6 +53,10 @@ module.exports = {
     '~/modules/typescript.js'
   ],
 
+  generate: {
+    routes: dynamicRoutes
+  },
+
   /*
   ** Build configuration
   */
@@ -58,4 +69,15 @@ module.exports = {
 
     }
   }
+}
+
+function getDynamicPaths(urlFilepathTable) {
+  return [].concat(
+    ...Object.keys(urlFilepathTable).map(url => {
+      var filepathGlob = urlFilepathTable[url];
+      return glob
+        .sync(filepathGlob, { cwd: 'content' })
+        .map(filepath => `${url}/${path.basename(filepath, '.json')}`);
+    })
+  );
 }

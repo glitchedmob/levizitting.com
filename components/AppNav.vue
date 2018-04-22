@@ -2,10 +2,10 @@
   <div class="navigation">
     <h1 class="title">Levi Zitting</h1>
     <nav class="nav">
-      <nuxt-link to="/" class="nav-item">Home</nuxt-link>
-      <nuxt-link to="/blog" class="nav-item">Blog</nuxt-link>
-      <nuxt-link to="/projects" class="nav-item">Projects</nuxt-link>
-      <nuxt-link to="/speaking" class="nav-item">Speaking</nuxt-link>
+      <nuxt-link to="/" class="nav-item home-link">Home</nuxt-link>
+      <nuxt-link to="/blog" class="nav-item blog-link">Blog</nuxt-link>
+      <nuxt-link to="/projects" class="nav-item projets-link">Projects</nuxt-link>
+      <nuxt-link to="/speaking" class="nav-item speaking-link">Speaking</nuxt-link>
     </nav>
   </div>
 </template>
@@ -42,6 +42,7 @@ export default class extends Vue {
     border-bottom 2px solid transparent
     padding 0 0 .5rem 0
 
+    &.blog-link.active,
     &.active-exact
       border-bottom 2px solid #FFF
 </style>
