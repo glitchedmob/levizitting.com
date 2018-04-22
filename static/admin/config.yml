@@ -20,7 +20,7 @@ collections:
     files:
       - name: "speaking"
         label: "Speaking"
-        file: "content/speaking.json"
+        file: "content/pages/speaking.json"
         fields:
           - label: "Talks"
             name: talks
