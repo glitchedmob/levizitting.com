@@ -1,0 +1,9 @@
+{
+  "breakpoints": {
+    "test": "test"
+  },
+  "colors": {
+    "text": "#FFF",
+    "background": "#263238"
+  }
+}

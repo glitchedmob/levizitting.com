@@ -3,6 +3,10 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
+  router: {
+    linkExactActiveClass: 'active-exact'
+  },
+
   /*
   ** Headers of the page
   */
@@ -34,9 +38,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    '~/plugins/vuetify.js'
-  ],
+  plugins: [],
 
   /*
   ** Nuxt.js modules
@@ -49,9 +51,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: [
-      '~/plugins/vuetify.js'
-    ],
     extractCSS: true,
     /*
     ** You can extend webpack config here
