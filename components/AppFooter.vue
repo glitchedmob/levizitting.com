@@ -42,7 +42,7 @@ export default class extends Vue {
 @import '../assets/stylus/config.styl'
 
 .footer
-  padding 2rem 0
+  padding 3rem 0
 
 .social
   display flex

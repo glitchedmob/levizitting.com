@@ -8,6 +8,10 @@
         <iframe :src="talk.url" frameborder="0"></iframe>
       </div>
     </div>
+    <h4 class="reach-out">
+      Intersted in having me speak? <br>
+      Reach out
+    </h4>
   </div>
 </template>
 
@@ -53,4 +57,7 @@ export default class extends Vue {
       height 100%
       width 100%
       position absolute
+
+  .reach-out
+    text-align center
 </style>
