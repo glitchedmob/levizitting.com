@@ -35,7 +35,7 @@ try {
       slug: `/blog/${key.replace('.json', '').replace('./', '')}`
     }))
     // Only show published posts
-    // .filter((post: BlogPost) => post.published);
+    .filter((post: BlogPost) => post.published);
 } catch(e) { }
 
 @Component({
