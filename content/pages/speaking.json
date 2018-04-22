@@ -3,6 +3,10 @@
     {
       "title": "Introduction to Vue.js",
       "url": "https://www.youtube.com/embed/06PEBWGXTRQ"
+    },
+    {
+      "title": "Building Single Page Apps in Django",
+      "url": "https://www.youtube.com/watch?v=7kZGmxgXaw8"
     }
   ]
 }
