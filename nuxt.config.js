@@ -110,13 +110,14 @@ function getDynamicPaths(urlFilepathTable) {
 function createFeed(feed) {
     feed.options = {
       title: 'Levi Zitting Blog',
+      link: 'https://levizitting.com/blog',
       description: 'A blog about code'
     }
 
     glob.sync('./content/blog/posts/*.json').forEach(file => {
       const post = require(path.resolve(file));
       if (post.published) {
-        const url = `/blog/${file.replace('.json', '').replace('./content/blog/posts/', '')}`;
+        const url = `https://levizitting.com/blog/${file.replace('.json', '').replace('./content/blog/posts/', '')}`;
         feed.addItem({
           title: post.title,
           id: url,
