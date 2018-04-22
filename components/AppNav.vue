@@ -28,19 +28,20 @@ export default class extends Vue {
 
   .title
     text-align center
+    margin 2rem 0 2.5rem 0
 
   .nav
     display flex
     justify-content space-between
 
   .nav-item
-    transition all 300ms ease
+    transition all 300ms ease-in-out
     font-size typography-size-6
     color colors-text
     text-decoration none
     border-bottom 2px solid transparent
-    padding 0 0 5px 0
+    padding 0 0 .5rem 0
 
     &.active-exact
-      border-bottom 2px solid white
+      border-bottom 2px solid #FFF
 </style>
