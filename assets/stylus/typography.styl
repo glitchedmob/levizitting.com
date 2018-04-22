@@ -8,11 +8,22 @@ h1, h2, h3, h4, h5, h6, p
   font-family: font
 
 a
+  transition all 250ms ease-in-out
+  color colors-text
   font-family: font
 
+  &:hover,
+  &:focus
+    color #90A4AE
+
+p, a
+  font-size: typography-size-base
 
 h1, h2, h3, h4, h5, h6
   font-weight: 500
+
+  a
+    font-size: inherit
 
 h1
   font-size: typography-size-1
@@ -37,9 +48,6 @@ h5
 h6
   font-size: typography-size-6
   line-height: 1.6
-
-p, a
-  font-size: typography-size-base
 
 @media (max-width: 768px)
   h1

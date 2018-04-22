@@ -6,7 +6,7 @@
     <h4 class="text">I code and sometimes write about it</h4>
     <div class="text">
       <h4>I live in Springfield MO</h4>
-      <h4>where I work full time for Mostly Serious</h4>
+      <h4>where I work at <a href="https://mostlyserious.io" target="_blank">Mostly Serious</a></h4>
     </div>
   </div>
 </template>
