@@ -27,7 +27,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description },
+      { hid: 'description', name: 'description', content: 'A blog about code' },
       { name: 'theme-color', content: '#263238' },
       { property: 'og:title', content: 'Levi Zitting | Programmer and Creator' }
     ],
