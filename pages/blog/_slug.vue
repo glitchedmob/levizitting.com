@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-post main-content" v-if="post">
+  <article class="blog-post main-content" v-if="post">
     <img :src="post.image" :alt="post.title" v-if="post.image">
     <h3>{{ post.title }}</h3>
     <p class="date">Published {{ post.date | humanDate }}</p>
@@ -8,7 +8,7 @@
         {{ post.body }}
       </vue-markdown>
     </div>
-  </div>
+  </article>
 </template>
 
 <script lang="ts">

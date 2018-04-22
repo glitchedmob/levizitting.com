@@ -1,11 +1,15 @@
 <template>
   <div class="container">
-    <app-nav />
-    <main>
-      <transition name="page" mode="out-in">
-        <nuxt :key="$route.path"/>
-      </transition>
-    </main>
+    <div class="above-footer">
+      <app-nav />
+      <main>
+        <transition name="page" mode="out-in">
+          <nuxt :key="$route.path"/>
+        </transition>
+      </main>
+    </div>
+
+    <app-footer />
   </div>
 </template>
 
@@ -16,10 +20,12 @@ import {
 } from "nuxt-property-decorator"
 
 import AppNav from '../components/AppNav.vue';
+import AppFooter from '../components/AppFooter.vue';
 
 @Component({
   components: {
-    AppNav
+    AppNav,
+    AppFooter,
   }
 })
 export default class extends Vue {
@@ -40,6 +46,9 @@ export default class extends Vue {
 
 .page-leave-to
   transform translateX(-100px)
+
+.above-footer
+  min-height 100vh
 
 </style>
 
