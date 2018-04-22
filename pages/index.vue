@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home main-content">
     <h2 class="text">Hi, thanks for stopping by</h2>
     <img :src="profileImg" alt="Levi Zitting profile image" class="profile">
     <p class="img-desc">This is me</p>
@@ -16,7 +16,6 @@ import {
   Component,
   Vue
 } from "nuxt-property-decorator"
-import { State } from "vuex-class"
 
 import * as profileImg from '../assets/images/levi-zitting.jpg'
 
@@ -29,7 +28,6 @@ export default class extends Vue {
 <style lang="stylus" scoped>
 
   .home
-    width 100%
     text-align center
 
   .text

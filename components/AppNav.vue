@@ -6,7 +6,6 @@
       <nuxt-link to="/blog" class="nav-item">Blog</nuxt-link>
       <nuxt-link to="/projects" class="nav-item">Projects</nuxt-link>
       <nuxt-link to="/speaking" class="nav-item">Speaking</nuxt-link>
-      <nuxt-link to="/contact" class="nav-item">Contact</nuxt-link>
     </nav>
   </div>
 </template>
@@ -33,6 +32,7 @@ export default class extends Vue {
   .nav
     display flex
     justify-content space-between
+    flex-wrap wrap
 
   .nav-item
     transition all 300ms ease-in-out

@@ -1,9 +1,11 @@
 <template>
   <div class="container">
     <app-nav />
-    <transition name="page">
-      <nuxt />
-    </transition>
+    <main>
+      <transition name="page">
+        <nuxt />
+      </transition>
+    </main>
   </div>
 </template>
 

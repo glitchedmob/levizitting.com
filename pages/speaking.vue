@@ -7,7 +7,6 @@ import {
   Component,
   Vue
 } from "nuxt-property-decorator"
-import { State } from "vuex-class"
 
 @Component({})
 export default class extends Vue {
