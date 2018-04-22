@@ -1,6 +1,6 @@
 <template>
   <div class="blog main-content">
-    <template v-if="posts.length > 0">
+    <template v-if="posts.length != 0">
       <post-preview
         v-for="(post, i) in posts"
         :key="i"
@@ -26,7 +26,7 @@ let posts: BlogPost[] = [];
 
 // Try catch to prevent error when no blog posts exists
 try {
-  const context = require.context('../content/blog/posts', false, /\.json$/);
+  const context = require.context('../../content/blog/posts', false, /\.json$/);
   posts = context
     .keys()
     .map(key => ({
@@ -35,7 +35,7 @@ try {
       slug: `/blog/${key.replace('.json', '').replace('./', '')}`
     }))
     // Only show published posts
-    .filter((post: BlogPost) => post.published);
+    // .filter((post: BlogPost) => post.published);
 } catch(e) { }
 
 @Component({
