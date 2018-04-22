@@ -8,6 +8,7 @@
         v-for="(link, i) in project.links"
         :key="i"
         :href="link.url"
+        target="_blank"
         class="link"
       >
         {{ link.title }}
