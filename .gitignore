@@ -9,3 +9,7 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+# Generated sitemap and rss feed
+static/sitemap.xml
+static/feed.xml

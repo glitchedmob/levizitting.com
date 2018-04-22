@@ -1,9 +1,10 @@
-var glob = require('glob');
-var path = require('path');
+const glob = require('glob');
+const path = require('path');
+const markdown = require('markdown').markdown
 const pkg = require('./package');
 
 
-var dynamicRoutes = getDynamicPaths({
+const dynamicRoutes = getDynamicPaths({
   '/blog': 'blog/posts/*.json'
 });
 
@@ -56,11 +57,29 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    '~/modules/typescript.js'
+    '~/modules/typescript.js',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/feed',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-79851879-2'
+    }]
   ],
 
   generate: {
     routes: dynamicRoutes
+  },
+
+  sitemap: {
+    hostname: 'https://levizitting.com',
+    generate: true,
+    routes: dynamicRoutes
+  },
+
+  feed: {
+    path: '/feed.xml',
+    create: createFeed,
+    cacheTime: 1000 * 60 * 15,
+    type: 'rss2'
   },
 
   /*
@@ -86,4 +105,25 @@ function getDynamicPaths(urlFilepathTable) {
         .map(filepath => `${url}/${path.basename(filepath, '.json')}`);
     })
   );
+}
+
+function createFeed(feed) {
+    feed.options = {
+      title: 'Levi Zitting Blog',
+      description: 'A blog about code'
+    }
+
+    glob.sync('./content/blog/posts/*.json').forEach(file => {
+      const post = require(path.resolve(file));
+      if (post.published) {
+        const url = `/blog/${file.replace('.json', '').replace('./content/blog/posts/', '')}`;
+        feed.addItem({
+          title: post.title,
+          id: url,
+          link: url,
+          description: post.description ? post.description : 'No description',
+          content: markdown.toHTML(post.body)
+        })
+      }
+    });
 }
