@@ -27,6 +27,12 @@ const projects = context.keys().map(key => ({ ...context(key) }))
 })
 export default class extends Vue {
   public projects: Project[] = projects;
+
+  public head() {
+    return {
+      title: 'Projects'
+    }
+  }
 }
 </script>
 

@@ -18,7 +18,8 @@ import {
 } from "nuxt-property-decorator";
 import VueMarkdown from 'vue-markdown';
 
-import { humanDate } from '../../filters/date-filters'
+import { humanDate } from '../../filters/date-filters';
+import { BlogPost } from '../../models/BlogPost';
 
 @Component({
   components: {
@@ -30,8 +31,20 @@ import { humanDate } from '../../filters/date-filters'
 })
 export default class extends Vue {
   async asyncData({ params }) {
-    let post = await import('~/content/blog/posts/' + params.slug + '.json');
+    let post: BlogPost = await import('~/content/blog/posts/' + params.slug + '.json');
     return { post };
+  }
+
+  public head() {
+    return {
+      title: `Blog | ${this.$data.post.title}`,
+      meta: [
+        { property: 'og:type', content: 'article' },
+        { property: 'og:title', content: `Levi Zitting | ${this.$data.post.title}` },
+        this.$data.post.image ? { property: 'og:image', content: this.$data.post.image } : null,
+        this.$data.post.description ? { property: 'og:description', content: this.$data.post.description } : null,
+      ]
+    }
   }
 }
 </script>

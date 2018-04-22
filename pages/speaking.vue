@@ -27,6 +27,12 @@ interface Talk {
 @Component({})
 export default class extends Vue {
   public talks: Talk[] = speakingPage.talks;
+
+  public head() {
+    return {
+      title: 'Speaking'
+    }
+  }
 }
 </script>
 

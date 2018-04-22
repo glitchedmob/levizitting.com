@@ -45,6 +45,12 @@ try {
 })
 export default class extends Vue {
   public posts: BlogPost[] = posts;
+
+  public head() {
+    return {
+      title: 'Blog'
+    }
+  }
 }
 </script>
 

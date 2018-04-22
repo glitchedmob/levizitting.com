@@ -2,6 +2,7 @@ var glob = require('glob');
 var path = require('path');
 const pkg = require('./package');
 
+
 var dynamicRoutes = getDynamicPaths({
   '/blog': 'blog/posts/*.json'
 });
@@ -18,11 +19,16 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Levi Zitting | Programmer and Creator ',
+    title: 'Levi Zitting | Programmer and Creator',
+    titleTemplate: (titleChunk) => (
+      titleChunk ? `Levi Zitting | ${titleChunk}` : 'Levi Zitting | Programmer and Creator'
+    ),
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: pkg.description },
+      { name: 'theme-color', content: '#263238' },
+      { property: 'og:title', content: 'Levi Zitting | Programmer and Creator' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
