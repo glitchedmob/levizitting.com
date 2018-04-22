@@ -15,16 +15,19 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "speaking"
-    label: "Speaking"
-    file: "content/speaking.json"
-    fields:
-      - label: "Talks"
-        name: talks
-        widget: list
+  - name: pages
+    label: "Pages"
+    files:
+      - name: "speaking"
+        label: "Speaking"
+        file: "content/speaking.json"
         fields:
-          - {label: "Title", name: title, widget: string}
-          - {label: URL, name: url, widget: string}
+          - label: "Talks"
+            name: talks
+            widget: list
+            fields:
+              - {label: "Title", name: title, widget: string}
+              - {label: URL, name: url, widget: string}
   - name: "projects"
     label: "Project"
     folder: "content/projects"
