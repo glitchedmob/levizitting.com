@@ -4,5 +4,7 @@ declare module '*.vue' {
   export default _default
 }
 
+declare module "*.json"
+
 declare module '*.png'
 declare module '*.jpg'
