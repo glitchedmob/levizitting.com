@@ -1,6 +1,6 @@
 export interface Project {
   title: string,
-  image: string,
+  image?: string,
   description: string,
   links: LinkInfo[]
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="project">
     <h3>{{ project.title }}</h3>
-    <img :src="project.image" :alt="project.title">
+    <img :src="project.image" :alt="project.title" v-if="project.image">
     <p>{{ project.description }}</p>
     <div class="links">
       <a
@@ -23,7 +23,7 @@ import {
   Vue
 } from "nuxt-property-decorator"
 
-import { Project } from '../models/Project.ts'
+import { Project } from '../models/Project'
 
 @Component({})
 export default class extends Vue {
@@ -32,4 +32,12 @@ export default class extends Vue {
 </script>
 
 <style lang="stylus" scoped>
+  .project
+    margin-top 2rem
+
+    img
+      width 100%
+
+    a
+      margin 0 .5rem 0 0
 </style>

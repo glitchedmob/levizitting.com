@@ -2,8 +2,8 @@
   <div class="container">
     <app-nav />
     <main>
-      <transition name="page">
-        <nuxt />
+      <transition name="page" mode="out-in">
+        <nuxt :key="$route.path"/>
       </transition>
     </main>
   </div>
@@ -29,6 +29,17 @@ export default class extends Vue {
 
 
 <style lang="stylus" scoped>
+.page-enter-active, .page-leave-active
+  transition all 250ms ease
+
+.page-enter, .page-leave-to
+  opacity 0
+
+.page-enter
+  transform translateX(100px)
+
+.page-leave-to
+  transform translateX(-100px)
 
 </style>
 
