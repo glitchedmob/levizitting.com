@@ -35,7 +35,10 @@ try {
       slug: `/blog/${key.replace('.json', '').replace('./', '')}`
     }))
     // Only show published posts
-    .filter((post: BlogPost) => post.published);
+    .filter((post: BlogPost) => post.published)
+    .sort((a: BlogPost, b: BlogPost) => (
+      new Date(a.date).valueOf() - new Date(b.date).valueOf()
+    ));
 } catch(e) { }
 
 @Component({
