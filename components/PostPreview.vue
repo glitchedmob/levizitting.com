@@ -6,7 +6,6 @@
     <p class="date">Published {{ post.date | humanDate }}</p>
     <img :src="post.image" :alt="post.title" v-if="post.image">
     <p class="desc" v-if="post.description">{{ post.description }}</p>
-    <nuxt-link class="button" :to="post.slug">Read More</nuxt-link>
   </div>
 </template>
 
