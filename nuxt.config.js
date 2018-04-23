@@ -20,7 +20,6 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Levi Zitting | Programmer and Creator',
     titleTemplate: (titleChunk) => (
       titleChunk ? `Levi Zitting | ${titleChunk}` : 'Levi Zitting | Programmer and Creator'
     ),
