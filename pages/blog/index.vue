@@ -37,7 +37,7 @@ try {
     // Only show published posts
     .filter((post: BlogPost) => post.published)
     .sort((a: BlogPost, b: BlogPost) => (
-      new Date(a.date).valueOf() - new Date(b.date).valueOf()
+      new Date(b.date).valueOf() - new Date(a.date).valueOf()
     ));
 } catch(e) { }
 
