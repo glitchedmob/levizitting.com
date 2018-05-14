@@ -28,7 +28,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'A blog about code' },
       { name: 'theme-color', content: '#263238' },
-      { property: 'og:title', content: 'Levi Zitting | Programmer and Creator' }
+      { hid: 'og:title', property: 'og:title', content: 'Levi Zitting | Programmer and Creator' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

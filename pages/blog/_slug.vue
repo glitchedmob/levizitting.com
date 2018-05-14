@@ -40,9 +40,9 @@ export default class extends Vue {
       title: `Blog | ${this.$data.post.title}`,
       meta: [
         { property: 'og:type', content: 'article' },
-        { property: 'og:title', content: `Levi Zitting | ${this.$data.post.title}` },
-        this.$data.post.image ? { property: 'og:image', content: this.$data.post.image } : {},
-        this.$data.post.description ? { property: 'og:description', content: this.$data.post.description } : {},
+        { hid: 'og:title', property: 'og:title', content: `Levi Zitting | ${this.$data.post.title}` },
+        this.$data.post.image ? { hid: 'og:image', property: 'og:image', content: this.$data.post.image } : {},
+        this.$data.post.description ? { hid: 'og:description', property: 'og:description', content: this.$data.post.description } : {},
       ]
     }
   }
