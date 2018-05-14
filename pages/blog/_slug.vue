@@ -41,8 +41,8 @@ export default class extends Vue {
       meta: [
         { property: 'og:type', content: 'article' },
         { property: 'og:title', content: `Levi Zitting | ${this.$data.post.title}` },
-        this.$data.post.image ? { property: 'og:image', content: this.$data.post.image } : null,
-        this.$data.post.description ? { property: 'og:description', content: this.$data.post.description } : null,
+        this.$data.post.image ? { property: 'og:image', content: this.$data.post.image } : {},
+        this.$data.post.description ? { property: 'og:description', content: this.$data.post.description } : {},
       ]
     }
   }
@@ -62,4 +62,13 @@ export default class extends Vue {
 
     & /deep/
       line-height 1.8rem
+
+      img
+        width auto
+        max-width 100%
+        margin 0 auto
+
+      pre
+        overflow-x auto
+
 </style>
