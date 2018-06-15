@@ -60,6 +60,7 @@ module.exports = {
     '~/modules/typescript.js',
     '@nuxtjs/sitemap',
     '@nuxtjs/feed',
+    '@nuxtjs/pwa',
     ['@nuxtjs/google-analytics', {
       id: 'UA-79851879-2'
     }]
