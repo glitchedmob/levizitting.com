@@ -1,6 +1,10 @@
 {
   "talks": [
     {
+      "title": "Building Browser Extensions",
+      "url": "https://www.youtube.com/embed/_JktrfVTH0U"
+    },
+    {
       "title": "Introduction to Vue.js",
       "url": "https://www.youtube.com/embed/06PEBWGXTRQ"
     },
