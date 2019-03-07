@@ -1,6 +1,10 @@
 {
   "talks": [
     {
+      "title": "Craft CMS",
+      "url": "https://www.youtube.com/embed/0CToiy1Uyrg"
+    },
+    {
       "title": "Building Browser Extensions",
       "url": "https://www.youtube.com/embed/_JktrfVTH0U"
     },
