@@ -1,17 +1,12 @@
-# dependencies
-node_modules
-
-# logs
-npm-debug.log
-
-# Nuxt build
-.nuxt
-
-# Nuxt generate
-dist
-
-sw.*
-
-# Generated sitemap and rss feed
-static/sitemap.xml
-static/feed.xml
+/.env
+/.idea
+/vendor
+.DS_Store
+/node_modules
+/web/**
+!/web/index.php
+!/web/.htaccess
+!/web/web.config
+/storage/**
+!/storage/.gitkeep
+/config/license.key

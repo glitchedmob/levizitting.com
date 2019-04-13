@@ -1,22 +1,35 @@
-# levizitting.com
+# Project Name
 
-> My kryptonian Nuxt.js project
+Powered by Craft CMS
 
-## Build Setup
+## Software requirements
+- node 8
+- npm 6
+- php >= 7.1
+- mysql 5.7
+- composer
 
-``` bash
-# install dependencies
-$ yarn install
+## Setup instructions
 
-# serve with hot reload at localhost:3000
-$ yarn run dev
+- Copy `.env.example` to `.env`
 
-# build for production and launch server
-$ yarn run build
-$ yarn start
+- Install php dependencies
 
-# generate static project
-$ yarn run generate
-```
+        $ composer install
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+- Create mysql database and import a SQL dump
+    - You can get a SQL dump from prod by logging into the admin and going to Utilities > Backup Database
+
+- Fill in the database credentials in the `.env` file
+
+- Install frontend dependencies
+
+        $ npm i
+
+- Build frontend dependencies
+
+        $ npm run build
+
+- Startup a php server pointing to the web folder
+
+        $ php -S localhost:8000 -t web
