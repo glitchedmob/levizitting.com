@@ -7,7 +7,7 @@
         class="socicon-github"
       ></a>
       <a
-        href="https://twitter.com/levi_zitting"
+        href="https://twitter.com/levizitting"
         target="_blank"
         class="socicon-twitter"
       ></a>
