@@ -1,6 +1,10 @@
 {
   "talks": [
     {
+      "title": "Xamarin.Forms",
+      "url": "https://www.youtube.com/embed/-rXBnaOU75s"
+    },
+    {
       "title": "Craft CMS",
       "url": "https://www.youtube.com/embed/0CToiy1Uyrg"
     },
