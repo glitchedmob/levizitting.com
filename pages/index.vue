@@ -6,7 +6,7 @@
     <h4 class="text">I code and sometimes write about it</h4>
     <div class="text">
       <h4>I live in Springfield MO</h4>
-      <h4>where I work at <a href="https://emergencme.com" target="_blank">EmergencMe</a></h4>
+      <h4>where I work at <a href="https://hearo.ai/" target="_blank">Hearo</a></h4>
     </div>
   </div>
 </template>
