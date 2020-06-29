@@ -1,6 +1,10 @@
 {
   "talks": [
     {
+      "title": "Introduction To Flutter (Part 2)",
+      "url": "https://www.youtube.com/embed/tgnrY-7QOrk"
+    },
+    {
       "title": "Introduction To Flutter (Part 1)",
       "url": "https://www.youtube.com/embed/SW68s6khZbc"
     },
