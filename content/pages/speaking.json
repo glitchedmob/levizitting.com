@@ -1,6 +1,10 @@
 {
   "talks": [
     {
+      "title": "Azure Static Web Apps",
+      "url": "https://www.youtube.com/embed/7kVxHx_pq0I"
+    },
+    {
       "title": "Introduction To Flutter (Part 2)",
       "url": "https://www.youtube.com/embed/tgnrY-7QOrk"
     },
