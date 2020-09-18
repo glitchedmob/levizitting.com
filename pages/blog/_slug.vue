@@ -27,7 +27,8 @@ export default Vue.extend({
         humanDate,
     },
     async asyncData({ params }: Context): Promise<{ post: BlogPost }> {
-        let post: BlogPost = await import('~/content/blog/posts/' + params.slug + '.json');
+        let module = await import('~/content/blog/posts/' + params.slug + '.json');
+        let post = module.default as BlogPost;
         return { post };
     },
     head() {
