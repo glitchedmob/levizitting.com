@@ -96,7 +96,8 @@ function createFeed(feed) {
     glob.sync('./content/blog/posts/*.json').forEach(file => {
         const post = require(path.resolve(file));
         if (post.published) {
-            const url = `https://www.levizitting.com/blog/${file.replace('.json', '').replace('./content/blog/posts/', '')}`;
+            const slug = file.replace('.json', '').replace('./content/blog/posts/', '')
+            const url = `https://www.levizitting.com/blog/${slug}`;
             feed.addItem({
                 title: post.title,
                 id: url,
