@@ -1,131 +1,109 @@
 const glob = require('glob');
 const path = require('path');
-const markdown = require('markdown').markdown
-const pkg = require('./package');
+const markdown = require('markdown').markdown;
 
 
 const dynamicRoutes = getDynamicPaths({
-  '/blog': 'blog/posts/*.json'
+    '/blog': 'blog/posts/*.json',
 });
 
-module.exports = {
-  mode: 'universal',
 
-  router: {
-    linkExactActiveClass: 'active-exact',
-    linkActiveClass: 'active'
-  },
+export default {
+    // Target (https://go.nuxtjs.dev/config-target)
+    target: 'static',
 
-  /*
-  ** Headers of the page
-  */
-  head: {
-    titleTemplate: (titleChunk) => (
-      titleChunk ? `Levi Zitting | ${titleChunk}` : 'Levi Zitting | Programmer and Creator'
-    ),
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'A blog about code' },
-      { name: 'theme-color', content: '#263238' },
-      { hid: 'og:title', property: 'og:title', content: 'Levi Zitting | Programmer and Creator' }
+    // Global page headers (https://go.nuxtjs.dev/config-head)
+    head: {
+        titleTemplate: (titleChunk) => (
+            titleChunk ? `Levi Zitting | ${titleChunk}` : 'Levi Zitting | Programmer and Creator'
+        ),
+        meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { hid: 'description', name: 'description', content: 'A blog about code' },
+            { name: 'theme-color', content: '#263238' },
+            { hid: 'og:title', property: 'og:title', content: 'Levi Zitting | Programmer and Creator' },
+        ],
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'stylesheet', href: 'https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d' },
+        ],
+    },
+
+    // Global CSS (https://go.nuxtjs.dev/config-css)
+    css: [
+        '~/assets/scss/main.scss',
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d' }
-    ]
-  },
 
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#FFFFFF' },
+    // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
+    plugins: [],
 
-  /*
-  ** Global CSS
-  */
-  css: [
-    '~/assets/stylus/main.styl'
-  ],
+    // Auto import components (https://go.nuxtjs.dev/config-components)
+    components: true,
 
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [],
+    // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
+    buildModules: [
+        // https://go.nuxtjs.dev/typescript
+        '@nuxt/typescript-build',
+    ],
 
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-    '~/modules/typescript.js',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/feed',
-    '@nuxtjs/pwa',
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-79851879-2'
-    }]
-  ],
+    // Modules (https://go.nuxtjs.dev/config-modules)
+    modules: [
+        '@nuxtjs/sitemap',
+        '@nuxtjs/feed',
+        '@nuxtjs/pwa',
+        ['@nuxtjs/google-analytics', {
+            id: 'UA-79851879-2',
+        }],
+    ],
 
-  generate: {
-    routes: dynamicRoutes
-  },
+    sitemap: {
+        hostname: 'https://www.levizitting.com',
+        routes: dynamicRoutes,
+    },
 
-  sitemap: {
-    hostname: 'https://levizitting.com',
-    generate: true,
-    routes: dynamicRoutes
-  },
+    feed: {
+        path: '/feed.xml',
+        create: createFeed,
+        cacheTime: 1000 * 60 * 15,
+        type: 'rss2',
+    },
 
-  feed: {
-    path: '/feed.xml',
-    create: createFeed,
-    cacheTime: 1000 * 60 * 15,
-    type: 'rss2'
-  },
-
-  /*
-  ** Build configuration
-  */
-  build: {
-    extractCSS: true,
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-
-    }
-  }
-}
+    // Build Configuration (https://go.nuxtjs.dev/config-build)
+    build: {
+        extractCSS: true,
+    },
+};
 
 function getDynamicPaths(urlFilepathTable) {
-  return [].concat(
-    ...Object.keys(urlFilepathTable).map(url => {
-      var filepathGlob = urlFilepathTable[url];
-      return glob
-        .sync(filepathGlob, { cwd: 'content' })
-        .map(filepath => `${url}/${path.basename(filepath, '.json')}`);
-    })
-  );
+    return [].concat(
+        ...Object.keys(urlFilepathTable).map(url => {
+            const filepathGlob = urlFilepathTable[url];
+            return glob
+                .sync(filepathGlob, { cwd: 'content' })
+                .map(filepath => `${url}/${path.basename(filepath, '.json')}`);
+        }),
+    );
 }
 
 function createFeed(feed) {
     feed.options = {
-      title: 'Levi Zitting Blog',
-      link: 'https://levizitting.com/blog',
-      description: 'A blog about code'
-    }
+        title: 'Levi Zitting Blog',
+        link: 'https://www.levizitting.com/blog',
+        description: 'A blog about code',
+    };
 
     glob.sync('./content/blog/posts/*.json').forEach(file => {
-      const post = require(path.resolve(file));
-      if (post.published) {
-        const url = `https://levizitting.com/blog/${file.replace('.json', '').replace('./content/blog/posts/', '')}`;
-        feed.addItem({
-          title: post.title,
-          id: url,
-          link: url,
-          description: post.description ? post.description : 'No description',
-          content: markdown.toHTML(post.body)
-        })
-      }
+        const post = require(path.resolve(file));
+        if (post.published) {
+            const url = `https://www.levizitting.com/blog/${file.replace('.json', '').replace('./content/blog/posts/', '')}`;
+            feed.addItem({
+                title: post.title,
+                id: url,
+                link: url,
+                description: post.description ? post.description : 'No description',
+                content: markdown.toHTML(post.body),
+            });
+        }
     });
 }
