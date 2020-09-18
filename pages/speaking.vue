@@ -16,10 +16,7 @@
 </template>
 
 <script lang="ts">
-import {
-  Component,
-  Vue
-} from "nuxt-property-decorator"
+import Vue from 'vue';
 
 import * as speakingPage from '../content/pages/speaking.json';
 
@@ -28,36 +25,38 @@ interface Talk {
   url: string
 }
 
-@Component({})
-export default class extends Vue {
-  public talks: Talk[] = speakingPage.talks;
-
-  public head() {
-    return {
-      title: 'Speaking'
-    }
-  }
-}
+export default Vue.extend({
+    data: () => ({
+        talks: speakingPage.talks as Talk[],
+    }),
+    head: () => ({
+        title: 'Speaking',
+    }),
+});
 </script>
 
-<style lang="stylus" scoped>
-  .talk
-    margin 2rem 0
+<style lang="scss" scoped>
+    .talk {
+        margin: 2rem 0;
+    }
 
-  .video
-    margin-top 1rem
-    overflow hidden
-    padding-bottom 56.25%
-    position relative
-    height 0
+    .video {
+        margin-top: 1rem;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
 
-    iframe
-      left 0
-      top 0
-      height 100%
-      width 100%
-      position absolute
+        iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    }
 
-  .reach-out
-    text-align center
+    .reach-out {
+        text-align: center;
+    }
 </style>

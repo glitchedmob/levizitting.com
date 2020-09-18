@@ -10,39 +10,31 @@
   </div>
 </template>
 
-<script lang="ts">
-import {
-  Component,
-  Vue
-} from "nuxt-property-decorator"
+<style lang="scss" scoped>
+  @import '../assets/scss/config.scss';
 
-@Component({})
-export default class extends Vue {
+  .title {
+      text-align: center;
+      margin: 2rem 0 2.5rem 0;
+  }
 
-}
-</script>
+  .nav {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
 
-<style lang="stylus" scoped>
-  @import '../assets/stylus/config.styl'
+  .nav-item {
+      transition: all 300ms ease-in-out;
+      font-size: $typography-size-6;
+      color: map-get($colors, text);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      padding: 0 0 0.5rem 0;
 
-  .title
-    text-align center
-    margin 2rem 0 2.5rem 0
-
-  .nav
-    display flex
-    justify-content space-between
-    flex-wrap wrap
-
-  .nav-item
-    transition all 300ms ease-in-out
-    font-size typography-size-6
-    color colors-text
-    text-decoration none
-    border-bottom 2px solid transparent
-    padding 0 0 .5rem 0
-
-    &.blog-link.active,
-    &.active-exact
-      border-bottom 2px solid #FFF
+      &.blog-link.active,
+      &.active-exact {
+          border-bottom: 2px solid #fff;
+      }
+  }
 </style>

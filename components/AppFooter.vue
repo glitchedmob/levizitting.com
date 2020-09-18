@@ -26,36 +26,25 @@
   </footer>
 </template>
 
-<script lang="ts">
-import {
-  Component,
-  Vue
-} from "nuxt-property-decorator"
+<style lang="scss" scoped>
+    .footer {
+        padding: 3rem 0;
+    }
 
-@Component({})
-export default class extends Vue {
+    .social {
+        display: flex;
+        justify-content: center;
+        align-content: center;
 
+        a {
+            text-decoration: none;
+            font-size: 3rem;
+            margin: 0 1rem;
+        }
+    }
+
+    .socicon-mail {
+        position: relative;
+        top: 0.4rem;
 }
-</script>
-
-<style lang="stylus" scoped>
-@import '../assets/stylus/config.styl'
-
-.footer
-  padding 3rem 0
-
-.social
-  display flex
-  justify-content center
-  align-content center
-
-  a
-    text-decoration none
-    font-size 3rem
-    margin 0 1rem
-
-.socicon-mail
-  position relative
-  top .4rem
-
 </style>

@@ -10,29 +10,27 @@
 </template>
 
 <script lang="ts">
-import {
-  Component,
-  Prop,
-  Vue
-} from "nuxt-property-decorator"
+import Vue, { PropType } from 'vue';
 
-import { humanDate } from '../filters/date-filters'
-import { BlogPost } from '../models/BlogPost';
+import { humanDate } from '~/filters/date-filters'
+import { BlogPost } from '~/models/BlogPost';
 
-@Component({
-  filters: {
-    humanDate
-  }
+export default Vue.extend({
+    props: {
+        post: Object as PropType<BlogPost>,
+    },
+    filters: {
+        humanDate,
+    }
 })
-export default class extends Vue {
-  @Prop() post: BlogPost;
-}
 </script>
 
-<style lang="stylus" scoped>
-.post-preview
-  margin 2rem 0
+<style lang="scss" scoped>
+    .post-preview {
+        margin: 2rem 0;
 
-  img
-    width 100%
+        img {
+            width: 100%;
+        }
+    }
 </style>

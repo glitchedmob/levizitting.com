@@ -12,63 +12,73 @@
 </template>
 
 <script lang="ts">
-import {
-  Component,
-  Vue
-} from "nuxt-property-decorator";
+import Vue from 'vue';
+import { Context } from '@nuxt/types';
 import VueMarkdown from 'vue-markdown';
 
-import { humanDate } from '../../filters/date-filters';
-import { BlogPost } from '../../models/BlogPost';
+import { humanDate } from '~/filters/date-filters';
+import { BlogPost } from '~/models/BlogPost';
 
-@Component({
-  components: {
-    VueMarkdown
-  },
-  filters: {
-    humanDate
-  }
-})
-export default class extends Vue {
-  async asyncData({ params }) {
-    let post: BlogPost = await import('~/content/blog/posts/' + params.slug + '.json');
-    return { post };
-  }
+export default Vue.extend({
+    components: {
+        VueMarkdown,
+    },
+    filters: {
+        humanDate,
+    },
+    async asyncData({ params }: Context): Promise<{post: BlogPost}> {
+        let post: BlogPost = await import('~/content/blog/posts/' + params.slug + '.json');
+        return { post };
+    },
+    head() {
+        const post: BlogPost = this.$data.post;
 
-  public head() {
-    return {
-      title: `Blog | ${this.$data.post.title}`,
-      meta: [
-        { property: 'og:type', content: 'article' },
-        { hid: 'og:title', property: 'og:title', content: `Levi Zitting | ${this.$data.post.title}` },
-        this.$data.post.image ? { hid: 'og:image', property: 'og:image', content: this.$data.post.image } : {},
-        this.$data.post.description ? { hid: 'og:description', property: 'og:description', content: this.$data.post.description } : {},
-      ]
+        const meta = [
+            { property: 'og:type', content: 'article' },
+            { hid: 'og:title', property: 'og:title', content: `Levi Zitting | ${post.title}` },
+        ]
+
+        if (post.image) {
+            meta.push({ hid: 'og:image', property: 'og:image', content: post.image });
+        }
+
+        if (post.description) {
+            meta.push({ hid: 'og:description', property: 'og:description', content: post.description })
+        }
+
+        return {
+            title: `Blog | ${post.title}`,
+            meta,
+        }
     }
-  }
-}
+});
 </script>
 
-<style lang="stylus" scoped>
-  .blog-post
-    margin 2rem 0
+<style lang="scss" scoped>
+    .blog-post {
+        margin: 2rem 0;
+        img {
+            width: 100%;
+            margin: 0 0 1rem 0;
+        }
+    }
 
-    img
-      width 100%
-      margin 0 0 1rem 0
 
-  .body
-    margin 1rem 0 0 0
+    .body {
+        margin: 1rem 0 0 0;
 
-    & /deep/
-      line-height 1.8rem
+        & /deep/ {
+            line-height: 1.8rem;
 
-      img
-        width auto
-        max-width 100%
-        margin 0 auto
+            img {
+                width: auto;
+                max-width: 100%;
+                margin: 0 auto;
+            }
 
-      pre
-        overflow-x auto
-
+            pre {
+                overflow-x: auto;
+            }
+        }
+    }
 </style>
