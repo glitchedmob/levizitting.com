@@ -57,12 +57,8 @@ export default {
         }],
     ],
 
-    generate: {
-    },
-
     sitemap: {
-        hostname: 'https://levizitting.com',
-        generate: true,
+        hostname: 'https://www.levizitting.com',
         routes: dynamicRoutes,
     },
 
