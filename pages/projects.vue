@@ -1,11 +1,11 @@
 <template>
-  <div class="projects main-content">
-    <app-project
-      v-for="(project, i) in projects"
-      :key="i"
-      :project="project"
-    />
-  </div>
+    <div class="projects main-content">
+        <app-project
+            v-for="(project, i) in projects"
+            :key="i"
+            :project="project"
+        />
+    </div>
 </template>
 
 <script lang="ts">

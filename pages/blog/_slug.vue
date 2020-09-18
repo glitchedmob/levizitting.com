@@ -1,14 +1,14 @@
 <template>
-  <article class="blog-post main-content" v-if="post">
-    <img :src="post.image" :alt="post.title" v-if="post.image">
-    <h3>{{ post.title }}</h3>
-    <p class="date">Published {{ post.date | humanDate }}</p>
-    <div class="body">
-      <vue-markdown>
-        {{ post.body }}
-      </vue-markdown>
-    </div>
-  </article>
+    <article class="blog-post main-content" v-if="post">
+        <img :src="post.image" :alt="post.title" v-if="post.image">
+        <h3>{{ post.title }}</h3>
+        <p class="date">Published {{ post.date | humanDate }}</p>
+        <div class="body">
+            <vue-markdown>
+                {{ post.body }}
+            </vue-markdown>
+        </div>
+    </article>
 </template>
 
 <script lang="ts">
@@ -26,7 +26,7 @@ export default Vue.extend({
     filters: {
         humanDate,
     },
-    async asyncData({ params }: Context): Promise<{post: BlogPost}> {
+    async asyncData({ params }: Context): Promise<{ post: BlogPost }> {
         let post: BlogPost = await import('~/content/blog/posts/' + params.slug + '.json');
         return { post };
     },
@@ -36,49 +36,50 @@ export default Vue.extend({
         const meta = [
             { property: 'og:type', content: 'article' },
             { hid: 'og:title', property: 'og:title', content: `Levi Zitting | ${post.title}` },
-        ]
+        ];
 
         if (post.image) {
             meta.push({ hid: 'og:image', property: 'og:image', content: post.image });
         }
 
         if (post.description) {
-            meta.push({ hid: 'og:description', property: 'og:description', content: post.description })
+            meta.push({ hid: 'og:description', property: 'og:description', content: post.description });
         }
 
         return {
             title: `Blog | ${post.title}`,
             meta,
-        }
-    }
+        };
+    },
 });
 </script>
 
 <style lang="scss" scoped>
-    .blog-post {
-        margin: 2rem 0;
+.blog-post {
+    margin: 2rem 0;
+
+    img {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+}
+
+
+.body {
+    margin: 1rem 0 0 0;
+
+    & /deep/ {
+        line-height: 1.8rem;
+
         img {
-            width: 100%;
-            margin: 0 0 1rem 0;
+            width: auto;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        pre {
+            overflow-x: auto;
         }
     }
-
-
-    .body {
-        margin: 1rem 0 0 0;
-
-        & /deep/ {
-            line-height: 1.8rem;
-
-            img {
-                width: auto;
-                max-width: 100%;
-                margin: 0 auto;
-            }
-
-            pre {
-                overflow-x: auto;
-            }
-        }
-    }
+}
 </style>
