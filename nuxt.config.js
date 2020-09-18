@@ -7,7 +7,6 @@ const dynamicRoutes = getDynamicPaths({
     '/blog': 'blog/posts/*.json',
 });
 
-
 export default {
     // Target (https://go.nuxtjs.dev/config-target)
     target: 'static',
@@ -76,14 +75,15 @@ export default {
 };
 
 function getDynamicPaths(urlFilepathTable) {
-    return [].concat(
-        ...Object.keys(urlFilepathTable).map(url => {
+    return Object
+        .keys(urlFilepathTable)
+        .map(url => {
             const filepathGlob = urlFilepathTable[url];
             return glob
                 .sync(filepathGlob, { cwd: 'content' })
                 .map(filepath => `${url}/${path.basename(filepath, '.json')}`);
-        }),
-    );
+        })
+        .flat();
 }
 
 function createFeed(feed) {
