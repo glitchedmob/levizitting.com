@@ -30,13 +30,15 @@
 
 .social {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    margin-bottom: -2rem;
 
     a {
         text-decoration: none;
         font-size: 3rem;
-        margin: 0 1rem;
+        margin: 0 1rem 2rem 1rem;
     }
 }
 </style>
