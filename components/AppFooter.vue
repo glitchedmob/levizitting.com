@@ -18,7 +18,7 @@
                 <i class="icon-dev" aria-hidden="true"></i>
             </a>
             <a
-                href="https://twitter.com/levizitting"
+                href="https://twitter.com/levi_zitting"
                 target="_blank"
                 title="Twitter"
                 rel="noopener"
