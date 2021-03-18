@@ -9,7 +9,7 @@
             <h4>where I work at <a href="https://hearo.ai/" target="_blank">Hearo</a></h4>
         </div>
         <h4>
-            Here's a copy of my <a href="/documents/Levi_Zitting_Resume_2020.pdf" target="_blank">resume</a>
+            Here's a copy of my <a href="/documents/Levi_Zitting_Resume_2021.pdf" target="_blank">resume</a>
         </h4>
     </div>
 </template>
