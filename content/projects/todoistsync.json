@@ -1,0 +1,11 @@
+{
+  "title": "TodoistSync",
+  "image": "/images/uploads/todoist-and-clickup.png",
+  "description": "A utility for syncing tasks from the Clickup app to the Todoist app. Built with .NET Core and AWS Lambda.",
+  "links": [
+    {
+      "title": "Source Code",
+      "url": "https://github.com/glitchedmob/TodoistSync"
+    }
+  ]
+}
