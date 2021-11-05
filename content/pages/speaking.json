@@ -1,6 +1,10 @@
 {
   "talks": [
     {
+      "title": "WSL Explained",
+      "url": "https://www.youtube.com/embed/Nv4u8bE0C4M"
+    },
+    {
       "title": "Azure Static Web Apps",
       "url": "https://www.youtube.com/embed/7kVxHx_pq0I"
     },
