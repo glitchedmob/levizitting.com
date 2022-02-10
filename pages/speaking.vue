@@ -1,6 +1,6 @@
 <template>
     <div class="speaking main-content">
-        <div class="talk" v-for="(talk, i) in talks" :key="i">
+        <div v-for="(talk, i) in talks" :key="i" class="talk">
             <h3>
                 <a :href="talk.url" target="_blank">{{ talk.title }}</a>
             </h3>
@@ -9,7 +9,7 @@
             </div>
         </div>
         <h4 class="reach-out">
-            Interested in having me speak?<br>
+            Interested in having me speak?<br />
             Reach out
         </h4>
     </div>
@@ -21,8 +21,8 @@ import Vue from 'vue';
 import * as speakingPage from '../content/pages/speaking.json';
 
 interface Talk {
-    title: string,
-    url: string
+    title: string;
+    url: string;
 }
 
 export default Vue.extend({

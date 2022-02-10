@@ -1,15 +1,15 @@
 <template>
     <div class="container">
         <div class="above-footer">
-            <app-nav/>
+            <app-nav />
             <main>
                 <transition name="page" mode="out-in">
-                    <nuxt :key="$route.path"/>
+                    <nuxt :key="$route.path" />
                 </transition>
             </main>
         </div>
 
-        <app-footer/>
+        <app-footer />
     </div>
 </template>
 
@@ -19,7 +19,6 @@ import Vue from 'vue';
 import AppNav from '~/components/AppNav.vue';
 import AppFooter from '~/components/AppFooter.vue';
 
-
 export default Vue.extend({
     components: {
         AppNav,
@@ -27,7 +26,6 @@ export default Vue.extend({
     },
 });
 </script>
-
 
 <style lang="scss" scoped>
 .page-enter-active,
@@ -52,4 +50,3 @@ export default Vue.extend({
     min-height: 100vh;
 }
 </style>
-

@@ -1,48 +1,68 @@
 backend:
-  name: git-gateway
-  branch: "master"
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+    name: git-gateway
+    branch: 'master'
+media_folder: 'static/images/uploads'
+public_folder: '/images/uploads'
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    format: 'json'
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Published", name: "published", widget: "boolean", default: false}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: pages
-    label: "Pages"
-    files:
-      - name: "speaking"
-        label: "Speaking"
-        file: "content/pages/speaking.json"
-        fields:
-          - label: "Talks"
-            name: talks
+    - name: 'blog'
+      label: 'Blog'
+      folder: 'content/blog/posts'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+      format: 'json'
+      fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+                label: 'Published',
+                name: 'published',
+                widget: 'boolean',
+                default: false,
+            }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - {
+                label: 'Featured Image',
+                name: 'image',
+                widget: 'image',
+                required: false,
+            }
+          - {
+                label: 'Description',
+                name: 'description',
+                widget: 'text',
+                required: false,
+            }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+    - name: pages
+      label: 'Pages'
+      files:
+          - name: 'speaking'
+            label: 'Speaking'
+            file: 'content/pages/speaking.json'
+            fields:
+                - label: 'Talks'
+                  name: talks
+                  widget: list
+                  fields:
+                      - { label: 'Title', name: title, widget: string }
+                      - { label: URL, name: url, widget: string }
+    - name: 'projects'
+      label: 'Project'
+      folder: 'content/projects'
+      create: true
+      slug: '{{slug}}'
+      format: 'json'
+      fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+                label: 'Featured Image',
+                name: 'image',
+                widget: 'image',
+                required: false,
+            }
+          - { label: 'Description', name: 'description', widget: 'string' }
+          - label: 'Links'
+            name: 'links'
             widget: list
             fields:
-              - {label: "Title", name: title, widget: string}
-              - {label: URL, name: url, widget: string}
-  - name: "projects"
-    label: "Project"
-    folder: "content/projects"
-    create: true
-    slug: "{{slug}}"
-    format: 'json'
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Description", name: "description", widget: "string"}
-      - label: "Links"
-        name: "links"
-        widget: list
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "URL", name: "url", widget: "string"}
+                - { label: 'Title', name: 'title', widget: 'string' }
+                - { label: 'URL', name: 'url', widget: 'string' }

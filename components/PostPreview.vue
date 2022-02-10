@@ -4,8 +4,8 @@
             <nuxt-link :to="post.slug">{{ post.title }}</nuxt-link>
         </h3>
         <p class="date">Published {{ post.date | humanDate }}</p>
-        <img :src="post.image" :alt="post.title" v-if="post.image">
-        <p class="desc" v-if="post.description">{{ post.description }}</p>
+        <img v-if="post.image" :src="post.image" :alt="post.title" />
+        <p v-if="post.description" class="desc">{{ post.description }}</p>
     </div>
 </template>
 
@@ -16,11 +16,14 @@ import { humanDate } from '~/filters/date-filters';
 import { BlogPost } from '~/models/BlogPost';
 
 export default Vue.extend({
-    props: {
-        post: Object as PropType<BlogPost>,
-    },
     filters: {
         humanDate,
+    },
+    props: {
+        post: {
+            type: Object as PropType<BlogPost>,
+            required: true,
+        },
     },
 });
 </script>

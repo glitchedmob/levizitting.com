@@ -1,14 +1,15 @@
 @font-face {
     font-family: 'icon';
     src: url('../icons/icon.ttf?jyamb4') format('truetype'),
-    url('../icons/icon.woff?jyamb4') format('woff'),
-    url('../icons/icon.svg?jyamb4#icon') format('svg');
+        url('../icons/icon.woff?jyamb4') format('woff'),
+        url('../icons/icon.svg?jyamb4#icon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icon' !important;
     speak: never;
@@ -24,25 +25,25 @@
 }
 
 .icon-linkedin:before {
-    content: "\f08c";
+    content: '\f08c';
 }
 
 .icon-twitter:before {
-    content: "\f099";
+    content: '\f099';
 }
 
 .icon-github:before {
-    content: "\f09b";
+    content: '\f09b';
 }
 
 .icon-instagram:before {
-    content: "\f16d";
+    content: '\f16d';
 }
 
 .icon-dev:before {
-    content: "\f6cc";
+    content: '\f6cc';
 }
 
 .icon-envelope:before {
-    content: "\f0e0";
+    content: '\f0e0';
 }

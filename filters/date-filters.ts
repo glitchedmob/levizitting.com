@@ -15,5 +15,7 @@ export function humanDate(dateStr: string) {
     ];
 
     const date = new Date(dateStr);
-    return `${months[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+    return `${
+        months[date.getUTCMonth()]
+    } ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
 }

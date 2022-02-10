@@ -1,7 +1,7 @@
 <template>
     <div class="project">
         <h3>{{ project.title }}</h3>
-        <img :src="project.image" :alt="project.title" v-if="project.image">
+        <img v-if="project.image" :src="project.image" :alt="project.title" />
         <p>{{ project.description }}</p>
         <div class="links">
             <a
@@ -10,7 +10,8 @@
                 :href="link.url"
                 target="_blank"
                 class="link"
-            >{{ link.title }}</a>
+                >{{ link.title }}</a
+            >
         </div>
     </div>
 </template>
@@ -22,7 +23,10 @@ import { Project } from '~/models/Project';
 
 export default Vue.extend({
     props: {
-        project: Object as PropType<Project>,
+        project: {
+            type: Object as PropType<Project>,
+            required: true,
+        },
     },
 });
 </script>

@@ -4,8 +4,12 @@
         <nav class="nav">
             <nuxt-link to="/" class="nav-item home-link">Home</nuxt-link>
             <nuxt-link to="/blog" class="nav-item blog-link">Blog</nuxt-link>
-            <nuxt-link to="/projects" class="nav-item projets-link">Projects</nuxt-link>
-            <nuxt-link to="/speaking" class="nav-item speaking-link">Speaking</nuxt-link>
+            <nuxt-link to="/projects" class="nav-item projets-link"
+                >Projects</nuxt-link
+            >
+            <nuxt-link to="/speaking" class="nav-item speaking-link"
+                >Speaking</nuxt-link
+            >
         </nav>
     </div>
 </template>

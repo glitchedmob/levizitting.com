@@ -1,6 +1,6 @@
 <template>
-    <article class="blog-post main-content" v-if="post">
-        <img :src="post.image" :alt="post.title" v-if="post.image">
+    <article v-if="post" class="blog-post main-content">
+        <img v-if="post.image" :src="post.image" :alt="post.title" />
         <h3>{{ post.title }}</h3>
         <p class="date">Published {{ post.date | humanDate }}</p>
         <div class="body">
@@ -27,8 +27,10 @@ export default Vue.extend({
         humanDate,
     },
     async asyncData({ params }: Context): Promise<{ post: BlogPost }> {
-        let module = await import('~/content/blog/posts/' + params.slug + '.json');
-        let post = module.default as BlogPost;
+        const module = await import(
+            '~/content/blog/posts/' + params.slug + '.json'
+        );
+        const post = module.default as BlogPost;
         return { post };
     },
     head() {
@@ -36,15 +38,27 @@ export default Vue.extend({
 
         const meta = [
             { property: 'og:type', content: 'article' },
-            { hid: 'og:title', property: 'og:title', content: `Levi Zitting | ${post.title}` },
+            {
+                hid: 'og:title',
+                property: 'og:title',
+                content: `Levi Zitting | ${post.title}`,
+            },
         ];
 
         if (post.image) {
-            meta.push({ hid: 'og:image', property: 'og:image', content: post.image });
+            meta.push({
+                hid: 'og:image',
+                property: 'og:image',
+                content: post.image,
+            });
         }
 
         if (post.description) {
-            meta.push({ hid: 'og:description', property: 'og:description', content: post.description });
+            meta.push({
+                hid: 'og:description',
+                property: 'og:description',
+                content: post.description,
+            });
         }
 
         return {
@@ -64,7 +78,6 @@ export default Vue.extend({
         margin: 0 0 1rem 0;
     }
 }
-
 
 .body {
     margin: 1rem 0 0 0;
