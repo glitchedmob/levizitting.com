@@ -1,9 +1,9 @@
 <template>
     <div class="speaking main-content">
         <div v-for="(talk, i) in talks" :key="i" class="talk">
-            <h3>
+            <h2 class="h3">
                 <a :href="talk.url" target="_blank">{{ talk.title }}</a>
-            </h3>
+            </h2>
             <div class="video">
                 <iframe :src="talk.url" frameborder="0"></iframe>
             </div>

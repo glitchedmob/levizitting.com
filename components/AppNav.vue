@@ -1,6 +1,6 @@
 <template>
     <div class="navigation">
-        <h1 class="title">Levi Zitting</h1>
+        <p class="h1 title">Levi Zitting</p>
         <nav class="nav">
             <nuxt-link to="/" class="nav-item home-link">Home</nuxt-link>
             <nuxt-link to="/blog" class="nav-item blog-link">Blog</nuxt-link>

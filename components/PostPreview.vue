@@ -1,8 +1,8 @@
 <template>
     <div class="post-preview">
-        <h3>
+        <h2 class="h3">
             <nuxt-link :to="post.slug">{{ post.title }}</nuxt-link>
-        </h3>
+        </h2>
         <p class="date">Published {{ post.date | humanDate }}</p>
         <img v-if="post.image" :src="post.image" :alt="post.title" />
         <p v-if="post.description" class="desc">{{ post.description }}</p>

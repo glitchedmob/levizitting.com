@@ -1,28 +1,28 @@
 <template>
     <div class="home main-content">
-        <h2 class="text">Thanks for stopping by</h2>
+        <p class="h2 text">Thanks for stopping by</p>
         <img
             src="/images/me.jpg"
             alt="Levi Zitting profile image"
             class="profile"
         />
         <p class="img-desc">This is me</p>
-        <h4 class="text">I code and sometimes write about it</h4>
+        <p class="h4 text">I code and sometimes write about it</p>
         <div class="text">
-            <h4>I live in Springfield MO</h4>
-            <h4>
+            <p class="h4">I live in Springfield MO</p>
+            <p class="h4">
                 where I work at
                 <a href="https://midwesterninteractive.com/" target="_blank"
                     >Midwestern Interactive</a
                 >
-            </h4>
+            </p>
         </div>
-        <h4>
+        <p class="h4">
             Here's a copy of my
             <a href="/documents/Levi_Zitting_Resume_2021.pdf" target="_blank"
                 >resume</a
             >
-        </h4>
+        </p>
     </div>
 </template>
 

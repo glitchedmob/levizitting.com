@@ -4,7 +4,7 @@
             <post-preview v-for="(post, i) in posts" :key="i" :post="post" />
         </template>
         <div v-else class="no-posts">
-            <h3>No blog posts :(</h3>
+            <p class="h3">No blog posts :(</p>
         </div>
     </div>
 </template>

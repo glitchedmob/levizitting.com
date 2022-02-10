@@ -1,6 +1,6 @@
 <template>
     <div class="project">
-        <h3>{{ project.title }}</h3>
+        <h2 class="h3">{{ project.title }}</h2>
         <img v-if="project.image" :src="project.image" :alt="project.title" />
         <p>{{ project.description }}</p>
         <div class="links">

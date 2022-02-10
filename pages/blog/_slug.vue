@@ -1,7 +1,7 @@
 <template>
     <article v-if="post" class="blog-post main-content">
         <img v-if="post.image" :src="post.image" :alt="post.title" />
-        <h3>{{ post.title }}</h3>
+        <h1 class="h3">{{ post.title }}</h1>
         <p class="date">Published {{ post.date | humanDate }}</p>
         <div class="body">
             <vue-markdown>
