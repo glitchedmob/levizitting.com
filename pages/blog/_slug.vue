@@ -69,7 +69,7 @@ export default Vue.extend({
 .body {
     margin: 1rem 0 0 0;
 
-    & /deep/ {
+    & ::v-deep {
         line-height: 1.8rem;
 
         img {

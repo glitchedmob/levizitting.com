@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $colors: (
     text: #FFF,
     background: #263238,
@@ -23,17 +25,17 @@ $font: -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next", "Segoe UI", "Ro
 $typography-size-base: 1rem;
 
 $typography-size-ratio: 1.2;
-$typography-size-1: round(($typography-size-base * pow($typography-size-ratio, 6)) * 1000) / 1000;
-$typography-size-2: round(($typography-size-base * pow($typography-size-ratio, 5)) * 1000) / 1000;
-$typography-size-3: round(($typography-size-base * pow($typography-size-ratio, 4)) * 1000) / 1000;
-$typography-size-4: round(($typography-size-base * pow($typography-size-ratio, 3)) * 1000) / 1000;
-$typography-size-5: round(($typography-size-base * pow($typography-size-ratio, 2)) * 1000) / 1000;
-$typography-size-6: round(($typography-size-base * $typography-size-ratio) * 1000) / 1000;
+$typography-size-1: math.div(round(($typography-size-base * pow($typography-size-ratio, 6)) * 1000), 1000);
+$typography-size-2: math.div(round(($typography-size-base * pow($typography-size-ratio, 5)) * 1000), 1000);
+$typography-size-3: math.div(round(($typography-size-base * pow($typography-size-ratio, 4)) * 1000), 1000);
+$typography-size-4: math.div(round(($typography-size-base * pow($typography-size-ratio, 3)) * 1000), 1000);
+$typography-size-5: math.div(round(($typography-size-base * pow($typography-size-ratio, 2)) * 1000), 1000);
+$typography-size-6: math.div(round(($typography-size-base * $typography-size-ratio) * 1000), 1000);
 
 $typography-size-small-ratio: 1.125;
-$typography-size-small-1: round(($typography-size-base * pow($typography-size-small-ratio, 6)) * 1000) / 1000;
-$typography-size-small-2: round(($typography-size-base * pow($typography-size-small-ratio, 5)) * 1000) / 1000;
-$typography-size-small-3: round(($typography-size-base * pow($typography-size-small-ratio, 4)) * 1000) / 1000;
-$typography-size-small-4: round(($typography-size-base * pow($typography-size-small-ratio, 3)) * 1000) / 1000;
-$typography-size-small-5: round(($typography-size-base * pow($typography-size-small-ratio, 2)) * 1000) / 1000;
-$typography-size-small-6: round(($typography-size-base * $typography-size-small-ratio) * 1000) / 1000;
+$typography-size-small-1: math.div(round(($typography-size-base * pow($typography-size-small-ratio, 6)) * 1000), 1000);
+$typography-size-small-2: math.div(round(($typography-size-base * pow($typography-size-small-ratio, 5)) * 1000), 1000);
+$typography-size-small-3: math.div(round(($typography-size-base * pow($typography-size-small-ratio, 4)) * 1000), 1000);
+$typography-size-small-4: math.div(round(($typography-size-base * pow($typography-size-small-ratio, 3)) * 1000), 1000);
+$typography-size-small-5: math.div(round(($typography-size-base * pow($typography-size-small-ratio, 2)) * 1000), 1000);
+$typography-size-small-6: math.div(round(($typography-size-base * $typography-size-small-ratio) * 1000), 1000);
