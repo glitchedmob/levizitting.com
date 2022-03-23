@@ -3,8 +3,8 @@
         <img v-if="post.image" :src="post.image" :alt="post.title" />
         <h1 class="h3">{{ post.title }}</h1>
         <p class="date">Published {{ post.date | humanDate }}</p>
-        <div class="body">
-            <vue-markdown>
+        <div ref="postBody" class="body">
+            <vue-markdown :anchor-attributes="{ target: '_blank', rel: 'noopener noreferrer' }">
                 {{ post.body }}
             </vue-markdown>
         </div>
