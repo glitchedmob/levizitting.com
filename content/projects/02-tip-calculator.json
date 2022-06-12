@@ -10,6 +10,10 @@
     {
       "title": "App Store",
       "url": "/tip-calculator/ios/"
+    },
+    {
+      "title": "Google Play",
+      "url": "/tip-calculator/android/"
     }
   ]
 }
