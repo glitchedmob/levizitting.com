@@ -16,7 +16,7 @@ export default {
         titleTemplate: (titleChunk) =>
             titleChunk
                 ? `Levi Zitting | ${titleChunk}`
-                : 'Levi Zitting | Programmer and Creator',
+                : 'Levi Zitting | Software Developer',
         meta: [
             { charset: 'utf-8' },
             {
@@ -32,18 +32,19 @@ export default {
             {
                 hid: 'og:title',
                 property: 'og:title',
-                content: 'Levi Zitting | Programmer and Creator',
+                content: 'Levi Zitting | Software Developer',
             },
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
         script: [
             {
-                innerHTML: '!function(){var t=window.firstparty=window.firstparty||[];if(!t.initialize){if(t.invoked)return void(window.console&&console.error&&console.error("Firstparty snippet included twice."));t.invoked=!0,t.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"],t.factory=function(r){return function(){var e=Array.prototype.slice.call(arguments);return e.unshift(r),t.push(e),t}};for(var r=0;r<t.methods.length;r++){var e=t.methods[r];t[e]=t.factory(e)}t.load=function(r,e,i){t._writeKey=r,t._host=e,t._firstpartyOptions=i;var a="/js/firstparty.min.js";void 0!==i&&void 0!==i.libraryPath&&(a=i.libraryPath);var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://"+e+a;var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(o,n)},t.SNIPPET_VERSION="0.1.0"}}();' +
+                innerHTML:
+                    '!function(){var t=window.firstparty=window.firstparty||[];if(!t.initialize){if(t.invoked)return void(window.console&&console.error&&console.error("Firstparty snippet included twice."));t.invoked=!0,t.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"],t.factory=function(r){return function(){var e=Array.prototype.slice.call(arguments);return e.unshift(r),t.push(e),t}};for(var r=0;r<t.methods.length;r++){var e=t.methods[r];t[e]=t.factory(e)}t.load=function(r,e,i){t._writeKey=r,t._host=e,t._firstpartyOptions=i;var a="/js/firstparty.min.js";void 0!==i&&void 0!==i.libraryPath&&(a=i.libraryPath);var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src="https://"+e+a;var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(o,n)},t.SNIPPET_VERSION="0.1.0"}}();' +
                     'window.firstparty.load("pxowTSKD0P6ZoWjm", "fp.levizitting.com");' +
                     'window.firstparty.page();',
                 type: 'text/javascript',
-            }
-        ]
+            },
+        ],
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -52,7 +53,12 @@ export default {
     router: { middleware: ['tracking'] },
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: [],
+    plugins: [
+        {
+            src: './plugins/gtag',
+            mode: 'client'
+        },
+    ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
@@ -66,17 +72,7 @@ export default {
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
-    modules: [
-        '@nuxtjs/sitemap',
-        '@nuxtjs/feed',
-        '@nuxtjs/pwa',
-        [
-            '@nuxtjs/google-analytics',
-            {
-                id: 'UA-79851879-2',
-            },
-        ],
-    ],
+    modules: ['@nuxtjs/sitemap', '@nuxtjs/feed', '@nuxtjs/pwa'],
 
     // PWA module configuration: https://go.nuxtjs.dev/pwa
     pwa: {

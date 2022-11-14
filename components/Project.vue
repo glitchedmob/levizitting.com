@@ -10,8 +10,9 @@
                 :href="link.url"
                 target="_blank"
                 class="link"
-                >{{ link.title }}</a
             >
+                {{ link.title }}
+            </a>
         </div>
     </div>
 </template>

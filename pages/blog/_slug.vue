@@ -4,7 +4,12 @@
         <h1 class="h3">{{ post.title }}</h1>
         <p class="date">Published {{ post.date | humanDate }}</p>
         <div ref="postBody" class="body">
-            <vue-markdown :anchor-attributes="{ target: '_blank', rel: 'noopener noreferrer' }">
+            <vue-markdown
+                :anchor-attributes="{
+                    target: '_blank',
+                    rel: 'noopener noreferrer',
+                }"
+            >
                 {{ post.body }}
             </vue-markdown>
         </div>

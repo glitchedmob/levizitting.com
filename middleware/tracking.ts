@@ -1,11 +1,11 @@
-import {Middleware} from "@nuxt/types";
+import { Middleware } from '@nuxt/types';
 
-const trackingMiddleware: Middleware = (context) => {
+const trackingMiddleware: Middleware = () => {
     if (!process.client) {
         return;
     }
 
     (window as any).firstparty?.page();
-}
+};
 
-export default trackingMiddleware
+export default trackingMiddleware;
