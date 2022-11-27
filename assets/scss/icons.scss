@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'icon';
-    src: url('../icons/icon.ttf?jyamb4') format('truetype'),
-        url('../icons/icon.woff?jyamb4') format('woff'),
-        url('../icons/icon.svg?jyamb4#icon') format('svg');
+    src: url('../icons/icon.ttf?vf4iyb') format('truetype'),
+    url('../icons/icon.woff?vf4iyb') format('woff'),
+    url('../icons/icon.svg?vf4iyb#icon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
 
-[class^='icon-'],
-[class*=' icon-'] {
+[class^="icon-"],
+[class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icon' !important;
     speak: never;
@@ -36,6 +36,10 @@
     content: '\f09b';
 }
 
+.icon-envelope:before {
+    content: '\f0e0';
+}
+
 .icon-instagram:before {
     content: '\f16d';
 }
@@ -44,6 +48,6 @@
     content: '\f6cc';
 }
 
-.icon-envelope:before {
-    content: '\f0e0';
+.icon-mastodon:before {
+    content: '\e900';
 }

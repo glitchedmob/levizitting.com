@@ -34,6 +34,14 @@
                 <i class="icon-instagram" aria-hidden="true"></i>
             </a>
             <a
+                href="https://techhub.social/@levizitting"
+                target="_blank"
+                title="Mastodon"
+                rel="me"
+            >
+                <i class="icon-mastodon" aria-hidden="true"></i>
+            </a>
+            <a
                 href="https://www.linkedin.com/in/levi-zitting/"
                 target="_blank"
                 title="Linkedin"
