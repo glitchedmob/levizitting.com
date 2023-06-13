@@ -1,6 +1,10 @@
 {
   "talks": [
     {
+      "title": ".NET and Why You Should Care",
+      "url": "https://www.youtube.com/embed/a5azw1FllLY"
+    },
+    {
       "title": "Bringing your IoT Ideas to Life With the Meadow Board and Its Game-Changing .NET Apis",
       "url": "https://www.youtube.com/embed/iQjkZjU5tFU"
     },
