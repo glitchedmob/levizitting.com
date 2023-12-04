@@ -1,3 +1,5 @@
+using Vite.AspNetCore.Extensions;
+
 var builder = Host.CreateDefaultBuilder(args)
     .ConfigureUmbracoDefaults()
     .ConfigureWebHostDefaults(webBuilder =>
@@ -29,6 +31,8 @@ public class Startup
             .AddDeliveryApi()
             .AddComposers()
             .Build();
+
+        services.AddViteServices();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,6 +40,7 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
+            app.UseViteDevMiddleware();
         }
 
         app.UseUmbraco()
