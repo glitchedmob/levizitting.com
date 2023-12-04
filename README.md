@@ -1,4 +1,4 @@
-﻿# levizitting.com
+# levizitting.com
 
 ## Project Setup
 - Create a sqlite database 
