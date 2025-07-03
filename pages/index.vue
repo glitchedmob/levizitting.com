@@ -12,15 +12,17 @@
             <p class="h4">I live in Springfield MO</p>
             <p class="h4">
                 where I work at
-                <a href="https://midwesterninteractive.com/" target="_blank"
-                    >Midwestern Interactive</a
+                <a href="https://midwesterninteractive.com/" target="_blank">
+                    Midwestern Interactive
+                </a
                 >
             </p>
         </div>
         <p class="h4">
             Here's a copy of my
-            <a href="/documents/Levi_Zitting_Resume_2021.pdf" target="_blank"
-                >resume</a
+            <a href="/documents/Levi_Zitting_Resume_2025.pdf" target="_blank">
+                resume
+            </a
             >
         </p>
     </div>
