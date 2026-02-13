@@ -20,8 +20,10 @@
 </template>
 
 <script setup lang="ts">
-import type { BlogPost } from '~/models/BlogPost';
+import type { PageCollections } from '@nuxt/content';
 import { humanDate } from '~/filters/date-filters';
+
+type BlogPost = PageCollections['blog'] & { slug: string };
 
 interface Props {
     post: BlogPost;

@@ -93,3 +93,6 @@ sw.*
 # Generated sitemap and rss feed
 public/sitemap.xml
 public/feed.xml
+
+# Nuxt Content database
+.data/

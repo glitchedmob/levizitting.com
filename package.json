@@ -14,8 +14,10 @@
         "format:check": "prettier --check ."
     },
     "dependencies": {
+        "@nuxt/content": "^3.11.2",
         "@nuxtjs/sitemap": "^7.6.0",
         "@tailwindcss/vite": "^4.1.18",
+        "better-sqlite3": "^12.6.2",
         "feed": "^5.2.0",
         "markdown-it": "^14.1.1",
         "nuxt": "^4.3.1",
