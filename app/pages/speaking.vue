@@ -11,7 +11,7 @@
             <Link rel="preconnect" href="https://i.ytimg.com" />
         </Head>
         <div
-            v-for="(talk, index) in speakingData.talks"
+            v-for="(talk, index) in talkList"
             :key="talk.url"
             class="my-8"
             :data-video-url="talk.url"
@@ -52,7 +52,13 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { onBeforeRouteLeave } from 'vue-router';
-import speakingData from '~/content/pages/speaking.json';
+import type { PageCollections } from '@nuxt/content';
+
+const { data: talks } = await useAsyncData('talks', () =>
+    queryCollection('talks').order('publishedDate', 'DESC').all(),
+);
+
+const talkList = computed(() => talks.value ?? []);
 
 declare global {
     interface Element {
@@ -83,11 +89,10 @@ function restoreCachedIframes() {
     const slots = document.querySelectorAll<HTMLDivElement>(
         '[data-iframe-index]',
     );
-    const talks = speakingData.talks;
 
     // Move cached iframes from container back to their slots
     slots.forEach((slot, index) => {
-        const talk = talks[index];
+        const talk = talkList.value[index];
         if (!talk) return;
 
         const cached = container.querySelector(
@@ -112,11 +117,10 @@ function cacheIframesToContainer() {
     const slots = document.querySelectorAll<HTMLDivElement>(
         '[data-iframe-index]',
     );
-    const talks = speakingData.talks;
 
     // Move iframes from slots to the hidden container
     slots.forEach((slot, index) => {
-        const talk = talks[index];
+        const talk = talkList.value[index];
         const iframe = slot.querySelector('iframe');
         if (iframe && talk) {
             iframe.setAttribute('data-video-url', talk.url);

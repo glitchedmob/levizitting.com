@@ -13,5 +13,15 @@ export default defineContentConfig({
                 date: z.string(),
             }),
         }),
+        talks: defineCollection({
+            type: 'data',
+            source: 'talks/*.md',
+            schema: z.object({
+                title: z.string(),
+                url: z.string(),
+                publishedDate: z.string(),
+                description: z.string().optional(),
+            }),
+        }),
     },
 });
