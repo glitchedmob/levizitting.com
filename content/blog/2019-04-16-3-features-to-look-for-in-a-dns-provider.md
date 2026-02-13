@@ -1,7 +1,6 @@
 ---
 title: 3 Features To Look For In a DNS Provider
-published: true
-date: 2019-04-16T21:46:03-05:00
+publishedDate: 2019-04-16T21:46:03-05:00
 description: There are countless DNS providers out there. Most of them make it easy enough to create and update the various records associated with your domains, but there are a handful of features that can make a DNS provider go from decent to amazing.
 ---
 

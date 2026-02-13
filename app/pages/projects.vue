@@ -14,6 +14,9 @@ useSeoMeta({
 });
 
 const { data: projects } = await useAsyncData('projects', () =>
-    queryCollection('projects').order('publishedDate', 'DESC').all(),
+    queryCollection('projects')
+        .where('publishedDate', 'IS NOT NULL')
+        .order('publishedDate', 'DESC')
+        .all(),
 );
 </script>

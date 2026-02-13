@@ -16,8 +16,8 @@ useSeoMeta({
 
 const { data: posts } = await useAsyncData('blog-posts', async () => {
     const collection = await queryCollection('blog')
-        .where('published', '=', true)
-        .order('date', 'DESC')
+        .where('publishedDate', 'IS NOT NULL')
+        .order('publishedDate', 'DESC')
         .all();
 
     return collection.map((post) => ({

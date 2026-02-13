@@ -1,7 +1,6 @@
 ---
 title: How to Treat Technical Debt
-published: true
-date: 2022-03-23T15:35:56-05:00
+publishedDate: 2022-03-23T15:35:56-05:00
 description: My thoughts on how engineers should treat the technical debt on their projects
 ---
 

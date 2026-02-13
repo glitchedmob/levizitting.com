@@ -6,11 +6,10 @@ export default defineContentConfig({
             type: 'page',
             source: 'blog/*.md',
             schema: z.object({
-                published: z.boolean(),
                 title: z.string(),
                 description: z.string().optional(),
                 image: z.string().optional(),
-                date: z.string(),
+                publishedDate: z.string().optional(),
             }),
         }),
         talks: defineCollection({
@@ -19,7 +18,7 @@ export default defineContentConfig({
             schema: z.object({
                 title: z.string(),
                 url: z.string(),
-                publishedDate: z.string(),
+                publishedDate: z.string().optional(),
                 description: z.string().optional(),
             }),
         }),
@@ -30,7 +29,7 @@ export default defineContentConfig({
                 title: z.string(),
                 image: z.string().optional(),
                 description: z.string(),
-                publishedDate: z.string(),
+                publishedDate: z.string().optional(),
                 links: z.array(
                     z.object({
                         title: z.string(),

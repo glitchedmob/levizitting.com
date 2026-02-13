@@ -17,18 +17,19 @@ export default defineEventHandler(async (event) => {
     });
 
     const posts = await queryCollection(event, 'blog')
-        .where('published', '=', true)
-        .order('date', 'DESC')
+        .where('publishedDate', 'IS NOT NULL')
+        .order('publishedDate', 'DESC')
         .all();
 
     for (const post of posts) {
+        if (!post.publishedDate) continue;
         const url = `https://www.levizitting.com/blog${post.path}`;
         feed.addItem({
             title: post.title,
             id: url,
             link: url,
             description: post.description || 'No description',
-            date: new Date(post.date),
+            date: new Date(post.publishedDate),
         });
     }
 

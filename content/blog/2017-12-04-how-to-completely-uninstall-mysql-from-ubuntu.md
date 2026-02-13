@@ -1,7 +1,6 @@
 ---
 title: How To Completely Uninstall MySQL from Ubuntu
-published: true
-date: 2017-12-04T08:57:22-06:00
+publishedDate: 2017-12-04T08:57:22-06:00
 image: /images/uploads/mysql.jpg
 description: A quick guide on how to COMPLETELY remove MySQL from Ubuntu
 ---

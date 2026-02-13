@@ -1,7 +1,6 @@
 ---
 title: Responsive Text Truncation using CSS's text-overflow Property
-published: true
-date: 2018-05-13T17:31:01-05:00
+publishedDate: 2018-05-13T17:31:01-05:00
 description: A quick guide covering the basics of the css text-overflow property, as well as some potential pitfalls you might run into while using it.
 ---
 

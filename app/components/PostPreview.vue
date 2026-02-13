@@ -8,7 +8,9 @@
                 {{ post.title }}
             </NuxtLink>
         </h2>
-        <p class="mb-2">Published {{ humanDate(post.date) }}</p>
+        <p v-if="post.publishedDate" class="mb-2">
+            Published {{ humanDate(post.publishedDate) }}
+        </p>
         <img
             v-if="post.image"
             :src="post.image"
