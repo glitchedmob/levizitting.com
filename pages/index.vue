@@ -26,11 +26,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
-useHead({
-    title: '',
-});
-</script>
+
 
 <style lang="scss" scoped>
 .home {
