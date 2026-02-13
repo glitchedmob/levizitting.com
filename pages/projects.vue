@@ -1,6 +1,6 @@
 <template>
     <div class="projects main-content">
-        <Project v-for="(project, i) in projects" :key="i" :project="project" />
+        <ProjectItem v-for="(project, i) in projects" :key="i" :project="project" />
     </div>
 </template>
 
