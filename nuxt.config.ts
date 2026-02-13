@@ -1,4 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config';
+import tailwindcss from '@tailwindcss/vite';
+import type { ViteConfig } from '@nuxt/schema';
 
 export default defineNuxtConfig({
     site: {
@@ -7,9 +9,17 @@ export default defineNuxtConfig({
         description: 'A blog about code',
     },
 
-    css: ['~/assets/scss/main.scss'],
+    css: ['~/assets/css/main.css'],
 
     modules: ['@nuxt/eslint', '@nuxtjs/sitemap', 'nuxt-gtag'],
+
+    vite: {
+        // Cast to Nuxt's expected Plugin type from ViteConfig
+        // This is needed because @tailwindcss/vite returns Vite's Plugin type
+        // which is structurally incompatible with Nuxt's bundled version.
+        // See: https://github.com/nuxt/nuxt/issues/34306
+        plugins: [tailwindcss() as NonNullable<ViteConfig['plugins']>[number]],
+    },
 
     sitemap: {
         zeroRuntime: true,
