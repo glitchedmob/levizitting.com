@@ -45,7 +45,7 @@
                         href="https://www.google.com/policies/privacy/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-text underline transition-all duration-[250ms] ease-in-out hover:text-text-muted"
+                        class="text-text hover:text-text-muted underline transition-all duration-250 ease-in-out"
                     >
                         Google Play Services
                     </a>
@@ -55,7 +55,7 @@
                         href="https://firebase.google.com/policies/analytics"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-text underline transition-all duration-[250ms] ease-in-out hover:text-text-muted"
+                        class="text-text hover:text-text-muted underline transition-all duration-250 ease-in-out"
                     >
                         Google Analytics for Firebase
                     </a>
@@ -65,7 +65,7 @@
                         href="https://sentry.io/privacy/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-text underline transition-all duration-[250ms] ease-in-out hover:text-text-muted"
+                        class="text-text hover:text-text-muted underline transition-all duration-250 ease-in-out"
                     >
                         Sentry
                     </a>
@@ -163,7 +163,7 @@
                 href="https://privacypolicytemplate.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-text underline transition-all duration-[250ms] ease-in-out hover:text-text-muted"
+                class="text-text hover:text-text-muted underline transition-all duration-250 ease-in-out"
             >
                 <span>privacypolicytemplate.net</span>
             </a>
@@ -172,7 +172,7 @@
                 href="https://app-privacy-policy-generator.nisrulz.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-text underline transition-all duration-[250ms] ease-in-out hover:text-text-muted"
+                class="text-text hover:text-text-muted underline transition-all duration-250 ease-in-out"
             >
                 <span>App Privacy Policy Generator</span>
             </a>
