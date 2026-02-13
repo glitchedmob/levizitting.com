@@ -90,5 +90,5 @@ sw.*
 *.swp
 
 # Generated sitemap and rss feed
-static/sitemap.xml
-static/feed.xml
+public/sitemap.xml
+public/feed.xml
