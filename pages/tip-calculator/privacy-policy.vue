@@ -74,7 +74,7 @@
             I want to inform you that whenever you use my Service, in a case of
             an error in the app I collect data and information (through
             third-party products) on your phone called Log Data. This Log Data
-            may include information such as your device Internet Protocol (“IP”)
+            may include information such as your device Internet Protocol ("IP")
             address, device name, operating system version, the configuration of
             the app when utilizing my Service, the time and date of your use of
             the Service, and other statistics.
@@ -87,8 +87,8 @@
             memory.
         </p>
         <p>
-            This Service does not use these “cookies” explicitly. However, the
-            app may use third-party code and libraries that use “cookies” to
+            This Service does not use these "cookies" explicitly. However, the
+            app may use third-party code and libraries that use "cookies" to
             collect information and improve their services. You have the option
             to either accept or refuse these cookies and know when a cookie is
             being sent to your device. If you choose to refuse our cookies, you
@@ -128,7 +128,7 @@
             control over and assume no responsibility for the content, privacy
             policies, or practices of any third-party sites or services.
         </p>
-        <p><strong>Children’s Privacy</strong></p>
+        <p><strong>Children's Privacy</strong></p>
         <div>
             <p>
                 These Services do not address anyone under the age of 13. I do
@@ -141,7 +141,6 @@
                 to do the necessary actions.
             </p>
         </div>
-        <!---->
         <p><strong>Changes to This Privacy Policy</strong></p>
         <p>
             I may update our Privacy Policy from time to time. Thus, you are
@@ -176,7 +175,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .privacy-policy {
     margin: 2rem 0;
 }

@@ -1,31 +1,27 @@
 <template>
     <div class="projects main-content">
-        <app-project
-            v-for="(project, i) in projects"
-            :key="i"
-            :project="project"
-        />
+        <Project v-for="(project, i) in projects" :key="i" :project="project" />
     </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
+<script setup lang="ts">
+import type { Project } from '~/models/Project';
 
-import AppProject from '../components/Project.vue';
-import { Project } from '~/models/Project';
+useHead({
+    title: 'Projects',
+});
 
-const context = require.context('../content/projects/', false, /\.json$/);
-const projects = context.keys().map((key) => ({ ...context(key) } as Project));
+const projects = ref<Project[]>([]);
 
-export default Vue.extend({
-    components: {
-        AppProject,
-    },
-    data: () => ({
-        projects,
-    }),
-    head: () => ({
-        title: 'Projects',
-    }),
+onMounted(async () => {
+    const modules = import.meta.glob('~/content/projects/*.json');
+    const loadedProjects: Project[] = [];
+
+    for (const path in modules) {
+        const module = await modules[path]();
+        loadedProjects.push((module as { default: Project }).default);
+    }
+
+    projects.value = loadedProjects;
 });
 </script>
