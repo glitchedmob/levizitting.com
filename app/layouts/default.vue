@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="container">
-            <div class="above-footer">
+        <div class="mx-auto flex min-h-screen w-full max-w-[600px] flex-col px-6 md:px-0">
+            <div class="flex-1">
                 <AppNav />
                 <main>
                     <NuxtPage />
@@ -9,36 +9,6 @@
             </div>
             <AppFooter />
         </div>
-        <div id="speaking-iframe-container" style="display: none" />
+        <div id="speaking-iframe-container" class="hidden" />
     </div>
 </template>
-
-<style lang="scss" scoped>
-.page-enter-active,
-.page-leave-active {
-    transition: all 250ms ease;
-}
-
-.page-enter-from,
-.page-leave-to {
-    opacity: 0;
-}
-
-.page-enter-from {
-    transform: translateX(100px);
-}
-
-.page-leave-to {
-    transform: translateX(-100px);
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.above-footer {
-    flex: 1;
-}
-</style>

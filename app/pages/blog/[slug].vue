@@ -1,10 +1,10 @@
 <template>
-    <article class="blog-post main-content">
-        <img v-if="blogPost.image" :src="blogPost.image" :alt="blogPost.title" >
-        <h1 class="h3">{{ blogPost.title }}</h1>
-        <p class="date">Published {{ humanDate(blogPost.date) }}</p>
+    <article class="my-8 w-full">
+        <img v-if="blogPost.image" :src="blogPost.image" :alt="blogPost.title" class="mb-4 w-full">
+        <h1 class="mb-2 text-2xl font-medium md:text-xl">{{ blogPost.title }}</h1>
+        <p class="mb-4">Published {{ humanDate(blogPost.date) }}</p>
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <div ref="postBody" class="body" v-html="renderedBody"/>
+        <div class="post-content mt-4" v-html="renderedBody"/>
     </article>
 </template>
 
@@ -49,31 +49,84 @@ useSeoMeta({
 });
 </script>
 
-<style lang="scss" scoped>
-.blog-post {
-    margin: 2rem 0;
+<style scoped>
+@reference "../../assets/css/main.css";
 
-    img {
-        width: 100%;
-        margin: 0 0 1rem;
-    }
+.post-content {
+    @apply leading-7;
 }
 
-.body {
-    margin: 1rem 0 0;
+.post-content:deep(h1),
+.post-content:deep(h2),
+.post-content:deep(h3),
+.post-content:deep(h4),
+.post-content:deep(h5),
+.post-content:deep(h6) {
+    @apply mt-6 mb-3 font-medium;
+}
 
-    :deep(*) {
-        line-height: 1.8rem;
+.post-content:deep(h1) {
+    @apply text-3xl leading-tight;
+}
 
-        img {
-            width: auto;
-            max-width: 100%;
-            margin: 0 auto;
-        }
+.post-content:deep(h2) {
+    @apply text-2xl leading-snug;
+}
 
-        pre {
-            overflow-x: auto;
-        }
-    }
+.post-content:deep(h3) {
+    @apply text-xl leading-snug;
+}
+
+.post-content:deep(h4) {
+    @apply text-lg leading-snug;
+}
+
+.post-content:deep(p) {
+    @apply mb-4;
+}
+
+.post-content:deep(img) {
+    @apply mx-auto block h-auto max-w-full;
+}
+
+.post-content:deep(a) {
+    @apply text-text underline transition-all duration-[250ms] ease-in-out;
+}
+
+.post-content:deep(a:hover) {
+    @apply text-text-muted;
+}
+
+.post-content:deep(ul),
+.post-content:deep(ol) {
+    @apply mb-4 list-inside pl-6;
+}
+
+.post-content:deep(ul) {
+    @apply list-disc;
+}
+
+.post-content:deep(ol) {
+    @apply list-decimal;
+}
+
+.post-content:deep(li) {
+    @apply mb-1;
+}
+
+.post-content:deep(blockquote) {
+    @apply my-4 border-l-4 border-text-muted pl-4 italic;
+}
+
+.post-content:deep(pre) {
+    @apply mb-4 overflow-x-auto rounded-md bg-white/10 p-4;
+}
+
+.post-content:deep(code) {
+    @apply rounded bg-white/10 px-1 py-0.5 font-mono;
+}
+
+.post-content:deep(pre code) {
+    @apply bg-transparent p-0;
 }
 </style>

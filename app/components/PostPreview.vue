@@ -1,11 +1,16 @@
 <template>
-    <div class="post-preview">
-        <h2 class="h3">
-            <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
+    <div class="my-8">
+        <h2 class="mb-2 text-2xl font-medium">
+            <NuxtLink
+                :to="post.slug"
+                class="text-text transition-all duration-[250ms] ease-in-out hover:text-text-muted"
+            >
+                {{ post.title }}
+            </NuxtLink>
         </h2>
-        <p class="date">Published {{ humanDate(post.date) }}</p>
-        <img v-if="post.image" :src="post.image" :alt="post.title" >
-        <p v-if="post.description" class="desc">{{ post.description }}</p>
+        <p class="mb-2">Published {{ humanDate(post.date) }}</p>
+        <img v-if="post.image" :src="post.image" :alt="post.title" class="w-full">
+        <p v-if="post.description" class="mt-2">{{ post.description }}</p>
     </div>
 </template>
 
@@ -19,13 +24,3 @@ interface Props {
 
 defineProps<Props>();
 </script>
-
-<style lang="scss" scoped>
-.post-preview {
-    margin: 2rem 0;
-
-    img {
-        width: 100%;
-    }
-}
-</style>
