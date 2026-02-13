@@ -1,6 +1,6 @@
 <template>
     <div class="my-8">
-        <h2 class="mb-2 text-3xl font-normal">
+        <h2 class="mb-2 text-2xl font-normal md:text-3xl">
             <NuxtLink
                 :to="post.slug"
                 class="text-text underline transition-all duration-[250ms] ease-in-out hover:text-text-muted"

@@ -1,6 +1,6 @@
 <template>
     <div class="text-center">
-        <h1 class="mb-10 mt-8 text-6xl font-medium md:text-5xl">Levi Zitting</h1>
+        <h1 class="mb-10 mt-8 text-4xl font-medium md:text-6xl">Levi Zitting</h1>
         <nav class="flex flex-wrap justify-between">
             <NuxtLink
                 to="/"

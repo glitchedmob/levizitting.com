@@ -12,7 +12,7 @@
             class="my-8"
             :data-video-url="talk.url"
         >
-            <h2 class="mb-4 text-3xl font-medium">
+            <h2 class="mb-4 text-2xl font-medium md:text-3xl">
                 <a
                     :href="talk.url"
                     target="_blank"
