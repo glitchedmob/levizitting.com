@@ -1,9 +1,9 @@
 <template>
     <div class="my-8">
-        <h2 class="mb-2 text-2xl font-medium">
+        <h2 class="mb-2 text-3xl font-normal">
             <NuxtLink
                 :to="post.slug"
-                class="text-text transition-all duration-[250ms] ease-in-out hover:text-text-muted"
+                class="text-text underline transition-all duration-[250ms] ease-in-out hover:text-text-muted"
             >
                 {{ post.title }}
             </NuxtLink>

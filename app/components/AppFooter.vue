@@ -1,7 +1,7 @@
 <template>
-    <footer class="py-12">
+    <footer class="pb-20 pt-12">
         <div
-            class="-mb-8 flex flex-wrap content-center justify-center gap-x-4 gap-y-8 px-4"
+            class="-mb-8 flex flex-wrap content-center justify-center gap-x-8 gap-y-8 px-4"
         >
             <a
                 href="https://github.com/glitchedmob"
