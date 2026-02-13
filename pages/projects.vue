@@ -11,9 +11,7 @@ useHead({
     title: 'Projects',
 });
 
-const projects = ref<Project[]>([]);
-
-onMounted(async () => {
+const { data: projects } = await useAsyncData<Project[]>('projects', async () => {
     const modules = import.meta.glob('~/content/projects/*.json');
     const loadedProjects: Project[] = [];
 
@@ -22,6 +20,6 @@ onMounted(async () => {
         loadedProjects.push((module as { default: Project }).default);
     }
 
-    projects.value = loadedProjects;
+    return loadedProjects;
 });
 </script>
