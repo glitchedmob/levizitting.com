@@ -1,31 +1,23 @@
 <template>
     <div class="post-preview">
         <h2 class="h3">
-            <nuxt-link :to="post.slug">{{ post.title }}</nuxt-link>
+            <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
         </h2>
-        <p class="date">Published {{ post.date | humanDate }}</p>
+        <p class="date">Published {{ humanDate(post.date) }}</p>
         <img v-if="post.image" :src="post.image" :alt="post.title" />
         <p v-if="post.description" class="desc">{{ post.description }}</p>
     </div>
 </template>
 
-<script lang="ts">
-import Vue, { PropType } from 'vue';
-
+<script setup lang="ts">
+import type { BlogPost } from '~/models/BlogPost';
 import { humanDate } from '~/filters/date-filters';
-import { BlogPost } from '~/models/BlogPost';
 
-export default Vue.extend({
-    filters: {
-        humanDate,
-    },
-    props: {
-        post: {
-            type: Object as PropType<BlogPost>,
-            required: true,
-        },
-    },
-});
+interface Props {
+    post: BlogPost;
+}
+
+defineProps<Props>();
 </script>
 
 <style lang="scss" scoped>

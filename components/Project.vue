@@ -17,19 +17,14 @@
     </div>
 </template>
 
-<script lang="ts">
-import Vue, { PropType } from 'vue';
+<script setup lang="ts">
+import type { Project } from '~/models/Project';
 
-import { Project } from '~/models/Project';
+interface Props {
+    project: Project;
+}
 
-export default Vue.extend({
-    props: {
-        project: {
-            type: Object as PropType<Project>,
-            required: true,
-        },
-    },
-});
+defineProps<Props>();
 </script>
 
 <style lang="scss" scoped>
