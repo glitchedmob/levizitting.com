@@ -6,7 +6,7 @@ public_folder: '/images/uploads'
 collections:
     - name: 'blog'
       label: 'Blog'
-      folder: 'content/blog/posts'
+      folder: 'app/content/blog/posts'
       create: true
       slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
       format: 'json'
@@ -37,7 +37,7 @@ collections:
       files:
           - name: 'speaking'
             label: 'Speaking'
-            file: 'content/pages/speaking.json'
+            file: 'app/content/pages/speaking.json'
             fields:
                 - label: 'Talks'
                   name: talks
@@ -47,7 +47,7 @@ collections:
                       - { label: URL, name: url, widget: string }
     - name: 'projects'
       label: 'Project'
-      folder: 'content/projects'
+      folder: 'app/content/projects'
       create: true
       slug: '{{slug}}'
       format: 'json'
