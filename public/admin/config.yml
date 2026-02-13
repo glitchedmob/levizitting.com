@@ -33,27 +33,41 @@ collections:
                 required: false,
             }
           - { label: 'Body', name: 'body', widget: 'markdown' }
-    - name: pages
-      label: 'Pages'
-      files:
-          - name: 'speaking'
-            label: 'Speaking'
-            file: 'app/content/pages/speaking.json'
-            fields:
-                - label: 'Talks'
-                  name: talks
-                  widget: list
-                  fields:
-                      - { label: 'Title', name: title, widget: string }
-                      - { label: URL, name: url, widget: string }
-    - name: 'projects'
-      label: 'Project'
-      folder: 'app/content/projects'
+    - name: 'talks'
+      label: 'Talks'
+      folder: 'content/talks'
       create: true
       slug: '{{slug}}'
-      format: 'json'
+      extension: 'md'
+      format: 'yaml-frontmatter'
       fields:
           - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'URL', name: 'url', widget: 'string' }
+          - {
+                label: 'Published Date',
+                name: 'publishedDate',
+                widget: 'datetime',
+            }
+          - {
+                label: 'Description',
+                name: 'description',
+                widget: 'text',
+                required: false,
+            }
+    - name: 'projects'
+      label: 'Projects'
+      folder: 'content/projects'
+      create: true
+      slug: '{{slug}}'
+      extension: 'md'
+      format: 'yaml-frontmatter'
+      fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+                label: 'Published Date',
+                name: 'publishedDate',
+                widget: 'datetime',
+            }
           - {
                 label: 'Featured Image',
                 name: 'image',
