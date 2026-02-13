@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 
     css: ['~/assets/css/main.css'],
 
-    modules: ['@nuxt/eslint', '@nuxtjs/sitemap', 'nuxt-gtag'],
+    modules: ['@nuxt/eslint', '@nuxtjs/sitemap', 'nuxt-gtag', '@nuxt/content'],
 
     vite: {
         // Cast to Nuxt's expected Plugin type from ViteConfig

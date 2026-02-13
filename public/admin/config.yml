@@ -9,7 +9,8 @@ collections:
       folder: 'app/content/blog/posts'
       create: true
       slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-      format: 'json'
+      extension: 'md'
+      format: 'yaml-frontmatter'
       fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - {
