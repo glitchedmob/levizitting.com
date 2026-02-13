@@ -1,3 +1,6 @@
+@use 'config' as *;
+@use 'sass:map';
+
 h1,
 h2,
 h3,
@@ -16,7 +19,7 @@ li {
 
 a {
     transition: all 250ms ease-in-out;
-    color: map-get($colors, text);
+    color: map.get($colors, text);
     font-family: $font;
 }
 

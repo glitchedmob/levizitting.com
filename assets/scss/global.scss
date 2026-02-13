@@ -1,3 +1,6 @@
+@use 'config' as *;
+@use 'sass:map';
+
 html,
 body {
     max-width: 100%;
@@ -5,8 +8,8 @@ body {
 }
 
 body {
-    background: map-get($colors, background);
-    color: map-get($colors, text);
+    background: map.get($colors, background);
+    color: map.get($colors, text);
 }
 
 .main-content {
