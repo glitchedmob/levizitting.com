@@ -3,7 +3,11 @@
         <Head>
             <Link rel="preconnect" href="https://www.youtube-nocookie.com" />
             <Link rel="preconnect" href="https://www.google.com" />
-            <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+            <Link
+                rel="preconnect"
+                href="https://fonts.gstatic.com"
+                crossorigin="anonymous"
+            />
             <Link rel="preconnect" href="https://i.ytimg.com" />
         </Head>
         <div
@@ -16,7 +20,7 @@
                 <a
                     :href="talk.url"
                     target="_blank"
-                    class="text-text underline transition-all duration-[250ms] ease-in-out hover:text-text-muted"
+                    class="text-text hover:text-text-muted underline transition-all duration-250 ease-in-out"
                 >
                     {{ talk.title }}
                 </a>
@@ -25,14 +29,21 @@
                 <iframe
                     :src="getEmbedUrl(talk.url)"
                     frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                    "
                     allowfullscreen
                     loading="lazy"
                 />
             </div>
         </div>
         <h4 class="text-center text-2xl font-medium md:text-xl">
-            Interested in having me speak?<br>
+            Interested in having me speak?<br />
             Reach out
         </h4>
     </div>
@@ -50,7 +61,7 @@ declare global {
 }
 
 useSeoMeta({
-    title: 'Speaking'
+    title: 'Speaking',
 });
 
 function getEmbedUrl(url: string): string {
@@ -69,7 +80,9 @@ function restoreCachedIframes() {
     const container = document.getElementById('speaking-iframe-container');
     if (!container) return;
 
-    const slots = document.querySelectorAll<HTMLDivElement>('[data-iframe-index]');
+    const slots = document.querySelectorAll<HTMLDivElement>(
+        '[data-iframe-index]',
+    );
     const talks = speakingData.talks;
 
     // Move cached iframes from container back to their slots
@@ -77,7 +90,9 @@ function restoreCachedIframes() {
         const talk = talks[index];
         if (!talk) return;
 
-        const cached = container.querySelector(`iframe[data-video-url="${talk.url}"]`);
+        const cached = container.querySelector(
+            `iframe[data-video-url="${talk.url}"]`,
+        );
         if (cached) {
             slot.innerHTML = '';
             slot.moveBefore(cached, null);
@@ -85,7 +100,7 @@ function restoreCachedIframes() {
     });
 
     // Clean up any remaining orphaned iframes in container
-    container.querySelectorAll('iframe').forEach(iframe => iframe.remove());
+    container.querySelectorAll('iframe').forEach((iframe) => iframe.remove());
 }
 
 function cacheIframesToContainer() {
@@ -94,7 +109,9 @@ function cacheIframesToContainer() {
     const container = document.getElementById('speaking-iframe-container');
     if (!container) return;
 
-    const slots = document.querySelectorAll<HTMLDivElement>('[data-iframe-index]');
+    const slots = document.querySelectorAll<HTMLDivElement>(
+        '[data-iframe-index]',
+    );
     const talks = speakingData.talks;
 
     // Move iframes from slots to the hidden container

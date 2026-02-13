@@ -1,5 +1,5 @@
 <template>
-    <footer class="pb-20 pt-12">
+    <footer class="pt-12 pb-20">
         <div
             class="-mb-8 flex flex-wrap content-center justify-center gap-x-2 gap-y-2 px-4 md:gap-x-4 md:gap-y-4"
         >
@@ -8,7 +8,7 @@
                 target="_blank"
                 title="Github"
                 rel="noopener"
-                class="p-2 text-3xl text-text no-underline transition-all duration-[250ms] ease-in-out hover:text-text-muted md:p-1 md:text-5xl"
+                class="text-text hover:text-text-muted p-2 text-3xl no-underline transition-all duration-250 ease-in-out md:p-1 md:text-5xl"
             >
                 <i class="icon-github" aria-hidden="true" />
             </a>
@@ -17,7 +17,7 @@
                 target="_blank"
                 title="Dev.to"
                 rel="noopener"
-                class="p-2 text-3xl text-text no-underline transition-all duration-[250ms] ease-in-out hover:text-text-muted md:p-1 md:text-5xl"
+                class="text-text hover:text-text-muted p-2 text-3xl no-underline transition-all duration-250 ease-in-out md:p-1 md:text-5xl"
             >
                 <i class="icon-dev" aria-hidden="true" />
             </a>
@@ -26,7 +26,7 @@
                 target="_blank"
                 title="Twitter"
                 rel="noopener"
-                class="p-2 text-3xl text-text no-underline transition-all duration-[250ms] ease-in-out hover:text-text-muted md:p-1 md:text-5xl"
+                class="text-text hover:text-text-muted p-2 text-3xl no-underline transition-all duration-250 ease-in-out md:p-1 md:text-5xl"
             >
                 <i class="icon-twitter" aria-hidden="true" />
             </a>
@@ -35,7 +35,7 @@
                 target="_blank"
                 title="Instagram"
                 rel="noopener"
-                class="p-2 text-3xl text-text no-underline transition-all duration-[250ms] ease-in-out hover:text-text-muted md:p-1 md:text-5xl"
+                class="text-text hover:text-text-muted p-2 text-3xl no-underline transition-all duration-250 ease-in-out md:p-1 md:text-5xl"
             >
                 <i class="icon-instagram" aria-hidden="true" />
             </a>
@@ -44,7 +44,7 @@
                 target="_blank"
                 title="Mastodon"
                 rel="me"
-                class="p-2 text-3xl text-text no-underline transition-all duration-[250ms] ease-in-out hover:text-text-muted md:p-1 md:text-5xl"
+                class="text-text hover:text-text-muted p-2 text-3xl no-underline transition-all duration-250 ease-in-out md:p-1 md:text-5xl"
             >
                 <i class="icon-mastodon" aria-hidden="true" />
             </a>
@@ -53,14 +53,14 @@
                 target="_blank"
                 title="Linkedin"
                 rel="noopener"
-                class="p-2 text-3xl text-text no-underline transition-all duration-[250ms] ease-in-out hover:text-text-muted md:p-1 md:text-5xl"
+                class="text-text hover:text-text-muted p-2 text-3xl no-underline transition-all duration-250 ease-in-out md:p-1 md:text-5xl"
             >
                 <i class="icon-linkedin" aria-hidden="true" />
             </a>
             <a
                 href="mailto:me@levizitting.com"
                 title="Email"
-                class="p-2 text-3xl text-text no-underline transition-all duration-[250ms] ease-in-out hover:text-text-muted md:p-1 md:text-5xl"
+                class="text-text hover:text-text-muted p-2 text-3xl no-underline transition-all duration-250 ease-in-out md:p-1 md:text-5xl"
             >
                 <i class="icon-envelope" aria-hidden="true" />
             </a>

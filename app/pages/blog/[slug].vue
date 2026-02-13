@@ -1,10 +1,17 @@
 <template>
     <article class="mt-8 w-full">
-        <img v-if="blogPost.image" :src="blogPost.image" :alt="blogPost.title" class="mb-4 w-full">
-        <h1 class="mb-2 text-2xl font-medium md:text-3xl">{{ blogPost.title }}</h1>
+        <img
+            v-if="blogPost.image"
+            :src="blogPost.image"
+            :alt="blogPost.title"
+            class="mb-4 w-full"
+        />
+        <h1 class="mb-2 text-2xl font-medium md:text-3xl">
+            {{ blogPost.title }}
+        </h1>
         <p class="mb-4">Published {{ humanDate(blogPost.date) }}</p>
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <div class="post-content mt-4" v-html="renderedBody"/>
+        <div class="post-content mt-4" v-html="renderedBody" />
     </article>
 </template>
 
@@ -90,7 +97,7 @@ useSeoMeta({
 }
 
 .post-content:deep(a) {
-    @apply text-text underline transition-all duration-[250ms] ease-in-out;
+    @apply text-text underline transition-all duration-250 ease-in-out;
 }
 
 .post-content:deep(a:hover) {
@@ -115,7 +122,7 @@ useSeoMeta({
 }
 
 .post-content:deep(blockquote) {
-    @apply my-4 border-l-4 border-text-muted pl-4 italic;
+    @apply border-text-muted my-4 border-l-4 pl-4 italic;
 }
 
 .post-content:deep(pre) {

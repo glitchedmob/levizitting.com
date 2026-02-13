@@ -43,7 +43,7 @@ export default defineEventHandler(async (event) => {
     }
 
     const rss = feed.rss2();
-    
+
     setResponseHeader(event, 'Content-Type', 'application/rss+xml');
     return rss;
 });
