@@ -16,36 +16,30 @@ useHead({
     title: 'Blog',
 });
 
-const posts = ref<BlogPost[]>([]);
+const { data: posts } = await useAsyncData<BlogPost[]>('blog-posts', async () => {
+    // Use import.meta.glob to load all blog posts at build time
+    const modules = import.meta.glob('~/content/blog/posts/*.json');
+    const loadedPosts: BlogPost[] = [];
 
-onMounted(async () => {
-    try {
-        // Use import.meta.glob to load all blog posts
-        const modules = import.meta.glob('~/content/blog/posts/*.json');
-        const loadedPosts: BlogPost[] = [];
+    for (const path in modules) {
+        const module = await modules[path]();
+        const post = (module as { default: BlogPost }).default;
+        const slug = path
+            .replace('/content/blog/posts/', '')
+            .replace('.json', '');
 
-        for (const path in modules) {
-            const module = await modules[path]();
-            const post = (module as { default: BlogPost }).default;
-            const slug = path
-                .replace('/content/blog/posts/', '')
-                .replace('.json', '');
-
-            loadedPosts.push({
-                ...post,
-                slug: `/blog/${slug}`,
-            });
-        }
-
-        posts.value = loadedPosts
-            .filter((post) => post.published)
-            .sort(
-                (a, b) =>
-                    new Date(b.date).getTime() - new Date(a.date).getTime(),
-            );
-    } catch {
-        // Silent fail - no posts will show
+        loadedPosts.push({
+            ...post,
+            slug: `/blog/${slug}`,
+        });
     }
+
+    return loadedPosts
+        .filter((post) => post.published)
+        .sort(
+            (a, b) =>
+                new Date(b.date).getTime() - new Date(a.date).getTime(),
+        );
 });
 </script>
 

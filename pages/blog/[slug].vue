@@ -15,8 +15,28 @@ import { humanDate } from '~/filters/date-filters';
 
 const route = useRoute();
 
-const post = ref<BlogPost | null>(null);
-const renderedBody = ref('');
+const { data: post } = await useAsyncData<BlogPost | null>(
+    `blog-${route.params.slug}`,
+    async () => {
+        try {
+            const slug = route.params.slug as string;
+            const module = await import(`~/content/blog/posts/${slug}.json`);
+            return module.default as BlogPost;
+        } catch {
+            return null;
+        }
+    },
+);
+
+const renderedBody = computed(() => {
+    if (!post.value?.body) return '';
+    const md = new MarkdownIt({
+        html: true,
+        linkify: true,
+        typographer: true,
+    });
+    return md.render(post.value.body);
+});
 
 useHead(() => {
     if (!post.value) return {};
@@ -50,25 +70,6 @@ useHead(() => {
         title: `Blog | ${post.value.title}`,
         meta,
     };
-});
-
-onMounted(async () => {
-    try {
-        const slug = route.params.slug as string;
-        const module = await import(`~/content/blog/posts/${slug}.json`);
-        post.value = module.default as BlogPost;
-
-        // Render markdown to HTML
-        const md = new MarkdownIt({
-            html: true,
-            linkify: true,
-            typographer: true,
-        });
-        renderedBody.value = md.render(post.value.body);
-    } catch {
-        // Handle 404 - post not found
-        post.value = null;
-    }
 });
 </script>
 
