@@ -3,6 +3,10 @@ import tailwindcss from '@tailwindcss/vite';
 import type { ViteConfig } from '@nuxt/schema';
 
 export default defineNuxtConfig({
+    app: {
+        pageTransition: { name: 'page', mode: 'out-in' },
+    },
+
     site: {
         url: 'https://www.levizitting.com',
         name: 'Levi Zitting',

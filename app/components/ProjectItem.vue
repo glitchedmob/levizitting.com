@@ -1,6 +1,6 @@
 <template>
     <div class="mt-8">
-        <h2 class="mb-2 text-2xl font-medium">{{ project.title }}</h2>
+        <h2 class="mb-2 text-3xl font-medium">{{ project.title }}</h2>
         <img v-if="project.image" :src="project.image" :alt="project.title" class="w-full">
         <p class="mb-2">{{ project.description }}</p>
         <div>

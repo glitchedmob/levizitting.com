@@ -12,7 +12,7 @@
             class="my-8"
             :data-video-url="talk.url"
         >
-            <h2 class="mb-2 text-2xl font-medium">
+            <h2 class="mb-4 text-3xl font-medium">
                 <a
                     :href="talk.url"
                     target="_blank"
@@ -21,7 +21,7 @@
                     {{ talk.title }}
                 </a>
             </h2>
-            <div class="video-container" :data-iframe-index="index">
+            <div class="video-container mt-6" :data-iframe-index="index">
                 <iframe
                     :src="getEmbedUrl(talk.url)"
                     frameborder="0"
@@ -31,7 +31,7 @@
                 />
             </div>
         </div>
-        <h4 class="text-center text-xl font-medium md:text-lg">
+        <h4 class="text-center text-2xl font-medium md:text-xl">
             Interested in having me speak?<br>
             Reach out
         </h4>

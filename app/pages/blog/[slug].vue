@@ -1,7 +1,7 @@
 <template>
     <article class="my-8 w-full">
         <img v-if="blogPost.image" :src="blogPost.image" :alt="blogPost.title" class="mb-4 w-full">
-        <h1 class="mb-2 text-2xl font-medium md:text-xl">{{ blogPost.title }}</h1>
+        <h1 class="mb-2 text-3xl font-medium md:text-2xl">{{ blogPost.title }}</h1>
         <p class="mb-4">Published {{ humanDate(blogPost.date) }}</p>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <div class="post-content mt-4" v-html="renderedBody"/>
