@@ -9,7 +9,9 @@
         <h1 class="mb-2 text-2xl font-medium md:text-3xl">
             {{ blogPost.title }}
         </h1>
-        <p class="mb-4">Published {{ humanDate(blogPost.date) }}</p>
+        <p v-if="blogPost.publishedDate" class="mb-4">
+            Published {{ humanDate(blogPost.publishedDate) }}
+        </p>
         <ContentRenderer :value="blogPost" class="post-content mt-4" />
     </article>
 </template>

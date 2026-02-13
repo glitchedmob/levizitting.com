@@ -54,7 +54,10 @@ import { onMounted } from 'vue';
 import { onBeforeRouteLeave } from 'vue-router';
 
 const { data: talks } = await useAsyncData('talks', () =>
-    queryCollection('talks').order('publishedDate', 'DESC').all(),
+    queryCollection('talks')
+        .where('publishedDate', 'IS NOT NULL')
+        .order('publishedDate', 'DESC')
+        .all(),
 );
 
 const talkList = computed(() => talks.value ?? []);

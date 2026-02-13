@@ -1,9 +1,8 @@
 ---
 title: Excellence In Technology Rising Star Award
-published: true
-date: 2020-02-28T19:42:26-06:00
+publishedDate: 2020-02-28T19:42:26-06:00
 image: /images/uploads/excellence-in-technology-awards.jpg
-description: Once a year AITP of the Ozarks hosts an award show to showcase standout organizations and individuals in the technology industry called the Excellence in Technology Awards. This year along with 2 other individuals, Tyler Drenon and Chelsea Cardoza I was a finalist for the Rising Star award.
+description: Once a year AITP of the Ozarks hosts an award show to showcase standout organizations and individuals in the technology industry called the Excellence in Technology Awards. This year along with 2 other individuals, Tyler Drenon and Chelsea Cardoza I was a finalist for the Rising Star award.
 ---
 
 Once a year [AITP of the Ozarks](https://www.aitpozarks.org/) hosts an award show to showcase standout organizations and individuals in the technology industry called the [Excellence in Technology Awards](https://www.biz417.com/awards/excellence-in-technology/). This year along with 2 other individuals, [Tyler Drenon](https://twitter.com/TylerDrenon) and Chelsea Cardoza I was a finalist for the [Rising Star award](https://www.biz417.com/awards/excellence-in-technology/nominations/).

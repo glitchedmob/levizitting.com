@@ -1,7 +1,6 @@
 ---
 title: Flutter Multiple Stream Builder Package
-published: true
-date: 2020-12-19T00:01:00-06:00
+publishedDate: 2020-12-19T00:01:00-06:00
 description: Flutter widgets for avoiding nested StreamBuilder
 ---
 

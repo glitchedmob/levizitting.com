@@ -1,7 +1,6 @@
 ---
 title: Announcing Focus App
-published: true
-date: 2017-12-01T10:49:25-06:00
+publishedDate: 2017-12-01T10:49:25-06:00
 image: /images/uploads/focus-app.jpg
 description: For the past few weeks I've been working on a Google Chrome extension I've called Focus App. I finally finished version 1.0, which is live on the Chrome Web Store right now.
 ---

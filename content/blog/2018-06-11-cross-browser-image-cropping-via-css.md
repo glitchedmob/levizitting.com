@@ -1,7 +1,6 @@
 ---
 title: Cross Browser Image Cropping Via CSS
-published: true
-date: 2018-06-11T21:36:43-05:00
+publishedDate: 2018-06-11T21:36:43-05:00
 description: A cross browser method of cropping images on the frontend using CSS.
 ---
 
