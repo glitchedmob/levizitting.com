@@ -8,8 +8,10 @@
         "dev": "nuxt dev",
         "preview": "nuxt preview",
         "postinstall": "patch-package && nuxt prepare",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
+        "lint": "eslint . --max-warnings=0",
+        "lint:fix": "eslint . --fix --max-warnings=0",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
     },
     "dependencies": {
         "@nuxtjs/sitemap": "^7.6.0",
@@ -28,6 +30,8 @@
         "@types/node": "^25.2.3",
         "eslint": "^9.39.2",
         "patch-package": "^8.0.1",
+        "prettier": "^3.8.1",
+        "prettier-plugin-tailwindcss": "^0.7.2",
         "typescript": "^5.9.3",
         "vue-tsc": "^3.2.4"
     }
