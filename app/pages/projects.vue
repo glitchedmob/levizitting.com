@@ -16,7 +16,9 @@ const { data: projects } = await useAsyncData<Project[]>('projects', async () =>
     const loadedProjects: Project[] = [];
 
     for (const path in modules) {
-        const module = await modules[path]();
+        const moduleFn = modules[path];
+        if (!moduleFn) continue;
+        const module = await moduleFn();
         loadedProjects.push((module as { default: Project }).default);
     }
 

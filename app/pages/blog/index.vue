@@ -22,7 +22,9 @@ const { data: posts } = await useAsyncData<BlogPost[]>('blog-posts', async () =>
     const loadedPosts: BlogPost[] = [];
 
     for (const path in modules) {
-        const module = await modules[path]();
+        const moduleFn = modules[path];
+        if (!moduleFn) continue;
+        const module = await moduleFn();
         const post = (module as { default: BlogPost }).default;
         const slug = path
             .replace('/content/blog/posts/', '')
