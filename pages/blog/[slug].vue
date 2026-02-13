@@ -1,9 +1,10 @@
 <template>
     <article v-if="post" class="blog-post main-content">
-        <img v-if="post.image" :src="post.image" :alt="post.title" />
+        <img v-if="post.image" :src="post.image" :alt="post.title" >
         <h1 class="h3">{{ post.title }}</h1>
         <p class="date">Published {{ humanDate(post.date) }}</p>
-        <div ref="postBody" class="body" v-html="renderedBody"></div>
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <div ref="postBody" class="body" v-html="renderedBody"/>
     </article>
 </template>
 
@@ -77,12 +78,12 @@ onMounted(async () => {
 
     img {
         width: 100%;
-        margin: 0 0 1rem 0;
+        margin: 0 0 1rem;
     }
 }
 
 .body {
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 0;
 
     :deep(*) {
         line-height: 1.8rem;

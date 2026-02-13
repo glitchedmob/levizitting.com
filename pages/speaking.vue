@@ -5,11 +5,11 @@
                 <a :href="talk.url" target="_blank">{{ talk.title }}</a>
             </h2>
             <div class="video">
-                <iframe :src="talk.url" frameborder="0"></iframe>
+                <iframe :src="talk.url" frameborder="0"/>
             </div>
         </div>
         <h4 class="reach-out">
-            Interested in having me speak?<br />
+            Interested in having me speak?<br >
             Reach out
         </h4>
     </div>

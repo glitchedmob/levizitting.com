@@ -16,7 +16,7 @@
 
 .title {
     text-align: center;
-    margin: 2rem 0 2.5rem 0;
+    margin: 2rem 0 2.5rem;
 }
 
 .nav {
@@ -31,7 +31,7 @@
     color: map.get($colors, text);
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    padding: 0 0 0.5rem 0;
+    padding: 0 0 0.5rem;
 
     &.blog-link.router-link-active,
     &.router-link-exact-active {
