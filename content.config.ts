@@ -23,5 +23,21 @@ export default defineContentConfig({
                 description: z.string().optional(),
             }),
         }),
+        projects: defineCollection({
+            type: 'data',
+            source: 'projects/*.md',
+            schema: z.object({
+                title: z.string(),
+                image: z.string().optional(),
+                description: z.string(),
+                publishedDate: z.string(),
+                links: z.array(
+                    z.object({
+                        title: z.string(),
+                        url: z.string(),
+                    }),
+                ),
+            }),
+        }),
     },
 });

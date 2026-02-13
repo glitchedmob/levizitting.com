@@ -52,7 +52,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { onBeforeRouteLeave } from 'vue-router';
-import type { PageCollections } from '@nuxt/content';
 
 const { data: talks } = await useAsyncData('talks', () =>
     queryCollection('talks').order('publishedDate', 'DESC').all(),

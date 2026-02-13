@@ -43,7 +43,11 @@ collections:
       fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'URL', name: 'url', widget: 'string' }
-          - { label: 'Published Date', name: 'publishedDate', widget: 'datetime' }
+          - {
+                label: 'Published Date',
+                name: 'publishedDate',
+                widget: 'datetime',
+            }
           - {
                 label: 'Description',
                 name: 'description',
@@ -51,13 +55,19 @@ collections:
                 required: false,
             }
     - name: 'projects'
-      label: 'Project'
-      folder: 'app/content/projects'
+      label: 'Projects'
+      folder: 'content/projects'
       create: true
       slug: '{{slug}}'
-      format: 'json'
+      extension: 'md'
+      format: 'yaml-frontmatter'
       fields:
           - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+                label: 'Published Date',
+                name: 'publishedDate',
+                widget: 'datetime',
+            }
           - {
                 label: 'Featured Image',
                 name: 'image',

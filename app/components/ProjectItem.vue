@@ -25,10 +25,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Project } from '~/models/Project';
+import type { Collections } from '@nuxt/content';
 
 interface Props {
-    project: Project;
+    project: Collections['projects'];
 }
 
 defineProps<Props>();
