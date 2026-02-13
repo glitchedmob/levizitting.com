@@ -1,31 +1,15 @@
 <template>
     <div class="container">
         <div class="above-footer">
-            <app-nav />
+            <AppNav />
             <main>
-                <transition name="page" mode="out-in">
-                    <nuxt :key="$route.path" />
-                </transition>
+                <NuxtPage />
             </main>
         </div>
 
-        <app-footer />
+        <AppFooter />
     </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue';
-
-import AppNav from '~/components/AppNav.vue';
-import AppFooter from '~/components/AppFooter.vue';
-
-export default Vue.extend({
-    components: {
-        AppNav,
-        AppFooter,
-    },
-});
-</script>
 
 <style lang="scss" scoped>
 .page-enter-active,
@@ -33,12 +17,12 @@ export default Vue.extend({
     transition: all 250ms ease;
 }
 
-.page-enter,
+.page-enter-from,
 .page-leave-to {
     opacity: 0;
 }
 
-.page-enter {
+.page-enter-from {
     transform: translateX(100px);
 }
 
