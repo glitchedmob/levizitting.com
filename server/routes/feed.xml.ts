@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
         },
     });
 
-    const blogDir = path.resolve('content/blog/posts');
+    const blogDir = path.resolve('app/content/blog/posts');
     if (fs.existsSync(blogDir)) {
         const files = fs.readdirSync(blogDir);
         for (const file of files) {
