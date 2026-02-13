@@ -1,5 +1,5 @@
 <template>
-    <div class="projects main-content">
+    <div class="w-full">
         <ProjectItem v-for="(project, i) in projects" :key="i" :project="project" />
     </div>
 </template>

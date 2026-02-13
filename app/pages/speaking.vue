@@ -1,16 +1,27 @@
 <template>
-    <div class="speaking main-content">
+    <div class="w-full">
         <Head>
             <Link rel="preconnect" href="https://www.youtube-nocookie.com" />
             <Link rel="preconnect" href="https://www.google.com" />
             <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
             <Link rel="preconnect" href="https://i.ytimg.com" />
         </Head>
-        <div v-for="(talk, index) in speakingData.talks" :key="talk.url" class="talk" :data-video-url="talk.url">
-            <h2 class="h3">
-                <a :href="talk.url" target="_blank">{{ talk.title }}</a>
+        <div
+            v-for="(talk, index) in speakingData.talks"
+            :key="talk.url"
+            class="my-8"
+            :data-video-url="talk.url"
+        >
+            <h2 class="mb-2 text-2xl font-medium">
+                <a
+                    :href="talk.url"
+                    target="_blank"
+                    class="text-text underline transition-all duration-[250ms] ease-in-out hover:text-text-muted"
+                >
+                    {{ talk.title }}
+                </a>
             </h2>
-            <div class="video" :data-iframe-index="index">
+            <div class="video-container" :data-iframe-index="index">
                 <iframe
                     :src="getEmbedUrl(talk.url)"
                     frameborder="0"
@@ -20,7 +31,7 @@
                 />
             </div>
         </div>
-        <h4 class="reach-out">
+        <h4 class="text-center text-xl font-medium md:text-lg">
             Interested in having me speak?<br>
             Reach out
         </h4>
@@ -106,28 +117,15 @@ onBeforeRouteLeave(() => {
 });
 </script>
 
-<style lang="scss" scoped>
-.talk {
-    margin: 2rem 0;
-}
+<style scoped>
+@reference "../assets/css/main.css";
 
-.video {
-    margin-top: 1rem;
-    overflow: hidden;
+.video-container {
+    @apply relative h-0 overflow-hidden;
     padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-
-    iframe {
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-    }
 }
 
-.reach-out {
-    text-align: center;
+.video-container iframe {
+    @apply absolute top-0 left-0 h-full w-full;
 }
 </style>

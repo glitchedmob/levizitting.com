@@ -1,10 +1,10 @@
 <template>
-    <div class="blog main-content">
+    <div class="w-full">
         <template v-if="posts && posts.length !== 0">
             <PostPreview v-for="(post, i) in posts" :key="i" :post="post" />
         </template>
-        <div v-else class="no-posts">
-            <p class="h3">No blog posts :(</p>
+        <div v-else class="mt-8 text-center">
+            <p class="text-3xl font-medium md:text-2xl">No blog posts :(</p>
         </div>
     </div>
 </template>
@@ -44,10 +44,3 @@ const { data: posts } = await useAsyncData<BlogPost[]>('blog-posts', async () =>
         );
 });
 </script>
-
-<style lang="scss" scoped>
-.no-posts {
-    text-align: center;
-    margin-top: 2rem;
-}
-</style>

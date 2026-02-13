@@ -1,41 +1,35 @@
 <template>
-    <div class="navigation">
-        <p class="h1 title">Levi Zitting</p>
-        <nav class="nav">
-            <NuxtLink to="/" class="nav-item home-link">Home</NuxtLink>
-            <NuxtLink to="/blog" class="nav-item blog-link">Blog</NuxtLink>
-            <NuxtLink to="/projects" class="nav-item projets-link">Projects</NuxtLink>
-            <NuxtLink to="/speaking" class="nav-item speaking-link">Speaking</NuxtLink>
+    <div class="mb-10 text-center">
+        <h1 class="mb-10 mt-8 text-5xl font-medium md:text-4xl">Levi Zitting</h1>
+        <nav class="flex flex-wrap justify-between">
+            <NuxtLink
+                to="/"
+                class="border-b-2 border-transparent pb-2 text-lg text-text transition-all duration-300 ease-in-out hover:text-text-muted"
+                :class="{ 'border-white': $route.path === '/' }"
+            >
+                Home
+            </NuxtLink>
+            <NuxtLink
+                to="/blog"
+                class="border-b-2 border-transparent pb-2 text-lg text-text transition-all duration-300 ease-in-out hover:text-text-muted"
+                :class="{ 'border-white': $route.path.startsWith('/blog') }"
+            >
+                Blog
+            </NuxtLink>
+            <NuxtLink
+                to="/projects"
+                class="border-b-2 border-transparent pb-2 text-lg text-text transition-all duration-300 ease-in-out hover:text-text-muted"
+                :class="{ 'border-white': $route.path === '/projects' }"
+            >
+                Projects
+            </NuxtLink>
+            <NuxtLink
+                to="/speaking"
+                class="border-b-2 border-transparent pb-2 text-lg text-text transition-all duration-300 ease-in-out hover:text-text-muted"
+                :class="{ 'border-white': $route.path === '/speaking' }"
+            >
+                Speaking
+            </NuxtLink>
         </nav>
     </div>
 </template>
-
-<style lang="scss" scoped>
-@use '~/assets/scss/config.scss' as *;
-@use 'sass:map';
-
-.title {
-    text-align: center;
-    margin: 2rem 0 2.5rem;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.nav-item {
-    transition: all 300ms ease-in-out;
-    font-size: $typography-size-6;
-    color: map.get($colors, text);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    padding: 0 0 0.5rem;
-
-    &.blog-link.router-link-active,
-    &.router-link-exact-active {
-        border-bottom: 2px solid #fff;
-    }
-}
-</style>

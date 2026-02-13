@@ -1,15 +1,15 @@
 <template>
-    <div class="project">
-        <h2 class="h3">{{ project.title }}</h2>
-        <img v-if="project.image" :src="project.image" :alt="project.title" >
-        <p>{{ project.description }}</p>
-        <div class="links">
+    <div class="mt-8">
+        <h2 class="mb-2 text-2xl font-medium">{{ project.title }}</h2>
+        <img v-if="project.image" :src="project.image" :alt="project.title" class="w-full">
+        <p class="mb-2">{{ project.description }}</p>
+        <div>
             <a
                 v-for="(link, i) in project.links"
                 :key="i"
                 :href="link.url"
                 target="_blank"
-                class="link"
+                class="mr-2 text-text underline transition-all duration-[250ms] ease-in-out hover:text-text-muted"
             >
                 {{ link.title }}
             </a>
@@ -26,17 +26,3 @@ interface Props {
 
 defineProps<Props>();
 </script>
-
-<style lang="scss" scoped>
-.project {
-    margin-top: 2rem;
-
-    img {
-        width: 100%;
-    }
-
-    a {
-        margin: 0 0.5rem 0 0;
-    }
-}
-</style>
