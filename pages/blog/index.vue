@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import type { BlogPost } from '~/models/BlogPost';
 
-useHead({
+useSeoMeta({
     title: 'Blog',
 });
 

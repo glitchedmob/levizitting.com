@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import type { Project } from '~/models/Project';
 
-useHead({
+useSeoMeta({
     title: 'Projects',
 });
 

@@ -1,8 +1,8 @@
 <template>
-    <article v-if="post" class="blog-post main-content">
-        <img v-if="post.image" :src="post.image" :alt="post.title" >
-        <h1 class="h3">{{ post.title }}</h1>
-        <p class="date">Published {{ humanDate(post.date) }}</p>
+    <article class="blog-post main-content">
+        <img v-if="blogPost.image" :src="blogPost.image" :alt="blogPost.title" >
+        <h1 class="h3">{{ blogPost.title }}</h1>
+        <p class="date">Published {{ humanDate(blogPost.date) }}</p>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <div ref="postBody" class="body" v-html="renderedBody"/>
     </article>
@@ -15,61 +15,37 @@ import { humanDate } from '~/filters/date-filters';
 
 const route = useRoute();
 
-const { data: post } = await useAsyncData<BlogPost | null>(
+const { data: post } = await useAsyncData<BlogPost>(
     `blog-${route.params.slug}`,
     async () => {
-        try {
-            const slug = route.params.slug as string;
-            const module = await import(`~/content/blog/posts/${slug}.json`);
-            return module.default as BlogPost;
-        } catch {
-            return null;
-        }
+        const slug = route.params.slug as string;
+        const module = await import(`~/content/blog/posts/${slug}.json`);
+        return module.default as BlogPost;
     },
 );
 
+if (!post.value) {
+    throw createError({ statusCode: 404, statusMessage: 'Post not found' });
+}
+
+const blogPost = post.value;
+
 const renderedBody = computed(() => {
-    if (!post.value?.body) return '';
     const md = new MarkdownIt({
         html: true,
         linkify: true,
         typographer: true,
     });
-    return md.render(post.value.body);
+    return md.render(blogPost.body);
 });
 
-useHead(() => {
-    if (!post.value) return {};
-
-    const meta = [
-        { property: 'og:type', content: 'article' },
-        {
-            hid: 'og:title',
-            property: 'og:title',
-            content: `Levi Zitting | ${post.value.title}`,
-        },
-    ];
-
-    if (post.value.image) {
-        meta.push({
-            hid: 'og:image',
-            property: 'og:image',
-            content: post.value.image,
-        });
-    }
-
-    if (post.value.description) {
-        meta.push({
-            hid: 'og:description',
-            property: 'og:description',
-            content: post.value.description,
-        });
-    }
-
-    return {
-        title: `Blog | ${post.value.title}`,
-        meta,
-    };
+useSeoMeta({
+    title: `Blog | ${blogPost.title}`,
+    description: blogPost.description,
+    ogType: 'article',
+    ogTitle: blogPost.title,
+    ogDescription: blogPost.description,
+    ogImage: blogPost.image,
 });
 </script>
 

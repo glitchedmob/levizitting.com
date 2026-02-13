@@ -23,7 +23,7 @@ interface Talk {
     url: string;
 }
 
-useHead({
+useSeoMeta({
     title: 'Speaking',
 });
 
