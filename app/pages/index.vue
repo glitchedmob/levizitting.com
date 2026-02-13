@@ -19,11 +19,11 @@
             <p class="text-xl font-normal md:text-3xl">
                 where I work at
                 <a
-                    href="https://midwesterninteractive.com/"
+                    href="https://www.jackhenry.com/"
                     target="_blank"
                     class="text-text hover:text-text-muted underline transition-all duration-250 ease-in-out"
                 >
-                    Midwestern Interactive
+                    Jack Henry
                 </a>
             </p>
         </div>
