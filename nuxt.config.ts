@@ -11,6 +11,10 @@ export default defineNuxtConfig({
 
     modules: ['@nuxt/eslint', '@nuxtjs/sitemap', 'nuxt-gtag'],
 
+    sitemap: {
+        zeroRuntime: true,
+    },
+
     gtag: {
         id: 'G-3JP4Q9JK72',
     },
