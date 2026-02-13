@@ -15,24 +15,19 @@
     </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-
-import * as speakingPage from '../content/pages/speaking.json';
+<script setup lang="ts">
+import speakingData from '~/content/pages/speaking.json';
 
 interface Talk {
     title: string;
     url: string;
 }
 
-export default Vue.extend({
-    data: () => ({
-        talks: speakingPage.talks as Talk[],
-    }),
-    head: () => ({
-        title: 'Speaking',
-    }),
+useHead({
+    title: 'Speaking',
 });
+
+const talks = speakingData.talks as Talk[];
 </script>
 
 <style lang="scss" scoped>

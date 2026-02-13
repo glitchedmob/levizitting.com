@@ -14,19 +14,23 @@
                 where I work at
                 <a href="https://midwesterninteractive.com/" target="_blank">
                     Midwestern Interactive
-                </a
-                >
+                </a>
             </p>
         </div>
         <p class="h4">
             Here's a copy of my
             <a href="/documents/Levi_Zitting_Resume_2025.pdf" target="_blank">
                 resume
-            </a
-            >
+            </a>
         </p>
     </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+    title: '',
+});
+</script>
 
 <style lang="scss" scoped>
 .home {
