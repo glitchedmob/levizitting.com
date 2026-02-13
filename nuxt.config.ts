@@ -73,6 +73,7 @@ export default defineNuxtConfig({
         preset: 'static',
         prerender: {
             routes: [...getDynamicRoutes(), '/feed.xml'],
+            ignore: ['/tip-calculator/ios', '/tip-calculator/android'],
         },
     },
 
