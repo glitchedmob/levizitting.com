@@ -6,6 +6,11 @@ const config: Config = {
         'stylelint-config-standard-scss',
         'stylelint-config-recommended-vue/scss',
     ],
+    ignoreFiles: [
+        'dist/**/*',
+        '.output/**/*',
+        'node_modules/**/*',
+    ],
     rules: {},
 };
 

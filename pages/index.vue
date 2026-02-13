@@ -5,7 +5,7 @@
             src="/images/me.jpg"
             alt="Levi Zitting profile image"
             class="profile"
-        />
+        >
         <p class="img-desc">This is me</p>
         <p class="h4 text">I code and sometimes write about it</p>
         <div class="text">
@@ -38,7 +38,7 @@ useHead({
 }
 
 .text {
-    margin: 2rem 0 2.5rem 0;
+    margin: 2rem 0 2.5rem;
 }
 
 img.profile {

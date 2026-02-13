@@ -18,14 +18,13 @@ $colors: (
 }
 
 // Fonts
-$font: -apple-system, BlinkMacSystemFont, Avenir, 'Avenir Next', 'Segoe UI',
+$font: -apple-system, blinkmacsystemfont, avenir, 'Avenir Next', 'Segoe UI',
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
 
 // Typography Scale
 // let s = size, b = base (1rem), r = ratio, and l = level -> s = b * (r ^ l)
 $typography-size-base: 1rem;
-
 $typography-size-ratio: 1.2;
 $typography-size-1: math.div(
     math.round(($typography-size-base * pow($typography-size-ratio, 6)) * 1000),
@@ -51,7 +50,6 @@ $typography-size-6: math.div(
     math.round(($typography-size-base * $typography-size-ratio) * 1000),
     1000
 );
-
 $typography-size-small-ratio: 1.125;
 $typography-size-small-1: math.div(
     math.round(

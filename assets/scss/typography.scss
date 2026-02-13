@@ -90,7 +90,7 @@ h6,
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     h1 {
         font-size: $typography-size-small-1;
     }

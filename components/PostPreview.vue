@@ -4,7 +4,7 @@
             <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
         </h2>
         <p class="date">Published {{ humanDate(post.date) }}</p>
-        <img v-if="post.image" :src="post.image" :alt="post.title" />
+        <img v-if="post.image" :src="post.image" :alt="post.title" >
         <p v-if="post.description" class="desc">{{ post.description }}</p>
     </div>
 </template>

@@ -7,7 +7,7 @@
                 title="Github"
                 rel="noopener"
             >
-                <i class="icon-github" aria-hidden="true"></i>
+                <i class="icon-github" aria-hidden="true"/>
             </a>
             <a
                 href="https://dev.to/levi_zitting"
@@ -15,7 +15,7 @@
                 title="Dev.to"
                 rel="noopener"
             >
-                <i class="icon-dev" aria-hidden="true"></i>
+                <i class="icon-dev" aria-hidden="true"/>
             </a>
             <a
                 href="https://twitter.com/levi_zitting"
@@ -23,7 +23,7 @@
                 title="Twitter"
                 rel="noopener"
             >
-                <i class="icon-twitter" aria-hidden="true"></i>
+                <i class="icon-twitter" aria-hidden="true"/>
             </a>
             <a
                 href="https://www.instagram.com/levi_zitting/"
@@ -31,7 +31,7 @@
                 title="Instagram"
                 rel="noopener"
             >
-                <i class="icon-instagram" aria-hidden="true"></i>
+                <i class="icon-instagram" aria-hidden="true"/>
             </a>
             <a
                 href="https://techhub.social/@levizitting"
@@ -39,7 +39,7 @@
                 title="Mastodon"
                 rel="me"
             >
-                <i class="icon-mastodon" aria-hidden="true"></i>
+                <i class="icon-mastodon" aria-hidden="true"/>
             </a>
             <a
                 href="https://www.linkedin.com/in/levi-zitting/"
@@ -47,10 +47,10 @@
                 title="Linkedin"
                 rel="noopener"
             >
-                <i class="icon-linkedin" aria-hidden="true"></i>
+                <i class="icon-linkedin" aria-hidden="true"/>
             </a>
             <a href="mailto:me@levizitting.com" title="Email">
-                <i class="icon-envelope" aria-hidden="true"></i>
+                <i class="icon-envelope" aria-hidden="true"/>
             </a>
         </div>
     </footer>
@@ -64,14 +64,13 @@
 .social {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+    place-content: center center;
     margin-bottom: -2rem;
 
     a {
         text-decoration: none;
         font-size: 3rem;
-        margin: 0 1rem 2rem 1rem;
+        margin: 0 1rem 2rem;
     }
 }
 </style>

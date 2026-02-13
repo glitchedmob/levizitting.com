@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'icon';
+    font-family: icon;
     src: url('../icons/icon.ttf?vf4iyb') format('truetype'),
     url('../icons/icon.woff?vf4iyb') format('woff'),
     url('../icons/icon.svg?vf4iyb#icon') format('svg');
@@ -11,7 +11,7 @@
 [class^="icon-"],
 [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icon' !important;
+    font-family: icon, sans-serif !important;
     speak: never;
     font-style: normal;
     font-weight: normal;
@@ -24,30 +24,30 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-linkedin:before {
+.icon-linkedin::before {
     content: '\f08c';
 }
 
-.icon-twitter:before {
+.icon-twitter::before {
     content: '\f099';
 }
 
-.icon-github:before {
+.icon-github::before {
     content: '\f09b';
 }
 
-.icon-envelope:before {
+.icon-envelope::before {
     content: '\f0e0';
 }
 
-.icon-instagram:before {
+.icon-instagram::before {
     content: '\f16d';
 }
 
-.icon-dev:before {
+.icon-dev::before {
     content: '\f6cc';
 }
 
-.icon-mastodon:before {
+.icon-mastodon::before {
     content: '\e900';
 }

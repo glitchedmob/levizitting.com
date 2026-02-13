@@ -21,7 +21,7 @@ body {
     width: 600px;
     margin: 0 auto;
 
-    @media (max-width: 629px) {
+    @media (width <= 629px) {
         width: calc(100% - 3rem);
         margin: 0 1.5rem;
     }
