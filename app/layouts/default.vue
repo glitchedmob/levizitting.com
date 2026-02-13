@@ -32,7 +32,13 @@
     transform: translateX(-100px);
 }
 
-.above-footer {
+.container {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+}
+
+.above-footer {
+    flex: 1;
 }
 </style>
