@@ -1,6 +1,6 @@
 <template>
     <div class="blog main-content">
-        <template v-if="posts.length !== 0">
+        <template v-if="posts && posts.length !== 0">
             <PostPreview v-for="(post, i) in posts" :key="i" :post="post" />
         </template>
         <div v-else class="no-posts">

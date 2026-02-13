@@ -26,7 +26,11 @@
     </div>
 </template>
 
-
+<script setup lang="ts">
+useHead({
+    title: 'Software Developer',
+});
+</script>
 
 <style lang="scss" scoped>
 .home {
