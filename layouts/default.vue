@@ -1,13 +1,15 @@
 <template>
-    <div class="container">
-        <div class="above-footer">
-            <AppNav />
-            <main>
-                <NuxtPage />
-            </main>
+    <div>
+        <div class="container">
+            <div class="above-footer">
+                <AppNav />
+                <main>
+                    <NuxtPage />
+                </main>
+            </div>
+            <AppFooter />
         </div>
-
-        <AppFooter />
+        <div id="speaking-iframe-container" style="display: none" />
     </div>
 </template>
 
