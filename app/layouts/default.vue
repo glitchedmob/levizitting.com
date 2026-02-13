@@ -5,7 +5,7 @@
             <main class="flex flex-1 flex-col">
                 <NuxtPage />
             </main>
-            <AppFooter class="mt-6" />
+            <AppFooter />
         </div>
         <div id="speaking-iframe-container" class="hidden" />
     </div>
