@@ -16,7 +16,7 @@
     "dependencies": {
         "@nuxt/content": "^3.11.2",
         "@nuxtjs/sitemap": "^7.6.0",
-        "@tailwindcss/vite": "^4.1.18",
+        "@tailwindcss/vite": "^4.2.0",
         "better-sqlite3": "^12.6.2",
         "feed": "^5.2.0",
         "markdown-it": "^14.1.1",
@@ -24,18 +24,18 @@
         "nuxt-gtag": "^4.1.0",
         "tailwindcss": "^4.1.18",
         "vue": "^3.5.28",
-        "vue-router": "^5.0.2"
+        "vue-router": "^5.0.3"
     },
     "devDependencies": {
         "@nuxt/eslint": "^1.15.1",
         "@types/markdown-it": "^14.1.2",
-        "@types/node": "^25.2.3",
-        "eslint": "^10.0.0",
+        "@types/node": "^25.3.0",
+        "eslint": "^10.0.1",
         "eslint-config-prettier": "^10.1.8",
         "patch-package": "^8.0.1",
         "prettier": "^3.8.1",
         "prettier-plugin-tailwindcss": "^0.7.2",
         "typescript": "^5.9.3",
-        "vue-tsc": "^3.2.4"
+        "vue-tsc": "^3.2.5"
     }
 }
