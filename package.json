@@ -24,13 +24,13 @@
         "nuxt-gtag": "^4.1.0",
         "tailwindcss": "^4.1.18",
         "vue": "^3.5.29",
-        "vue-router": "^5.0.3"
+        "vue-router": "^5.0.4"
     },
     "devDependencies": {
         "@nuxt/eslint": "^1.15.2",
         "@types/markdown-it": "^14.1.2",
         "@types/node": "^25.5.0",
-        "eslint": "^10.0.3",
+        "eslint": "^10.1.0",
         "eslint-config-prettier": "^10.1.8",
         "patch-package": "^8.0.1",
         "prettier": "^3.8.1",
