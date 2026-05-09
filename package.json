@@ -16,26 +16,26 @@
     "dependencies": {
         "@nuxt/content": "^3.13.0",
         "@nuxtjs/sitemap": "^8.0.15",
-        "@tailwindcss/vite": "^4.2.4",
+        "@tailwindcss/vite": "^4.3.0",
         "better-sqlite3": "^12.9.0",
         "feed": "^5.2.1",
         "markdown-it": "^14.1.1",
         "nuxt": "^4.4.4",
         "nuxt-gtag": "^4.1.0",
         "tailwindcss": "^4.1.18",
-        "vue": "^3.5.33",
+        "vue": "^3.5.34",
         "vue-router": "^5.0.6"
     },
     "devDependencies": {
         "@nuxt/eslint": "^1.15.2",
         "@types/markdown-it": "^14.1.2",
-        "@types/node": "^25.6.0",
+        "@types/node": "^25.6.2",
         "eslint": "^10.3.0",
         "eslint-config-prettier": "^10.1.8",
         "patch-package": "^8.0.1",
         "prettier": "^3.8.3",
         "prettier-plugin-tailwindcss": "^0.8.0",
         "typescript": "^6.0.3",
-        "vue-tsc": "^3.2.7"
+        "vue-tsc": "^3.2.8"
     }
 }
