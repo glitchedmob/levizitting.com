@@ -14,13 +14,13 @@
         "format:check": "prettier --check ."
     },
     "dependencies": {
-        "@nuxt/content": "^3.15.0",
-        "@nuxtjs/sitemap": "^8.2.2",
+        "@nuxt/content": "^3.15.2",
+        "@nuxtjs/sitemap": "^8.3.0",
         "@tailwindcss/vite": "^4.3.3",
-        "better-sqlite3": "^12.11.1",
+        "better-sqlite3": "^13.0.1",
         "feed": "^6.0.0",
         "markdown-it": "^14.3.0",
-        "nuxt": "^4.4.8",
+        "nuxt": "^4.5.0",
         "nuxt-gtag": "^4.1.0",
         "tailwindcss": "^4.1.18",
         "vue": "^3.5.40",
@@ -30,13 +30,13 @@
         "@nuxt/eslint": "^1.16.0",
         "@types/markdown-it": "^14.1.2",
         "@types/node": "^26.1.1",
-        "eslint": "^10.7.0",
+        "eslint": "^10.8.0",
         "eslint-config-prettier": "^10.1.8",
         "patch-package": "^8.0.1",
-        "prettier": "^3.9.5",
+        "prettier": "^3.9.6",
         "prettier-plugin-tailwindcss": "^0.8.1",
-        "typescript": "^6.0.3",
-        "vue-tsc": "^3.3.7"
+        "typescript": "^7.0.2",
+        "vue-tsc": "^3.3.8"
     },
     "allowScripts": {
         "esbuild@0.28.1": true,
