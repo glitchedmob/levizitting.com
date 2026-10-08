@@ -14,25 +14,25 @@
         "format:check": "prettier --check ."
     },
     "dependencies": {
-        "@nuxt/content": "^3.16.0",
-        "@nuxtjs/sitemap": "^8.5.1",
+        "@nuxt/content": "^3.16.1",
+        "@nuxtjs/sitemap": "^8.6.1",
         "@tailwindcss/vite": "^4.3.3",
         "better-sqlite3": "^13.0.3",
         "feed": "^6.0.0",
-        "nostics": "^1.2.0",
+        "nostics": "^1.3.0",
         "nuxt": "^4.5.2",
         "nuxt-gtag": "^5.0.0",
         "tailwindcss": "^4.1.18",
-        "vue": "^3.5.42",
+        "vue": "^3.5.43",
         "vue-router": "^5.3.1"
     },
     "devDependencies": {
         "@nuxt/eslint": "^1.17.0",
-        "@types/node": "^26.6.1",
-        "eslint": "^10.10.0",
+        "@types/node": "^26.6.3",
+        "eslint": "^10.11.0",
         "eslint-config-prettier": "^10.1.8",
         "patch-package": "^8.0.1",
-        "prettier": "^3.9.7",
+        "prettier": "^3.9.9",
         "prettier-plugin-tailwindcss": "^0.8.1",
         "typescript": "^6.0.3",
         "vue-tsc": "^3.3.11"
